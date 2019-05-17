@@ -1,0 +1,7 @@
+@mixin font($size,$family){
+  font:$size $family;
+}
+
+@mixin transition{
+  transition: all .25s linear;
+}
