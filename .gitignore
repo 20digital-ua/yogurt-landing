@@ -3,6 +3,8 @@
 
 node_modules
 # deploye-updater.php
+package-lock.json
+package.json
 
 
 .htpasswd
