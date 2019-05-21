@@ -9,9 +9,16 @@
 
 /* GENERAL */
 @import "_modules/general";
+/* BUTTONS */
+@import "_modules/buttons";
+/* SLIDERS */
+@import "_modules/sliders";
 
 
 /* HEADER */
 @import "_modules/header";
 /* MAIN CONTENT */
-@import "_modules/main";
+
+@import "_modules/services";/* SERVICES */
+@import "_modules/wonder-event";/* WONDER EVENT */
+

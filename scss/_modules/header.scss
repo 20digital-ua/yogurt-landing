@@ -1,0 +1,97 @@
+header{
+  background: url("#{$image_dir}header/Header_BG.png") center;
+  min-height: 574px;
+  position: relative;
+}
+.header-top{
+  width: 100%;
+  left: 0;
+  top: 28px;
+  box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.07);
+
+  height: 50px;
+  background-color: #fff;
+  position: absolute;
+  &__order-link{
+    padding-left: 15px;
+    @include font(12px,$MontserratSemiBold);
+    color: $primaryTextColor;
+    font-weight: 400;
+  }
+  &__logo{
+    width: 82px;
+    height: 81px;
+    background-color: #fff;
+    justify-self: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 50%; 
+  }
+}
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  padding: 0 13px;
+}
+.header-main-content{
+  padding-top: 106px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.burger-btn{
+  height: 16px;
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+
+}
+.burger-btn span{
+  width: 100%;
+  height: 2px;
+  background-color: $primaryTextColor;
+}
+
+.header-title{
+  
+  margin-top: 10px;
+  @include font(31px, $MontserratBold);
+  text-transform: uppercase;
+  line-height: 18px; 
+  letter-spacing: 1.53px;
+  min-width: 302px;
+  span{
+    @include font(52px, $MontserratExtraBold);
+    font-weight: 400;
+    letter-spacing: 2.37px;
+  }
+} 
+.yogurt-container{
+  margin-top: -29px;
+  display: flex;
+  justify-content: center;
+}
+.yogurt{
+  // height: 337px;
+  // background: url("#{$image_dir}header/Yogrt.png") center no-repeat;
+  
+  
+  &__img{
+    width: 100%;
+    height: 328px;
+    object-fit: cover;
+    // transform: translateX(69px);
+  }
+}

@@ -1,0 +1,20 @@
+.services{
+  .title{
+    background: url("#{$image_dir}title-shapes/Service.svg") bottom no-repeat;
+    height: 45px;
+  }
+}
+
+.services-slider{
+  min-height: 185px;
+}
+.services-slide{
+  outline: none;
+  margin-right: 15px; 
+  &__name{
+    text-align: center;
+    margin-top: 16px;
+    @include font(25px, $MontserratSemiBold);
+  }
+}
+
