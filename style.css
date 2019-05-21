@@ -176,6 +176,11 @@ body {
   padding-right: 0;
 }
 
+.container-nopadding__sides {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .title {
   text-align: center;
   font: 28px "MontserratBold";
@@ -342,6 +347,7 @@ header {
 
 .services-slider {
   min-height: 185px;
+  padding-left: 10px;
 }
 
 .services-slide {
@@ -383,3 +389,66 @@ header {
 }
 
 /* WONDER EVENT */
+
+.facts {
+  background: url("img/facts/Facts_BG.svg") -277px no-repeat;
+  background-size: cover;
+}
+
+.facts-img-wrapper {
+  background: url("img/facts/Wonderpots_img_shape.svg") 100% 100% no-repeat;
+  background-size: 581px 115px;
+  width: 100%;
+  height: 320px;
+  max-width: 580px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.facts-img-wrapper img {
+  object-fit: contain;
+  width: 401px;
+  height: 350px;
+  position: absolute;
+  right: 36px;
+}
+
+.facts-points {
+  /* Style for "Vector Sma" */
+  width: 100%;
+  max-width: 322px;
+  margin: 0 auto;
+  height: 351px;
+  background: url("img/facts/facts-points_BG.png") 5px no-repeat;
+  background-size: contain;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "IndieFlower";
+  padding-left: 13px;
+  padding-top: 40px;
+}
+
+.facts-point {
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+
+.facts-point__count {
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 39.7px;
+  letter-spacing: 6.07px;
+  margin-bottom: 18px;
+}
+
+.facts-point__name {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 2.29px;
+}
+
+/* FACTS */

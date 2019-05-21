@@ -23,3 +23,8 @@
     src: url("Montserrat/Montserrat-ExtraBold.ttf") format("opentype");
     font-display: block;
 }
+@font-face {
+    font-family: 'IndieFlower';
+    src: url("IndieFlower.ttf") format("opentype");
+    font-display: block;
+}
