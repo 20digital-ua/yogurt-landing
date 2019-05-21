@@ -215,9 +215,8 @@ body {
 .slick-dots {
   display: flex;
   margin: 0 auto;
-  justify-content: space-between;
-  width: 80px;
-  margin-top: 36px;
+  justify-content: center;
+  margin-top: -4px;
 }
 
 .slick-dots li button {
@@ -233,10 +232,25 @@ body {
   line-height: 0;
   color: transparent;
   outline: none;
+  margin-right: 11px;
+}
+
+.slick-dots li:last-child button {
+  margin-right: 0;
 }
 
 .slick-dots li.slick-active button {
   background-color: #1c8abe;
+}
+
+.slider-wrapper {
+  padding-left: 10px;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+.slick-list {
+  overflow: visible !important;
 }
 
 /* HEADER */
@@ -347,7 +361,6 @@ header {
 
 .services-slider {
   min-height: 185px;
-  padding-left: 10px;
 }
 
 .services-slide {
@@ -391,7 +404,7 @@ header {
 /* WONDER EVENT */
 
 .facts {
-  background: url("img/facts/Facts_BG.svg") -277px no-repeat;
+  background: url("img/facts/Facts_BG.svg") -277px 20px no-repeat;
   background-size: cover;
 }
 
@@ -452,3 +465,86 @@ header {
 }
 
 /* FACTS */
+
+.latest-events .title:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 9px;
+  background: url("img/title-shapes/Latest-events.svg") center no-repeat;
+  position: relative;
+  bottom: -10px;
+}
+
+.latest-events-slide {
+  width: 213px;
+  max-height: 314px;
+  border-radius: 15px;
+  box-shadow: 10px 17px 36px 2px rgba(0, 25, 36, 0.1);
+  margin-right: 26px;
+}
+
+/* LATEST EVENTS */
+
+.toppings .title-wrapper {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 75px 0 75px;
+  margin-bottom: 36px;
+}
+
+.toppings .title {
+  position: relative;
+  display: inline;
+}
+
+.toppings .title:before {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 50px;
+  background: url("img/title-shapes/Wing-left.svg") center no-repeat;
+  position: absolute;
+  top: 7px;
+  left: -75px;
+}
+
+.toppings .title:after {
+  content: '';
+  display: block;
+  width: 65px;
+  height: 50px;
+  background: url("img/title-shapes/Wing-right.svg") center no-repeat;
+  position: absolute;
+  top: 7px;
+  right: -83px;
+}
+
+.toppings-slide {
+  width: 166px;
+  height: 166px;
+  margin-right: 11px;
+}
+
+#toppings-slider-arrows .slick-prev {
+  display: none !important;
+}
+
+#toppings-slider-arrows {
+  display: flex;
+  justify-content: center;
+}
+
+#toppings-slider-arrows .next-slide-btn {
+  border: none;
+  background-color: unset;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  transition: all .25s linear;
+  padding-right: 50px;
+  background: url("img/icons/Arrow-right.svg") center right no-repeat;
+}
+
+/* TOPPINGS */

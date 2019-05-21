@@ -1,0 +1,57 @@
+.toppings{
+  .title-wrapper{
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 75px 0 75px;
+    margin-bottom: 36px;
+  }
+  .title{
+    position: relative;
+    display: inline;
+    &:before{
+      content: '';
+      display: block;
+      width: 70px;
+      height: 50px;
+      @include bgi('title-shapes/Wing-left.svg', center no-repeat);
+      position: absolute;
+      top: 7px;
+      left: -75px;
+    }
+    &:after{
+      content: '';
+      display: block;
+      width: 65px;
+      height: 50px;
+      @include bgi('title-shapes/Wing-right.svg', center no-repeat);
+      position: absolute;
+      top: 7px;
+      right: -83px;
+    }
+    
+  }
+}
+
+.toppings-slide{
+  width: 166px;
+  height: 166px;
+  margin-right: 11px;
+}
+#toppings-slider-arrows .slick-prev{
+  display: none !important;
+}
+#toppings-slider-arrows{
+  display: flex;
+  justify-content: center;
+} 
+#toppings-slider-arrows .next-slide-btn{
+  border: none;
+  background-color: unset;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  @include transition();
+  padding-right: 50px;
+  @include bgi('icons/Arrow-right.svg',center right no-repeat);
+}

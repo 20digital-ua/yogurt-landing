@@ -4,7 +4,7 @@
     display: block;
     width: 100%;
     height: 9px;
-    background: url("#{$image_dir}title-shapes/Wave.svg") center no-repeat;
+    @include bgi('title-shapes/Wave.svg', center no-repeat);
     position: relative;
     top: 10px;
     left: -88px;
