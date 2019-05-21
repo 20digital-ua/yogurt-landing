@@ -1,9 +1,14 @@
 $image_dir:'img/';
 
 
-$primarySiteFont: 'Lato';
+$Montserrat: 'Montserrat';
+$MontserratBold: 'MontserratBold';
+$MontserratSemiBold: 'MontserratSemiBold';
+$MontserratExtraBold: 'MontserratExtraBold';
+$IndieFlower: 'IndieFlower';
 
-body{
-  box-sizing: border-box;
-  font-family: 'Lato';
-}
+
+$primaryTextColor: #191d22;
+
+$sidePaddingsMob: 10px;
+$sidePaddingsMain: 7%;

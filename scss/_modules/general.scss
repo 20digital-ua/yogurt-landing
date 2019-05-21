@@ -1,0 +1,39 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  @include font(13px, $Montserrat);
+  color: $primaryTextColor;
+}
+
+.container{
+  max-width: 1335px;
+  margin: 0 auto;
+  padding-top: 48px;
+  padding-bottom: 0;
+  padding-left: $sidePaddingsMob;
+  padding-right: $sidePaddingsMob;
+  
+  padding-top:48px; 
+  // outline: 1px solid red;
+  box-sizing: content-box;
+  &-nopadding{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &-nopadding__right{
+    padding-right: 0;
+  }
+  &-nopadding__sides{
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.title{
+  text-align: center;
+  @include font(28px, $MontserratBold);
+  margin-bottom: 36px;
+}

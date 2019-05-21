@@ -5,3 +5,6 @@
 @mixin transition{
   transition: all .25s linear;
 }
+@mixin bgi($url, $properties){
+  background: url("#{$image_dir}#{$url}") $properties;
+}
