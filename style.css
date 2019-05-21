@@ -548,3 +548,39 @@ header {
 }
 
 /* TOPPINGS */
+
+.unigue {
+  background: url("img/unique/Unique_ContactForm_BG.svg") center;
+  height: 1000px;
+}
+
+.unique-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.unique-item {
+  width: 126px;
+  height: 126px;
+  box-shadow: 4px 6px 0 #3ba7da;
+  background-color: #85d1f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+  color: #ffffff;
+  font: 23px "IndieFlower";
+  font-weight: 400;
+  line-height: 25.71px;
+  letter-spacing: 0.89px;
+  margin-bottom: 43px;
+}
+
+.unique-item:last-child {
+  padding-top: 0;
+}
+
+/* UNIQUE */
