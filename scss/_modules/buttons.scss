@@ -12,13 +12,18 @@
   display: block;
   margin: 0 auto;
   &--blue{
-    box-shadow: 0 5px 0 #1c8abe;
     background-color: #7dcdf3;
+    box-shadow: 0 5px 0 #1c8abe;
     color: #ffffff;
   }
   &--submit{
     border:none;
     cursor: pointer;
     outline: none;
+  }
+  .inner{
+    background: url("#{$image_dir}icons/Dish-white.svg") left 4px no-repeat;
+    background-size: 17px 13px;
+    padding-left: 22px;
   }
 } 

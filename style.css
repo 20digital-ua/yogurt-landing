@@ -209,8 +209,8 @@ body {
 }
 
 .primary-btn--blue {
-  box-shadow: 0 5px 0 #1c8abe;
   background-color: #7dcdf3;
+  box-shadow: 0 5px 0 #1c8abe;
   color: #ffffff;
 }
 
@@ -218,6 +218,12 @@ body {
   border: none;
   cursor: pointer;
   outline: none;
+}
+
+.primary-btn .inner {
+  background: url("img/icons/Dish-white.svg") left 4px no-repeat;
+  background-size: 17px 13px;
+  padding-left: 22px;
 }
 
 /* SLIDERS */
@@ -283,6 +289,8 @@ header {
 
 .header-top__order-link {
   padding-left: 15px;
+  background: url("img/icons/Dish-black.svg") left center no-repeat;
+  background-size: 11px 10px;
   font: 12px "MontserratSemiBold";
   color: #191d22;
   font-weight: 400;
@@ -565,7 +573,7 @@ header {
 
 .unigue {
   background: url("img/unique/Unique_ContactForm_BG.svg") center;
-  background-size: contain;
+  background-size: 190%;
   padding-bottom: 50px;
 }
 
@@ -615,7 +623,6 @@ header {
   border: 1px solid #f3f3f3;
   border-radius: 25px;
   font: 13px "Montserrat";
-  background: url("img/icons/Arrow-right.svg") left center no-repeat;
   background-color: #fff;
   margin-bottom: 11px;
 }
@@ -627,6 +634,16 @@ header {
   letter-spacing: 0.39px;
 }
 
+.contact-form__input-name {
+  background: #fff url("img/icons/form-icons/user.svg") 15px center no-repeat;
+  background-size: 17px 19px;
+}
+
+.contact-form__input-email {
+  background: #fff url("img/icons/form-icons/email.svg") 15px center no-repeat;
+  background-size: 17px 17px;
+}
+
 .contact-form__textarea {
   min-width: 300px;
   max-width: 100%;
@@ -634,12 +651,14 @@ header {
   padding-top: 13px;
   margin-bottom: 30px;
   padding-bottom: 12px;
+  background: #fff url("img/icons/form-icons/edit.svg") 15px 13px no-repeat;
+  background-size: 17px 17px;
 }
 
 /* CONTACT FORM */
 
 footer {
-  background: url("img/footer/Footer_BG.png") center no-repeat;
+  background: url("img/footer/Footer_BG.png") center;
   height: 592px;
 }
 

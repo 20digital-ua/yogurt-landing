@@ -1,5 +1,5 @@
 footer{
-  @include bgi('footer/Footer_BG.png', center no-repeat);
+  @include bgi('footer/Footer_BG.png', center);
   height: 592px;
   .container{
     padding-top: 28px;
