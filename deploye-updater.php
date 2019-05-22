@@ -10,7 +10,7 @@
 // The commands
 
 set_time_limit(0);
-$dir = '/data/web/e104797/html/dev/twnty';				// local dir of dev baranche444
+$dir = '/data/web/e104797/html/dev/wonderpots';				// local dir of dev baranche444
 define('SSH_FILE','/data/web/e104797/.ssh/git_rsa');
 define('WORKING_BRANCHE','develop');
 
