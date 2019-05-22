@@ -187,6 +187,10 @@ body {
   margin-bottom: 36px;
 }
 
+.title--left {
+  text-align: left;
+}
+
 /* BUTTONS */
 
 .primary-btn {
@@ -208,6 +212,12 @@ body {
   box-shadow: 0 5px 0 #1c8abe;
   background-color: #7dcdf3;
   color: #ffffff;
+}
+
+.primary-btn--submit {
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 /* SLIDERS */
@@ -551,13 +561,15 @@ header {
 
 .unigue {
   background: url("img/unique/Unique_ContactForm_BG.svg") center;
-  height: 1000px;
+  background-size: contain;
+  padding-bottom: 50px;
 }
 
 .unique-blocks {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .unique-item {
@@ -584,3 +596,40 @@ header {
 }
 
 /* UNIQUE */
+
+.contact-form {
+  margin-top: 24px;
+}
+
+.contact-form__input {
+  padding-left: 50px;
+  padding-right: 20px;
+  outline: none;
+  width: 100%;
+  height: 46px;
+  box-shadow: 2px 4px 10px #dedede;
+  border: 1px solid #f3f3f3;
+  border-radius: 25px;
+  font: 13px "Montserrat";
+  background: url("img/icons/Arrow-right.svg") left center no-repeat;
+  background-color: #fff;
+  margin-bottom: 11px;
+}
+
+.contact-form__input::placeholder {
+  color: #d4d4d4;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.39px;
+}
+
+.contact-form__textarea {
+  min-width: 300px;
+  max-width: 100%;
+  min-height: 104px;
+  padding-top: 13px;
+  margin-bottom: 30px;
+  padding-bottom: 12px;
+}
+
+/* CONTACT FORM */

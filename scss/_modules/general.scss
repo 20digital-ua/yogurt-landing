@@ -36,4 +36,7 @@ body{
   text-align: center;
   @include font(28px, $MontserratBold);
   margin-bottom: 36px;
+  &--left{
+    text-align: left;
+  }
 }
