@@ -14,6 +14,8 @@ header{
   position: absolute;
   &__order-link{
     padding-left: 15px;
+    @include bgi('icons/Dish-black.svg', left center no-repeat);
+    background-size: 11px 10px;
     @include font(12px,$MontserratSemiBold);
     color: $primaryTextColor;
     font-weight: 400;

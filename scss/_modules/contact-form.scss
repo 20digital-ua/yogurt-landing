@@ -11,7 +11,6 @@
     border-radius: 25px;
     @include font(13px, $Montserrat);
     
-    @include bgi('icons/Arrow-right.svg',left center no-repeat);
     background-color: #fff;
     margin-bottom: 11px;
     &::placeholder{
@@ -19,6 +18,15 @@
       font-size: 12px;
       font-weight: 400;
       letter-spacing: 0.39px;
+    }
+    /////////////////
+    &-name{
+      background:#fff url("#{$image_dir}icons/form-icons/user.svg") 15px center no-repeat;
+      background-size: 17px 19px;
+    }
+    &-email{
+      background:#fff url("#{$image_dir}icons/form-icons/email.svg") 15px center no-repeat;
+      background-size: 17px 17px;
     }
   }
   &__textarea{
@@ -28,6 +36,8 @@
     padding-top: 13px;
     margin-bottom: 30px;
     padding-bottom: 12px;
+    background:#fff url("#{$image_dir}icons/form-icons/edit.svg") 15px 13px no-repeat;
+    background-size: 17px 17px;
   }
   
 }
