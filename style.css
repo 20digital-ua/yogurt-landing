@@ -369,9 +369,67 @@ header {
   justify-content: center;
 }
 
+.yogurt {
+  position: relative;
+}
+
 .yogurt__img {
   position: relative;
   left: 70px;
+}
+
+.yogurt__property {
+  font: 18px "IndieFlower";
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  line-height: 16px;
+}
+
+.yogurt__property-oganic {
+  left: 40px;
+  top: 79px;
+}
+
+.yogurt__property-oganic:after {
+  content: '';
+  background: url("img/header/Prop_arrows/Yogurt_prop_arrow_1.svg") center no-repeat;
+  width: 56px;
+  height: 33px;
+  position: absolute;
+  right: -29px;
+  top: -18px;
+}
+
+.yogurt__property-fresh {
+  right: 43px;
+  top: 72px;
+}
+
+.yogurt__property-fresh:after {
+  content: '';
+  background: url("img/header/Prop_arrows/Yogurt_prop_arrow_2.svg") center no-repeat;
+  width: 52px;
+  height: 30px;
+  position: absolute;
+  left: -21px;
+  top: -18px;
+}
+
+.yogurt__property-logo {
+  left: 45px;
+  bottom: 15px;
+}
+
+.yogurt__property-logo:after {
+  content: '';
+  background: url("img/header/Prop_arrows/Yogurt_prop_arrow_3.svg") center no-repeat;
+  width: 69px;
+  height: 55px;
+  position: absolute;
+  left: 76px;
+  top: -32px;
+  z-index: 99;
 }
 
 /* MAIN CONTENT */
