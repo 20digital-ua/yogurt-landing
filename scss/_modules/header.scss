@@ -87,6 +87,7 @@ header{
   justify-content: center;
 }
 .yogurt{
+  max-width: 380px;
   position: relative;
   &__img{
     position: relative;
@@ -139,4 +140,47 @@ header{
       }
     }
   }
+}
+
+
+
+
+// MENU MOB
+
+.burger-btn{
+  span{
+    @include transition;
+  }
+  @include transition;
+}
+.burger-btn.active{
+  height: 20px;
+  .line1{
+    transform-origin: left bottom;
+    transform: rotate(45deg);
+  }
+  .line3{
+    transform-origin: left top;
+    transform: rotate(-45deg);
+  }
+
+  .line2{
+    width: 0;
+    opacity: .2;
+  }
+}
+
+.menu{
+ 
+}
+.header-top{
+  
+}
+.main-menu{
+  // display: block;
+  // position: absolute;
+  // width: 100%;
+  // height: 100%;
+  // background-color: #eee;
+  
 }

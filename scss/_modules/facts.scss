@@ -5,7 +5,7 @@
 // Wonderpots_img.png
 
 
-.facts-img-wrapper{
+.facts-img-container{
   @include bgi('facts/Wonderpots_img_shape.svg', 100% 100% no-repeat);
   background-size: 581px 115px;
   width: 100%;

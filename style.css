@@ -370,6 +370,7 @@ header {
 }
 
 .yogurt {
+  max-width: 380px;
   position: relative;
 }
 
@@ -432,6 +433,33 @@ header {
   z-index: 99;
 }
 
+.burger-btn {
+  transition: all .25s linear;
+}
+
+.burger-btn span {
+  transition: all .25s linear;
+}
+
+.burger-btn.active {
+  height: 20px;
+}
+
+.burger-btn.active .line1 {
+  transform-origin: left bottom;
+  transform: rotate(45deg);
+}
+
+.burger-btn.active .line3 {
+  transform-origin: left top;
+  transform: rotate(-45deg);
+}
+
+.burger-btn.active .line2 {
+  width: 0;
+  opacity: .2;
+}
+
 /* MAIN CONTENT */
 
 .services .title {
@@ -488,7 +516,7 @@ header {
   background-size: cover;
 }
 
-.facts-img-wrapper {
+.facts-img-container {
   background: url("img/facts/Wonderpots_img_shape.svg") 100% 100% no-repeat;
   background-size: 581px 115px;
   width: 100%;
@@ -499,7 +527,7 @@ header {
   margin: 0 auto;
 }
 
-.facts-img-wrapper img {
+.facts-img-container img {
   object-fit: contain;
   width: 401px;
   height: 350px;
