@@ -10,7 +10,7 @@ body{
 }
 
 .container{
-  max-width: 1335px;
+  max-width: $maxContentWidth;
   box-sizing: content-box;
   margin: 0 auto;
   padding-top: 48px;
@@ -21,6 +21,18 @@ body{
     padding-left: $sidePaddingsMain;
     padding-right: $sidePaddingsMain;
   }
+  @include screen-tb{
+    padding-top: 70px;
+  }
+  @include screen-lp{
+    padding-top: 90px;
+  }
+  @include screen-md{
+    padding-top: 120px;
+  }
+  @include screen-lg{
+    padding-top: 150px;
+  }
   // outline: 1px solid red;
   
   &-nopadding{
@@ -30,11 +42,12 @@ body{
     padding-right: 0;
   }
   &-nopadding__right{
-    padding-right: 0;
+    padding-right: 0 !important;
   }
-  &-nopadding__sides{
-    padding-right: 0;
-    padding-left: 0;
+  &-nopadding__sides{ 
+    padding-right: 0 ;
+    padding-left: 0 ;
+  
   }
 }
 
@@ -44,5 +57,17 @@ body{
   margin-bottom: 36px;
   &--left{
     text-align: left;
+  }
+  @include screen-lp{
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+  @include screen-md{
+    font-size: 36px;
+    margin-bottom: 90px;
+  }
+  @include screen-lg{
+    font-size: 40px;
+    margin-bottom: 110px;
   }
 }

@@ -29,8 +29,10 @@
 .slider-wrapper {
   padding-left: $sidePaddingsMob; //space for the shadows
   padding-bottom: 40px;
-  // margin-left: -15px; 
   overflow: hidden; 
+  @include screen-tb{
+    padding-bottom: 0;
+  }
 }
 .slick-list {
   

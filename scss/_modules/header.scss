@@ -56,15 +56,18 @@ header{
   align-items: center;
   box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.07);
   border-radius: 50%; 
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  &--header{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
   @include screen-lp{
     left: 8%;
     transform: unset;
     width: 138px;
     height: 138px;
   }
+
 }
 .header-container{
   display: flex;
@@ -72,7 +75,7 @@ header{
   align-items: center;
   height: 100%;
   position: relative;
-  padding-top: 0;
+  padding-top: 0 !important;
   padding-left: $sidePaddingsMob;
   padding-right: $sidePaddingsMob;
  

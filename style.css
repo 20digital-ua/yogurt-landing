@@ -176,7 +176,7 @@ body.no-scroll {
 }
 
 .container-nopadding__right {
-  padding-right: 0;
+  padding-right: 0 !important;
 }
 
 .container-nopadding__sides {
@@ -313,6 +313,9 @@ header {
   align-items: center;
   box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.07);
   border-radius: 50%;
+}
+
+.main-logo--header {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -324,7 +327,7 @@ header {
   align-items: center;
   height: 100%;
   position: relative;
-  padding-top: 0;
+  padding-top: 0 !important;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -450,6 +453,7 @@ header {
 
 .wonderpots-general .container {
   overflow: hidden;
+  padding-top: 0 !important;
 }
 
 .wonderpots-wrapper {
@@ -560,24 +564,37 @@ header {
 
 /* WONDERPOTS GENERAL */
 
-.services .title {
-  background: url("img/title-shapes/Service.svg") bottom no-repeat;
-  height: 45px;
+.services .title:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 9px;
+  background: url("img/title-shapes/Service.svg") center no-repeat;
+  position: relative;
 }
 
-.services-slider {
+.services-grid {
   min-height: 185px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.services-slide {
+.service-item {
   outline: none;
   margin-right: 15px;
+  max-width: 183px;
+  transition: all .25s linear;
 }
 
-.services-slide__name {
-  text-align: center;
+.service-item__name {
   margin-top: 16px;
+  text-align: center;
   font: 25px "MontserratSemiBold";
+}
+
+.service-item__description {
+  display: none;
 }
 
 /* SERVICES */
@@ -982,7 +999,52 @@ footer .container {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .container {
+    padding-top: 70px;
+  }
+
+  .slider-wrapper {
+    padding-bottom: 0;
+  }
+
+  .service-item {
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .service-item__info {
+    margin-left: 50px;
+  }
+
+  .service-item__name {
+    margin-top: 0;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .service-item__description {
+    display: block;
+  }
+
+  .service-item:first-child {
+    margin-bottom: 20px;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
+  .container {
+    padding-top: 90px;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+
   header {
     top: 51px;
   }
@@ -1143,7 +1205,7 @@ footer .container {
     font-weight: 400;
     line-height: 97px;
     display: inline-block;
-    transform: rotate(-3deg);
+    transform: rotate(-2.5deg);
   }
 
   .wonderpots__text {
@@ -1153,9 +1215,39 @@ footer .container {
     font-weight: 400;
     line-height: 30px;
   }
+
+  .services .title:after {
+    bottom: -10px;
+  }
+
+  .services-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .service-item {
+    width: 48%;
+    max-width: 610px;
+    margin-bottom: 0;
+  }
+
+  .service-item:first-child {
+    margin-bottom: 30px;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
+  .container {
+    padding-top: 120px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 90px;
+  }
+
   .primary-menu .menu {
     margin-right: 60px;
   }
@@ -1182,9 +1274,22 @@ footer .container {
     font-size: 94px;
     line-height: 125px;
   }
+
+  .service-item:first-child {
+    margin-bottom: 45px;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
+  .container {
+    padding-top: 150px;
+  }
+
+  .title {
+    font-size: 40px;
+    margin-bottom: 110px;
+  }
+
   .primary-menu {
     width: 67%;
   }
@@ -1204,5 +1309,9 @@ footer .container {
 
   .yogurt {
     left: 0;
+  }
+
+  .service-item:first-child {
+    margin-bottom: 70px;
   }
 }
