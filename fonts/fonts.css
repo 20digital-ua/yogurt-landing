@@ -28,3 +28,8 @@
     src: url("IndieFlower.ttf") format("opentype");
     font-display: block;
 }
+@font-face {
+    font-family: 'Sacramento';
+    src: url("Sacramento-Regular.ttf") format("opentype");
+    font-display: block;
+}
