@@ -4,6 +4,11 @@
 body{
   @include font(13px, $Montserrat);
   color: $primaryTextColor;
+  @include screen-lp{
+    font-size: 16px;
+    line-height: 25px;
+  }
+
   &.no-scroll{
     overflow: hidden;
   }
