@@ -154,15 +154,18 @@ body {
   color: #191d22;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1335px;
+  box-sizing: content-box;
   margin: 0 auto;
   padding-top: 48px;
   padding-bottom: 0;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 48px;
-  box-sizing: content-box;
 }
 
 .container-nopadding {
@@ -272,34 +275,32 @@ body {
 /* HEADER */
 
 header {
-  background: url("img/header/Header_BG.png") center;
-  min-height: 574px;
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 100%;
+  z-index: 200;
+  transition: all .25s linear;
 }
 
 .header-top {
   width: 100%;
-  left: 0;
-  top: 28px;
   box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.07);
   height: 50px;
   background-color: #fff;
-  position: absolute;
+  transition: all .25s linear;
 }
 
-.header-top__order-link {
-  padding-left: 15px;
-  background: url("img/icons/Dish-black.svg") left center no-repeat;
-  background-size: 11px 10px;
+.header-btn-order {
   font: 12px "MontserratSemiBold";
   color: #191d22;
   font-weight: 400;
 }
 
-.header-top__logo {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+.header-btn-order .inner {
+  padding-left: 15px;
+  background: url("img/icons/Dish-black.svg") left center no-repeat;
+  background-size: 11px 10px;
 }
 
 .main-logo {
@@ -312,6 +313,9 @@ header {
   align-items: center;
   box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.07);
   border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .header-container {
@@ -320,7 +324,9 @@ header {
   align-items: center;
   height: 100%;
   position: relative;
-  padding: 0 13px;
+  padding-top: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .burger-btn {
@@ -329,35 +335,143 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  opacity: 1;
+  transition: all .25s linear;
   cursor: pointer;
 }
 
 .burger-btn span {
+  transition: all .25s linear;
   width: 100%;
   height: 2px;
   background-color: #191d22;
 }
 
-.title-logo {
-  max-width: 100%;
-  padding-top: 106px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.burger-btn.active {
+  height: 20px;
+}
+
+.burger-btn.active .main-nav-block-mob {
+  visibility: visible;
+  opacity: 1;
+}
+
+.burger-btn.active .line1 {
+  transform-origin: left bottom;
+  transform: rotate(45deg);
+}
+
+.burger-btn.active .line3 {
+  transform-origin: left top;
+  transform: rotate(-45deg);
+}
+
+.burger-btn.active .line2 {
+  width: 0;
+  opacity: .2;
+}
+
+.main-nav-block-mob {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #caeeff;
+  z-index: 99;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .25s linear;
+}
+
+.main-nav-block-mob.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.main-nav-block-mob .menu {
+  margin-top: 120px;
+  margin-left: 40px;
+  display: block;
+}
+
+.main-nav-block-mob .menu__link {
+  white-space: nowrap;
+  display: block;
+  color: #191d22;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.45px;
+  margin-right: 16px;
+  margin-bottom: 36px;
+  transition: all .25s linear;
+}
+
+.main-nav-block-mob .menu__link:hover {
+  color: #1c8abe;
+}
+
+.primary-menu {
+  width: auto;
+  transition: all .25s linear;
+}
+
+.primary-menu .menu {
+  display: none;
+  justify-content: space-between;
+  margin-right: 30px;
+  transition: all .25s linear;
+}
+
+.primary-menu .menu__link {
+  white-space: nowrap;
+  display: block;
+  color: #191d22;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.45px;
+  margin-right: 16px;
+  transition: all .25s linear;
+}
+
+.primary-menu .menu__link:hover {
+  color: #1c8abe;
+  transform: scale(1.05);
+}
+
+.primary-menu .menu :last-child {
+  margin-right: 0;
+}
+
+/* MAIN CONTENT */
+
+.wonderpots-general {
+  background: url("img/wonderpots-top/Header_BG_mob.png") center repeat-x;
+  min-height: 574px;
+}
+
+.wonderpots-general .container {
   overflow: hidden;
 }
 
-.header-title {
+.wonderpots-wrapper {
+  max-width: 100%;
+  padding-top: 106px;
+  height: 100%;
+  padding-bottom: 25px;
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.wonderpots-title {
   margin-top: 10px;
   font: 31px "MontserratBold";
   text-transform: uppercase;
   line-height: 18px;
   letter-spacing: 1.53px;
   min-width: 302px;
+  text-align: center;
 }
 
-.header-title span {
+.wonderpots-title span {
   font: 52px "MontserratExtraBold";
   font-weight: 400;
   letter-spacing: 2.37px;
@@ -394,7 +508,8 @@ header {
 
 .yogurt__property-oganic:after {
   content: '';
-  background: url("img/header/Prop_arrows/Yogurt_prop_arrow_1.svg") center no-repeat;
+  background: url("img/wonderpots-top/Prop_arrows/Yogurt_prop_arrow_1.svg") center no-repeat;
+  background-size: contain;
   width: 56px;
   height: 33px;
   position: absolute;
@@ -409,7 +524,8 @@ header {
 
 .yogurt__property-fresh:after {
   content: '';
-  background: url("img/header/Prop_arrows/Yogurt_prop_arrow_2.svg") center no-repeat;
+  background: url("img/wonderpots-top/Prop_arrows/Yogurt_prop_arrow_2.svg") center no-repeat;
+  background-size: contain;
   width: 52px;
   height: 30px;
   position: absolute;
@@ -424,43 +540,25 @@ header {
 
 .yogurt__property-logo:after {
   content: '';
-  background: url("img/header/Prop_arrows/Yogurt_prop_arrow_3.svg") center no-repeat;
+  background: url("img/wonderpots-top/Prop_arrows/Yogurt_prop_arrow_3.svg") center no-repeat;
+  background-size: contain;
   width: 69px;
   height: 55px;
   position: absolute;
   left: 76px;
   top: -32px;
-  z-index: 99;
+  z-index: 77;
 }
 
-.burger-btn {
-  transition: all .25s linear;
+.wonder-ticket {
+  display: none;
 }
 
-.burger-btn span {
-  transition: all .25s linear;
+.wonderpots__text {
+  display: none;
 }
 
-.burger-btn.active {
-  height: 20px;
-}
-
-.burger-btn.active .line1 {
-  transform-origin: left bottom;
-  transform: rotate(45deg);
-}
-
-.burger-btn.active .line3 {
-  transform-origin: left top;
-  transform: rotate(-45deg);
-}
-
-.burger-btn.active .line2 {
-  width: 0;
-  opacity: .2;
-}
-
-/* MAIN CONTENT */
+/* WONDERPOTS GENERAL */
 
 .services .title {
   background: url("img/title-shapes/Service.svg") bottom no-repeat;
@@ -876,3 +974,235 @@ footer .container {
 }
 
 /* FOOTER */
+
+@media only screen and (min-width: 400px) {
+  .container {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    top: 51px;
+  }
+
+  .header-top {
+    height: 74px;
+  }
+
+  .header-btn-order {
+    width: 176px;
+    height: 44px;
+    border-radius: 25px;
+    line-height: 44px;
+    box-shadow: 0 5px 0 #1c8abe;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    background-color: #7dcdf3;
+    color: #ffffff;
+  }
+
+  .header-btn-order .inner {
+    padding-left: 30px;
+    background: url("img/icons/Dish-white.svg") left center no-repeat;
+    background-size: 19px 17px;
+  }
+
+  .main-logo {
+    left: 8%;
+    transform: unset;
+    width: 138px;
+    height: 138px;
+  }
+
+  .header-container {
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  .main-nav-block-mob {
+    display: none;
+  }
+
+  .primary-menu {
+    width: 60%;
+  }
+
+  .primary-menu .menu {
+    display: flex;
+  }
+
+  .wonderpots-general {
+    min-height: 1000px;
+    background: url("img/wonderpots-top/Header_BG_desk.png") center repeat-x;
+  }
+
+  .wonderpots-general .primary-btn {
+    margin: 0;
+  }
+
+  .wonderpots-wrapper {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 188px;
+  }
+
+  .wonderpots-title-wrapper {
+    max-width: 650px;
+  }
+
+  .wonderpots-title {
+    grid-row: 1/2;
+    text-align: left;
+    font-size: 38px;
+  }
+
+  .wonderpots-title span {
+    font-size: 64px;
+    line-height: 80px;
+  }
+
+  .yogurt-container {
+    margin-top: 0;
+    grid-column: 2;
+    grid-row: 1/3;
+    max-height: 620px;
+  }
+
+  .yogurt__img {
+    height: 611px;
+    left: 0;
+  }
+
+  .yogurt {
+    left: -50px;
+  }
+
+  .yogurt__property {
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 2.51px;
+  }
+
+  .yogurt__property-oganic {
+    left: -71px;
+    top: 99px;
+  }
+
+  .yogurt__property-oganic:after {
+    width: 116px;
+    height: 68px;
+    right: -59px;
+    top: -38px;
+  }
+
+  .yogurt__property-fresh {
+    right: -145px;
+    top: 131px;
+  }
+
+  .yogurt__property-fresh:after {
+    width: 107px;
+    height: 62px;
+    left: -51px;
+    top: -38px;
+  }
+
+  .yogurt__property-logo {
+    left: -66px;
+    bottom: -5px;
+  }
+
+  .yogurt__property-logo:after {
+    width: 144px;
+    height: 115px;
+    left: 151px;
+    top: -76px;
+  }
+
+  .wonder-ticket {
+    width: 335px;
+    height: 97px;
+    margin-top: 70px;
+    margin-bottom: 64px;
+    display: block;
+    text-align: center;
+    background: url("img/wonderpots-top/wonder-tcket-bg.svg") center no-repeat;
+  }
+
+  .wonder-ticket__inner {
+    color: #2c3137;
+    font-family: "Sacramento";
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 97px;
+    display: inline-block;
+    transform: rotate(-3deg);
+  }
+
+  .wonderpots__text {
+    margin-top: 22px;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .primary-menu .menu {
+    margin-right: 60px;
+  }
+
+  .primary-menu .menu__link {
+    font-size: 18px;
+  }
+
+  .wonderpots-general .primary-btn {
+    margin-top: 50px;
+    width: 196px;
+    height: 67px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 67px;
+    border-radius: 40px;
+  }
+
+  .wonderpots-title {
+    font-size: 56px;
+  }
+
+  .wonderpots-title span {
+    font-size: 94px;
+    line-height: 125px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .primary-menu {
+    width: 67%;
+  }
+
+  .primary-menu .menu {
+    margin-right: 89px;
+  }
+
+  .wonderpots-title {
+    font-size: 67px;
+  }
+
+  .wonderpots-title span {
+    font-size: 113px;
+    line-height: 170px;
+  }
+
+  .yogurt {
+    left: 0;
+  }
+}

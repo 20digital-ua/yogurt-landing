@@ -4,19 +4,25 @@
 body{
   @include font(13px, $Montserrat);
   color: $primaryTextColor;
+  &.no-scroll{
+    overflow: hidden;
+  }
 }
 
 .container{
   max-width: 1335px;
+  box-sizing: content-box;
   margin: 0 auto;
   padding-top: 48px;
   padding-bottom: 0;
   padding-left: $sidePaddingsMob;
   padding-right: $sidePaddingsMob;
-  
-  padding-top:48px; 
+  @include screen-sm{
+    padding-left: $sidePaddingsMain;
+    padding-right: $sidePaddingsMain;
+  }
   // outline: 1px solid red;
-  box-sizing: content-box;
+  
   &-nopadding{
     padding-top: 0;
     padding-bottom: 0;
