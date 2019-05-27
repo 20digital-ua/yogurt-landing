@@ -13,20 +13,22 @@
     width: 90%;
     display: flex;
     justify-content: space-between;
-    @include screen-lg{
-      padding: 140px 100px;
-    }
     &__info{
       width: 50%;
       max-width: 411px;
-      @include screen-lp{
-        font-size: 15px;
-        line-height: 25px;
-      }
     }
     &__form{
       width: 45%;
       max-width: 454px;
+    }
+  }
+  @include screen-lg{
+    padding: 140px 100px;
+  }
+  @include screen-lp{
+    &__info{
+      font-size: 15px;
+      line-height: 25px;
     }
   }
 }
@@ -45,6 +47,7 @@
     margin-bottom: 59px;
   }
 }
+
 .contact-form{
   margin-top: 24px;
   @include screen-tb{
@@ -66,7 +69,7 @@
     @include screen-lp{
       font-size: 15px;
     }
-    @include screen-lg{
+    @include screen-md{
       height: 58px;
     }
     &::placeholder{
@@ -96,7 +99,7 @@
     @include screen-tb{
       margin-bottom: 11px;
     }
-    @include screen-lg{
+    @include screen-md{
       min-height: 132px;
       margin-bottom: 46px;
     }
