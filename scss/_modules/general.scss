@@ -41,7 +41,10 @@ body{
   &.slider-container{
     padding-left: 0;
     padding-right: 0;
-    max-width: $maxContentWidth+40;
+    max-width: $maxContentWidth;
+    @include screen-lg{
+      max-width: $maxContentWidth+140;
+    }
   }
   // outline: 1px solid red;
   
