@@ -912,6 +912,11 @@ header {
 
 /* UNIQUE */
 
+.booking__title {
+  font: 28px "MontserratBold";
+  margin-bottom: 36px;
+}
+
 .contact-form {
   margin-top: 24px;
 }
@@ -932,7 +937,7 @@ header {
 
 .contact-form__input::placeholder {
   color: #d4d4d4;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.39px;
 }
@@ -948,7 +953,6 @@ header {
 }
 
 .contact-form__textarea {
-  min-width: 300px;
   max-width: 100%;
   min-height: 104px;
   padding-top: 13px;
@@ -956,6 +960,10 @@ header {
   padding-bottom: 12px;
   background: #fff url("img/icons/form-icons/edit.svg") 15px 13px no-repeat;
   background-size: 17px 17px;
+}
+
+.contact-form .primary-btn--submit {
+  margin: 0;
 }
 
 /* CONTACT FORM */
@@ -1193,6 +1201,52 @@ footer .container {
     padding-left: 0;
     padding-right: 0;
   }
+
+  .booking-wrapper {
+    background: url("img/unique/Paper_BG.svg") top center no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .booking {
+    padding: 10%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .booking__info {
+    width: 50%;
+    max-width: 411px;
+  }
+
+  .booking__form {
+    width: 45%;
+    max-width: 454px;
+  }
+
+  .contact-form {
+    margin-top: 0;
+  }
+
+  .contact-form__textarea {
+    margin-bottom: 11px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 1600px) {
+  .booking {
+    padding: 140px 100px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 1024px) {
+  .booking__info {
+    font-size: 15px;
+    line-height: 25px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1406,6 +1460,26 @@ footer .container {
     font-size: 32px;
     margin-bottom: 60px;
   }
+
+  .unique-item {
+    width: 196px;
+    height: 196px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .unique-item:nth-child(even) {
+    margin-top: 120px;
+  }
+
+  .booking__title {
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
+
+  .contact-form__input {
+    font-size: 15px;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -1460,6 +1534,10 @@ footer .container {
   .toppings .title-wrapper {
     font-size: 36px;
     margin-bottom: 90px;
+  }
+
+  .booking__title {
+    font-size: 36px;
   }
 }
 
@@ -1532,5 +1610,19 @@ footer .container {
     width: 139px;
     height: 90px;
     transform: translateX(130%);
+  }
+
+  .booking__title {
+    font-size: 40px;
+    margin-bottom: 59px;
+  }
+
+  .contact-form__input {
+    height: 58px;
+  }
+
+  .contact-form__textarea {
+    min-height: 132px;
+    margin-bottom: 46px;
   }
 }
