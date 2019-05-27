@@ -23,7 +23,36 @@ jQuery(document).ready(function () {
     dots:true,
     variableWidth: true,
     arrows: false,
-    appendDots: jQuery('#latest-events-slider-dots')
+    appendDots: jQuery('#latest-events-slider-dots'),
+    mobileFirst:true,
+    responsive:[
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+          variableWidth: false,
+          dots: false,
+          arrows: true,
+          // appendArrows: jQuery('#latest-events-slider-dots'),
+          slidesToScroll: 1,
+          prevArrow: '<div class="slider-arrow slider-arrow-left"></div>',
+          nextArrow: '<div class="slider-arrow slider-arrow-right"></div>'
+        }
+      },
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 4,
+          variableWidth: false,
+          dots: false,
+          arrows: true,
+          // appendArrows: jQuery('#latest-events-slider-dots'),
+          slidesToScroll: 1,
+          prevArrow: '<div class="slider-arrow slider-arrow-left"></div>',
+          nextArrow: '<div class="slider-arrow slider-arrow-right"></div>'
+        }
+      }
+    ]
   });
   jQuery('.toppings-slider').slick({
     infinite: false,

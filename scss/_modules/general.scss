@@ -38,6 +38,11 @@ body{
   @include screen-lg{
     padding-top: 150px;
   }
+  &.slider-container{
+    padding-left: 0;
+    padding-right: 0;
+    max-width: $maxContentWidth+40;
+  }
   // outline: 1px solid red;
   
   &-nopadding{
@@ -50,9 +55,8 @@ body{
     padding-right: 0 !important;
   }
   &-nopadding__sides{ 
-    padding-right: 0 ;
+    padding-right: 0  ;
     padding-left: 0 ;
-  
   }
 }
 

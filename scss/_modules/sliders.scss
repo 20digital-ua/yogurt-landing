@@ -26,15 +26,22 @@
   }
 }
 
-.slider-wrapper {
+.slider-wrapper { 
   padding-left: $sidePaddingsMob; //space for the shadows
   padding-bottom: 40px;
   overflow: hidden; 
   @include screen-tb{
+    padding-left: 50px;
+    padding-right: 50px;
     padding-bottom: 0;
   }
 }
 .slick-list {
-  
   overflow: visible !important;
+  padding-bottom: 40px;
+  @include screen-tb{
+    overflow: hidden !important;
+  }
 }
+
+
