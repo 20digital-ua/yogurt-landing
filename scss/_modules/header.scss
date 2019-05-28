@@ -56,9 +56,19 @@ header{
   align-items: center;
   box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.07);
   border-radius: 50%; 
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  &__img{
+    width: 79px;
+    height: 79px;
+    @include screen-lp{
+      width: 136px;
+      height: 136px;
+    }
+  }
+  &--header{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
   @include screen-lp{
     left: 8%;
     transform: unset;
@@ -72,7 +82,7 @@ header{
   align-items: center;
   height: 100%;
   position: relative;
-  padding-top: 0;
+  padding-top: 0 !important;
   padding-left: $sidePaddingsMob;
   padding-right: $sidePaddingsMob;
  
@@ -94,6 +104,16 @@ header{
   opacity: 1;
   @include transition;
   cursor: pointer;
+  &:active{
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    outline: none;
+  }
+  
+
   span{
     @include transition;
     width: 100%;
@@ -189,7 +209,6 @@ header{
       @include transition();
       &:hover{
         color: #1c8abe;
-        transform: scale(1.05); 
       }
     }
     :last-child{

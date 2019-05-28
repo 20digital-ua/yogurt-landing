@@ -7,6 +7,7 @@
   }
   .container{
     overflow: hidden;
+    padding-top: 0 !important;
   }
   .primary-btn{
     @include screen-lp{
@@ -216,7 +217,7 @@
       font-weight: 400;
       line-height: 97px;
       display: inline-block;
-      transform: rotate(-3deg);
+      transform: rotate(-2.5deg);
     }
   }
 }

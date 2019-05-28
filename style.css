@@ -168,6 +168,12 @@ body.no-scroll {
   padding-right: 10px;
 }
 
+.container.slider-container {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 1335px;
+}
+
 .container-nopadding {
   padding-top: 0;
   padding-bottom: 0;
@@ -176,7 +182,7 @@ body.no-scroll {
 }
 
 .container-nopadding__right {
-  padding-right: 0;
+  padding-right: 0 !important;
 }
 
 .container-nopadding__sides {
@@ -209,12 +215,21 @@ body.no-scroll {
   font-family: "MontserratSemiBold";
   display: block;
   margin: 0 auto;
+  transition: all .25s linear;
+}
+
+.primary-btn:hover {
+  background-color: #e6f9ff;
 }
 
 .primary-btn--blue {
   background-color: #7dcdf3;
   box-shadow: 0 5px 0 #1c8abe;
   color: #ffffff;
+}
+
+.primary-btn--blue:hover {
+  background-color: #92d5f4;
 }
 
 .primary-btn--submit {
@@ -270,6 +285,7 @@ body.no-scroll {
 
 .slick-list {
   overflow: visible !important;
+  padding-bottom: 40px;
 }
 
 /* HEADER */
@@ -313,6 +329,14 @@ header {
   align-items: center;
   box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.07);
   border-radius: 50%;
+}
+
+.main-logo__img {
+  width: 79px;
+  height: 79px;
+}
+
+.main-logo--header {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -324,7 +348,7 @@ header {
   align-items: center;
   height: 100%;
   position: relative;
-  padding-top: 0;
+  padding-top: 0 !important;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -338,6 +362,15 @@ header {
   opacity: 1;
   transition: all .25s linear;
   cursor: pointer;
+}
+
+.burger-btn:active {
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  outline: none;
 }
 
 .burger-btn span {
@@ -434,7 +467,6 @@ header {
 
 .primary-menu .menu__link:hover {
   color: #1c8abe;
-  transform: scale(1.05);
 }
 
 .primary-menu .menu :last-child {
@@ -450,6 +482,7 @@ header {
 
 .wonderpots-general .container {
   overflow: hidden;
+  padding-top: 0 !important;
 }
 
 .wonderpots-wrapper {
@@ -560,24 +593,37 @@ header {
 
 /* WONDERPOTS GENERAL */
 
-.services .title {
-  background: url("img/title-shapes/Service.svg") bottom no-repeat;
-  height: 45px;
+.services .title:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 9px;
+  background: url("img/title-shapes/Service.svg") center no-repeat;
+  position: relative;
 }
 
-.services-slider {
+.services-grid {
   min-height: 185px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.services-slide {
+.service-item {
   outline: none;
   margin-right: 15px;
+  max-width: 183px;
+  transition: all .25s linear;
 }
 
-.services-slide__name {
-  text-align: center;
+.service-item__name {
   margin-top: 16px;
+  text-align: center;
   font: 25px "MontserratSemiBold";
+}
+
+.service-item__description {
+  display: none;
 }
 
 /* SERVICES */
@@ -589,22 +635,27 @@ header {
   height: 9px;
   background: url("img/title-shapes/Wave.svg") center no-repeat;
   position: relative;
+  background-size: contain;
   top: 10px;
   left: -88px;
+  z-index: -1;
 }
 
-.wonder-content {
-  margin-bottom: 21px;
-}
-
-.wonder-content__img {
+.wonder-img {
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
+  max-width: 581px;
+  max-height: 562px;
+  width: 70%;
 }
 
-.wonder-content__text p {
+.wonder-content p {
   margin-bottom: 10px;
+}
+
+.wonder-content .primary-btn {
+  margin-top: 21px;
 }
 
 /* WONDER EVENT */
@@ -614,39 +665,78 @@ header {
   background-size: cover;
 }
 
+.facts .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.facts-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .facts-img-container {
-  background: url("img/facts/Wonderpots_img_shape.svg") 100% 100% no-repeat;
-  background-size: 581px 115px;
-  width: 100%;
-  height: 320px;
-  max-width: 580px;
   overflow: hidden;
-  position: relative;
+}
+
+.facts-img {
+  width: 320px;
+  height: 383px;
+  /* max-width: 290px; */
   margin: 0 auto;
 }
 
-.facts-img-container img {
-  object-fit: contain;
-  width: 401px;
-  height: 350px;
+.main-img {
+  width: 430px;
+  height: 383px;
+  /* max-width: 290px; */
+  margin: 0 auto;
+  position: relative;
+  background: url(img/facts/Wonderpots_img.png) center no-repeat;
+  background-position-x: 100%;
+  background-size: 100% 100%;
+  position: relative;
+  left: -130px;
+}
+
+.main-img:before {
+  content: '';
+  width: 581px;
+  height: 115px;
+  z-index: -1;
+  background: url(img/facts/Wonderpots_img_shape.svg) center no-repeat;
   position: absolute;
-  right: 36px;
+  right: -20px;
+  bottom: 30px;
+}
+
+.facts-points__wrapper {
+  background: url("img/facts/facts-points_BG.svg") 5px no-repeat;
+  background-size: contain;
+  max-width: 912px;
+  max-height: 864px;
+  box-sizing: content-box;
+}
+
+.facts-points__wrapper .title-copy {
+  font: 32px "MontserratBold";
+  display: none;
+  font-weight: 700;
+  line-height: 58px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px !important;
 }
 
 .facts-points {
-  /* Style for "Vector Sma" */
   width: 100%;
-  max-width: 322px;
   margin: 0 auto;
-  height: 351px;
-  background: url("img/facts/facts-points_BG.png") 5px no-repeat;
-  background-size: contain;
+  min-height: 351px;
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   font-family: "IndieFlower";
-  padding-left: 13px;
-  padding-top: 40px;
+  padding: 30px 0 0 13px;
 }
 
 .facts-point {
@@ -682,12 +772,75 @@ header {
   bottom: -10px;
 }
 
+.latest-events-slider {
+  min-height: 314px;
+  position: relative;
+}
+
+.latest-events-slider .slick-arrow {
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-90%);
+  cursor: pointer;
+  transition: all .25s linear;
+}
+
+.latest-events-slider .slider-arrow-left {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background: url("img/icons/sliders/Arrow-left.svg") center no-repeat;
+  left: -30px;
+}
+
+.latest-events-slider .slider-arrow-right {
+  right: -30px;
+  display: block;
+  width: 45px;
+  height: 45px;
+  background: url("img/icons/sliders/Arrow-right.svg") center no-repeat;
+}
+
 .latest-events-slide {
   width: 213px;
-  max-height: 314px;
-  border-radius: 15px;
+  outline: none;
+  max-height: 450px;
   box-shadow: 10px 17px 36px 2px rgba(0, 25, 36, 0.1);
-  margin-right: 26px;
+  border-radius: 20px;
+  margin: 0 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.latest-events-slide:hover .hover-block {
+  visibility: visible;
+  opacity: 0.9;
+}
+
+.latest-events-slide .hover-block {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #85d1f5;
+  opacity: 0.9;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+  font: 18px "MontserratSemiBold";
+  transition: all .25s linear;
+  opacity: 0;
+}
+
+.latest-events-slide .hover-block span {
+  line-height: 70px;
+}
+
+.latest-events-slide img {
+  width: 100%;
+  height: 100%;
 }
 
 /* LATEST EVENTS */
@@ -710,9 +863,11 @@ header {
   width: 70px;
   height: 50px;
   background: url("img/title-shapes/Wing-left.svg") center no-repeat;
+  background-size: contain;
   position: absolute;
   top: 7px;
-  left: -75px;
+  left: 0;
+  transform: translateX(-110%);
 }
 
 .toppings .title:after {
@@ -721,9 +876,23 @@ header {
   width: 65px;
   height: 50px;
   background: url("img/title-shapes/Wing-right.svg") center no-repeat;
+  background-size: contain;
   position: absolute;
   top: 7px;
-  right: -83px;
+  right: 0;
+  transform: translateX(125%);
+}
+
+.container.toppings-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.toppings-slider {
+  display: grid;
+  grid-gap: 67px;
+  grid-template-columns: repeat(auto-fill, 166px);
+  justify-content: space-between;
 }
 
 .toppings-slide {
@@ -751,6 +920,17 @@ header {
   transition: all .25s linear;
   padding-right: 50px;
   background: url("img/icons/Arrow-right.svg") center right no-repeat;
+}
+
+.toppings-slide__continue {
+  line-height: 100%;
+  color: #85d1f5;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150px;
+  /* Text style for "t, o be co" */
+  letter-spacing: 0.75px;
+  min-width: 300px;
 }
 
 /* TOPPINGS */
@@ -793,6 +973,11 @@ header {
 
 /* UNIQUE */
 
+.booking__title {
+  font: 28px "MontserratBold";
+  margin-bottom: 36px;
+}
+
 .contact-form {
   margin-top: 24px;
 }
@@ -813,7 +998,7 @@ header {
 
 .contact-form__input::placeholder {
   color: #d4d4d4;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.39px;
 }
@@ -829,7 +1014,6 @@ header {
 }
 
 .contact-form__textarea {
-  min-width: 300px;
   max-width: 100%;
   min-height: 104px;
   padding-top: 13px;
@@ -839,11 +1023,15 @@ header {
   background-size: 17px 17px;
 }
 
+.contact-form .primary-btn--submit {
+  margin: 0;
+}
+
 /* CONTACT FORM */
 
 footer {
-  background: url("img/footer/Footer_BG.png") center;
-  height: 592px;
+  background: url("img/footer/Footer_BG_mob.png") center;
+  min-height: 592px;
 }
 
 footer .container {
@@ -851,14 +1039,23 @@ footer .container {
 }
 
 .footer-wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  font-size: 11px;
+}
+
+.title-bold {
+  font: 13px "MontserratBold";
+}
+
+.main-logo--footer {
+  grid-column: 1/2;
+  justify-self: flex-start;
 }
 
 .footer-social {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  grid-column: 2/3;
+  justify-self: flex-end;
+  align-self: center;
 }
 
 .social {
@@ -909,15 +1106,10 @@ footer .container {
 
 .footer-about-us {
   margin-top: 14px;
-  font-size: 11px;
+  grid-column: 1/3;
 }
 
 .footer-about-us__title {
-  line-height: 13px;
-  font: 13px "MontserratBold";
-  font-weight: 700;
-  letter-spacing: 0.52px;
-  text-transform: uppercase;
   margin-bottom: 12px;
 }
 
@@ -926,29 +1118,29 @@ footer .container {
   letter-spacing: 0.52px;
 }
 
-.about-us-pictures {
+.footer-pictures {
   display: flex;
+  justify-self: center;
+  width: 100%;
   justify-content: space-between;
   margin-top: 16px;
+  grid-column: 1/3;
+  max-width: 513px;
 }
 
-.about-us-pictures__img {
-  width: 88px;
-  height: 89px;
-  object-fit: cover;
+.footer-pictures__img {
+  width: 32%;
+  max-width: 148px;
+  max-height: 89px;
+  object-fit: contain;
 }
 
 .footer-stores {
   margin-top: 16px;
-  font-size: 11px;
+  grid-column: 1/3;
 }
 
 .footer-stores__title {
-  line-height: 13px;
-  font: 13px "MontserratBold";
-  font-weight: 700;
-  letter-spacing: 0.52px;
-  text-transform: uppercase;
   margin-bottom: 12px;
 }
 
@@ -965,6 +1157,7 @@ footer .container {
 }
 
 .footer-copyright {
+  grid-column: 1/3;
   font: 11px "MontserratBold";
   font-weight: 700;
   line-height: 11.56px;
@@ -982,7 +1175,218 @@ footer .container {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .container {
+    padding-top: 70px;
+  }
+
+  .slider-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 0;
+  }
+
+  .slick-list {
+    overflow: hidden !important;
+  }
+
+  .service-item {
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .service-item__info {
+    margin-left: 50px;
+  }
+
+  .service-item__name {
+    margin-top: 0;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .service-item__description {
+    display: block;
+  }
+
+  .service-item:first-child {
+    margin-bottom: 20px;
+  }
+
+  .wonder-event .container {
+    padding-bottom: 60px;
+  }
+
+  .wonder-event-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wonder-event-wrapper .wonder-title {
+    grid-column: 2;
+    grid-row: 1;
+    text-align-last: left;
+    margin-bottom: 40px;
+  }
+
+  .wonder-event-wrapper .wonder-title:after {
+    background-position: left;
+    width: 372px;
+    height: 16px;
+    left: -30%;
+  }
+
+  .wonder-event-wrapper .wonder-img {
+    grid-column: 1;
+    grid-row: 1/3;
+    margin: 0;
+    width: 80%;
+  }
+
+  .wonder-event-wrapper .wonder-content {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .wonder-event-wrapper .wonder-content .primary-btn {
+    margin: 0;
+    margin-top: 21px;
+  }
+
+  .facts {
+    background-position: 20px 0%;
+  }
+
+  .facts .container {
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 50px;
+  }
+
+  .facts-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .facts-img-container {
+    width: 50%;
+    overflow: visible;
+  }
+
+  .facts-points__wrapper {
+    width: 45%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .latest-events-slide {
+    margin: 0 20px;
+    margin-bottom: 40px;
+    box-shadow: 6px 7px 15px 4px rgba(0, 25, 36, 0.1);
+  }
+
+  .container.toppings-container {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .topping-slider-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .booking-wrapper {
+    background: url("img/unique/Paper_BG.svg") top center no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .booking {
+    padding: 10%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .booking__info {
+    width: 50%;
+    max-width: 411px;
+  }
+
+  .booking__form {
+    width: 45%;
+    max-width: 454px;
+  }
+
+  .contact-form {
+    margin-top: 0;
+  }
+
+  .contact-form__textarea {
+    margin-bottom: 11px;
+  }
+
+  footer {
+    background: url("img/footer/Footer_BG_desk.png") center repeat-x;
+    min-height: 459px;
+  }
+
+  .footer-wrapper {
+    margin-top: 20px;
+    grid-template-columns: 30% 36% 30%;
+    grid-column-gap: 2%;
+    line-height: 22px;
+  }
+
+  .footer-social {
+    justify-self: center;
+    grid-column: 2/3;
+  }
+
+  .footer-about-us {
+    grid-column: 1/2;
+  }
+
+  .footer-pictures__img {
+    max-height: 148px;
+  }
+
+  .footer-pictures {
+    grid-column: 2/3;
+    margin-top: 0;
+  }
+
+  .footer-stores {
+    grid-column: 3;
+    grid-row: 1/3;
+    margin-top: 30px;
+  }
+
+  .footer-copyright {
+    grid-column: 1/4;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
+  body {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .container {
+    padding-top: 90px;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+
   header {
     top: 51px;
   }
@@ -1008,6 +1412,11 @@ footer .container {
     padding-left: 30px;
     background: url("img/icons/Dish-white.svg") left center no-repeat;
     background-size: 19px 17px;
+  }
+
+  .main-logo__img {
+    width: 136px;
+    height: 136px;
   }
 
   .main-logo {
@@ -1143,7 +1552,7 @@ footer .container {
     font-weight: 400;
     line-height: 97px;
     display: inline-block;
-    transform: rotate(-3deg);
+    transform: rotate(-2.5deg);
   }
 
   .wonderpots__text {
@@ -1153,9 +1562,139 @@ footer .container {
     font-weight: 400;
     line-height: 30px;
   }
+
+  .services .title:after {
+    bottom: -10px;
+  }
+
+  .services-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .service-item {
+    width: 48%;
+    max-width: 610px;
+    margin-bottom: 0;
+  }
+
+  .service-item:first-child {
+    margin-bottom: 30px;
+  }
+
+  .facts .facts-title {
+    display: none;
+  }
+
+  .main-img:before {
+    width: 623px;
+    height: 160px;
+    right: -80px;
+    bottom: -10px;
+  }
+
+  .facts-points__wrapper .title-copy {
+    display: block;
+  }
+
+  .facts-points__wrapper {
+    padding: 50px 80px 50px 50px;
+  }
+
+  .toppings .title-wrapper {
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+
+  .unique-item {
+    width: 196px;
+    height: 196px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .unique-item:nth-child(even) {
+    margin-top: 120px;
+  }
+
+  .booking__info {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .booking__title {
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
+
+  .contact-form__input {
+    font-size: 15px;
+  }
+
+  .footer-wrapper {
+    font-size: 14px;
+  }
+
+  .title-bold {
+    font-size: 16px;
+  }
+
+  .social__item {
+    width: 61px;
+    height: 61px;
+    margin-right: 19px;
+  }
+
+  .social__link {
+    width: 53px;
+    height: 53px;
+  }
+
+  .social__icon {
+    width: 11px;
+    height: 20px;
+  }
+
+  .social__icon-twitter {
+    width: 19px;
+    height: 16px;
+  }
+
+  .social__icon-google {
+    width: 24px;
+    height: 16px;
+  }
+
+  .footer-about-us__title {
+    margin-bottom: 20px;
+  }
+
+  .footer-stores {
+    padding-left: 20px;
+    margin-top: 56px;
+  }
+
+  .footer-stores__title {
+    margin-bottom: 20px;
+  }
+
+  .footer-copyright {
+    font-size: 13px;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
+  .container {
+    padding-top: 120px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 90px;
+  }
+
   .primary-menu .menu {
     margin-right: 60px;
   }
@@ -1182,9 +1721,95 @@ footer .container {
     font-size: 94px;
     line-height: 125px;
   }
+
+  .service-item:first-child {
+    margin-bottom: 45px;
+  }
+
+  .wonder-event-wrapper .wonder-title:after {
+    top: 20px;
+  }
+
+  .wonder-event-wrapper .wonder-content .primary-btn {
+    margin-top: 30px;
+  }
+
+  .facts {
+    background-size: contain;
+    background-position: 100px center;
+  }
+
+  .main-img {
+    margin-top: 60px;
+    width: 550px;
+    height: 470px;
+    left: -180px;
+  }
+
+  .main-img:before {
+    width: 823px;
+    height: 160px;
+    right: -140px;
+    bottom: -10px;
+  }
+
+  .facts-points__wrapper .title-copy {
+    font-size: 36px;
+    margin-bottom: 90px;
+  }
+
+  .facts-points__wrapper {
+    padding: 90px 120px 50px 90px;
+  }
+
+  .toppings .title-wrapper {
+    font-size: 36px;
+    margin-bottom: 90px;
+  }
+
+  .booking__title {
+    font-size: 36px;
+  }
+
+  .contact-form__input {
+    height: 58px;
+  }
+
+  .contact-form__textarea {
+    min-height: 132px;
+    margin-bottom: 46px;
+  }
+
+  .main-logo--footer {
+    margin-bottom: 20px;
+  }
+
+  .footer-stores {
+    padding-left: 90px;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
+  .container {
+    padding-top: 150px;
+  }
+
+  .container.slider-container {
+    max-width: 1475px;
+  }
+
+  .title {
+    font-size: 40px;
+    margin-bottom: 110px;
+  }
+
+  .primary-btn {
+    width: 195px;
+    height: 58px;
+    line-height: 58px;
+    border-radius: 50px;
+  }
+
   .primary-menu {
     width: 67%;
   }
@@ -1204,5 +1829,94 @@ footer .container {
 
   .yogurt {
     left: 0;
+  }
+
+  .service-item:first-child {
+    margin-bottom: 70px;
+  }
+
+  .wonder-event-wrapper .wonder-title:after {
+    top: 30px;
+  }
+
+  .wonder-event-wrapper .wonder-content .primary-btn {
+    margin-top: 49px;
+  }
+
+  .facts {
+    background-position: 80px center;
+  }
+
+  .facts-img {
+    width: auto;
+    height: auto;
+  }
+
+  .main-img {
+    width: 650px;
+    height: 570px;
+  }
+
+  .main-img:before {
+    width: 1023px;
+    height: 204px;
+    right: -260px;
+    bottom: -10px;
+  }
+
+  .facts-points__wrapper .title-copy {
+    margin-bottom: 100px !important;
+    font-size: 40px;
+    margin-bottom: 110px;
+  }
+
+  .facts-points__wrapper {
+    padding: 110px 140px 70px 130px;
+  }
+
+  .facts-points {
+    margin: 0;
+    padding: 0;
+    width: 504px;
+    height: 370px;
+  }
+
+  .facts-point__count {
+    font-size: 68px;
+  }
+
+  .facts-point__name {
+    font-size: 32px;
+    line-height: 36.05px;
+  }
+
+  .toppings .title-wrapper {
+    font-size: 40px;
+    margin-bottom: 110px;
+  }
+
+  .toppings .title:before {
+    width: 128px;
+    height: 82px;
+    transform: translateX(-130%);
+  }
+
+  .toppings .title:after {
+    width: 139px;
+    height: 90px;
+    transform: translateX(130%);
+  }
+
+  .booking {
+    padding: 140px 100px;
+  }
+
+  .booking__title {
+    font-size: 40px;
+    margin-bottom: 59px;
+  }
+
+  .footer-stores {
+    padding-left: 120px;
   }
 }

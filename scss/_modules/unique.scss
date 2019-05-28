@@ -29,6 +29,14 @@
   &:last-child{
     padding-top: 0;
   }
-
+  @include screen-lp{
+    width: 196px;
+    height: 196px;
+    font-size: 36px;
+    line-height: 40px;
+    &:nth-child(even){
+      margin-top: 120px;
+    }
+  }
 }
 

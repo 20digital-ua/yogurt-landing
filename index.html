@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#7dcdf3">
+
 	<link rel="stylesheet" href="fonts/fonts.css">
 	<link rel="stylesheet" href="style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -14,13 +16,12 @@
 </head>
 <body>
 	<div class="main-nav-block-mob">
-		
 	</div>
 	<header>
 		<div class="header-top">
 			<div class="header-container container">
 				<a href="#" class="header-btn-order"><spna class="inner">Order now</spna></a>
-				<a href="#" class="header-top__logo main-logo" ><img src="/img/header/Main_Logo.png" alt=""></a>
+				<a href="#" class="main-logo main-logo--header" ><img class="main-logo__img" src="/img/header/Main_Logo.png" alt=""></a>
 				<div class="menu-container primary-menu">
 					<nav class="main-nav-block">
 						<ul class="menu">
@@ -79,23 +80,39 @@
 			<div class="container container-nopadding__sides">
 					<div class="title">Our Services</div>
 					<div class="slider-wrapper">
-						<div class="services-slider">
-							<div class="services-slide">
-								<img class="services-slide__img" src="img/services/Parties.png" alt="">
-								<div class="services-slide__name">Parties</div>
+						<div class="services-slider services-grid">
+							<div class="service-item">
+								<img class="sservice-item__img" src="img/services/Parties.png" alt="">
+								<div class="service-item__info">
+									<div class="service-item__name">Parties</div>
+									<div class="service-item__description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque quos.
+									</div>
+								</div>
 							</div>
-							<div class="services-slide">
-									<img class="services-slide__img" src="img/services/events.png" alt="">
-									<div class="services-slide__name">Events</div>
-							</div>
-							<div class="services-slide">
-									<img class="services-slide__img" src="img/services/wedding.png" alt="">
-									<div class="services-slide__name">Wedding</div>
-							</div>
-							<div class="services-slide">
-									<img class="services-slide__img" src="img/services/birthday.png" alt="">
-									<div class="services-slide__name">Birthday</div>
-							</div>
+							<div class="service-item">
+									<img class="sservice-item__img" src="img/services/events.png" alt="">
+									<div class="service-item__info">
+										<div class="service-item__name">Events</div>
+										<div class="service-item__description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque quos.
+										</div>
+									</div>
+								</div>
+								<div class="service-item">
+										<img class="sservice-item__img" src="img/services/wedding.png" alt="">
+										<div class="service-item__info">
+											<div class="service-item__name">Weddings</div>
+											<div class="service-item__description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque quos.
+											</div>
+										</div>
+									</div>
+									<div class="service-item">
+											<img class="sservice-item__img" src="img/services/birthday.png" alt="">
+											<div class="service-item__info">
+												<div class="service-item__name">Birthdays</div>
+												<div class="service-item__description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque quos.
+												</div>
+											</div>
+										</div>
 						</div>
 					</div>
 					<div id="services-slider-dots"></div>
@@ -103,82 +120,139 @@
 		</section>
 		<section class="wonder-event">	
 			<div class="container">
-				<div class="title">
-					Wonder at Your Event
-				</div>
-				<div class="wonder-content">
-					<img class="wonder-content__img" src="img/wonder-event/Wonder-img.png" alt="">
-					<div class="wonder-content__text">
+				<div class="wonder-event-wrapper">
+					<div class="title wonder-title">
+						Wonder at Your Event
+					</div>
+					<img class="wonder-img" src="img/wonder-event/Wonder-img.png" alt="">
+					<div class="wonder-content">
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
 						<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+						<a href="#" class="primary-btn primary-btn--blue"><span class="inner">Order now</span></a>
 					</div>
 				</div>
-				<a href="#" class="primary-btn primary-btn--blue"><span class="inner">Order now</span></a>
 			</div>
 		</section>	
 		<section class="facts">
-			<div class="container container-nopadding__sides">
-				<div class="title">Wonderpots in Facts and Numbers</div>
-				<div class="facts-img">
-						<div class="facts-img-container">
-								<img src="img/facts/Wonderpots_img.png" alt="">
-						</div>
-				</div>
-
-				<div class="facts-points">
-						<div class="facts-point">
-							<div class="facts-point__count">150</div>
-							<div class="facts-point__name">events served</div>
-						</div>
-						<div class="facts-point">
-							<div class="facts-point__count">294</div>
-							<div class="facts-point__name">positive feedbacks</div>
-						</div>
-						<div class="facts-point">
-							<div class="facts-point__count">1100</div>
-							<div class="facts-point__name">happy clients per day</div>
-						</div>
-						<div class="facts-point">
-							<div class="facts-point__count">35</div>
-							<div class="facts-point__name">differen toppings</div>
+			<div class="container">
+				<div class="title facts-title">Wonderpots in Facts and Numbers</div>
+				<div class="facts-wrapper">
+					<div class="facts-img-container">
+							<div class="facts-img">
+								<div class="main-img"></div>
+							</div>
+					</div>
+					<div class="facts-points__wrapper">
+						<div class="title-copy title">Wonderpots in Facts and Numbers</div>
+						<div class="facts-points">
+							<div class="facts-point">
+								<div class="facts-point__count">150</div>
+								<div class="facts-point__name">events<br>served</div>
+							</div>
+							<div class="facts-point">
+								<div class="facts-point__count">294</div>
+								<div class="facts-point__name">positive<br>feedbacks</div>
+							</div>
+							<div class="facts-point">
+								<div class="facts-point__count">1100</div>
+								<div class="facts-point__name">happy clients<br>per day</div>
+							</div>
+							<div class="facts-point">
+								<div class="facts-point__count">35</div>
+								<div class="facts-point__name">differen<br>toppings</div>
+							</div>
 						</div>
 					</div>
+				</div>
 			</div>
 		</section>
 		<section class="latest-events">
-				<div class="container container-nopadding__sides">
+				<div class="container slider-container slider-container">
 					<div class="title">Latest events</div>
 					<div class="slider-wrapper">
-						<div class="latest-events-slider">
-							<div class="latest-events-slide">
-								<img src="img/latest-events/Event_1.png" alt="">
-							</div> 	
-							<div class="latest-events-slide">
-								<img src="img/latest-events/Event_2.png" alt="">
-							</div> 	
-							<div class="latest-events-slide">
-								<img src="img/latest-events/Event_3.png" alt="">
-							</div> 	
-							<div class="latest-events-slide">
-								<img src="img/latest-events/Event_4.png" alt="">
-							</div> 	
+							<div class="latest-events-slider">
+								<a href="#" class="latest-events-slide">
+									<img  src="img/latest-events/Event_1.png" alt="">
+									<div class="hover-block"><span>Some Presenation</span></div>
+								</a> 
+								<a href="#" class="latest-events-slide">
+									<img  src="img/latest-events/Event_2.png" alt="">
+									<div class="hover-block"><span>Some Presenation</span></div>
+								</a> 
+								<a href="#" class="latest-events-slide">
+									<img  src="img/latest-events/Event_3.png" alt="">
+									<div class="hover-block"><span>Some Presenation</span></div>
+								</a> 
+								<a href="#" class="latest-events-slide">
+									<img  src="img/latest-events/Event_4.png" alt="">
+									<div class="hover-block"><span>Some Presenation</span></div>
+								</a> 
+								<a href="#" class="latest-events-slide">
+									<img  src="img/latest-events/Event_1.png" alt="">
+									<div class="hover-block"><span>Some Presenation</span></div>
+								</a>
 						</div>
 					</div>
 					<div id="latest-events-slider-dots"></div>
 				</div>
 		</section>
 		<section class="toppings">
-			<div class="container container-nopadding__sides">
+			<div class="container toppings-container">
 				<div class="title-wrapper">
 						<div class="title">Wonderful toppings</div>
 				</div>
-				<div class="slider-wrapper">
+				<div class="slider-wrapper topping-slider-wrapper">
 					<div class="toppings-slider">
 						<div class="toppings-slide">
 							<img src="img/toppings/Topping_1.png" alt="">
 						</div>
 						<div class="toppings-slide">
 							<img src="img/toppings/Topping_2.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_3.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_4.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_5.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_6.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_7.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_8.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_9.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_10.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_11.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_12.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_13.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_14.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_15.png" alt="">
+						</div>
+						<div class="toppings-slide">
+							<img src="img/toppings/Topping_16.png" alt="">
+						</div>
+						<div class="toppings-slide toppings-slide__continue">
+								to be continued...
 						</div>
 					</div>
 				</div>
@@ -202,26 +276,29 @@
 						<span>Fresh<br>toppings</span>
 					</div>
 				</div>
-				<div class="booking">
-					<div class="title title--left">Book Your Wonder!</div>
-					<div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione. </div>
+				<div class="booking-wrapper">
+					<div class="booking">
+						<div class="booking__info">
+								<div class="booking__title">Book Your Wonder!</div>
+								<div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.
+							</div>
+						</div>
+						<form action="" class="contact-form booking__form">
+							<input class="contact-form__input contact-form__input-name" type="text" placeholder="Your Name">
+							<input class="contact-form__input contact-form__input-email" type="email" placeholder="Email">
+							<textarea class="contact-form__input contact-form__textarea" placeholder="Message" name="" ></textarea>
+							<button class="primary-btn primary-btn--blue primary-btn--submit"><span class="inner">Order now</span></button>
+						</form>
+					</div>
 				</div>
-				<form action="" class="contact-form">
-
-					<input class="contact-form__input contact-form__input-name" type="text" placeholder="Your Name">
-					<input class="contact-form__input contact-form__input-email" type="email" placeholder="Email">
-					<textarea class="contact-form__input contact-form__textarea" placeholder="Message" name="" ></textarea>
-					<button class="primary-btn primary-btn--blue primary-btn--submit"><span class="inner">Order now</span></button>
-				</form>
 			</div>
 		</section>
 	</main>
 	<footer>
 		<div class="container">
 			<div class="footer-wrapper">
+				<a href="#" class="main-logo main-logo--footer" ><img class="main-logo__img" src="/img/header/Main_Logo.png" alt=""></a>
 				<div class="footer-social">
-					<a href="#" class="footer-first__logo main-logo" ><img src="/img/header/Main_Logo.png" alt=""></a>
 					<ul class="social">
 						<li class="social__item">
 							<a href="#" class="social__link">
@@ -241,20 +318,22 @@
 					</ul>
 				</div>
 				<div class="footer-about-us">
-					<h4 class="footer-about-us__title">ABOUT US:</h4>
-					<p class="footer-about-us__text">
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Voluptatem accusantium doloremque laudantium.
-					</p>
-					<div class="about-us-pictures">
-						<img class="about-us-pictures__img" src="img/footer/about-ua-img/about-img_1.png" alt="">
-						<img class="about-us-pictures__img" src="img/footer/about-ua-img/about-img_2.png" alt="">
-						<img class="about-us-pictures__img" src="img/footer/about-ua-img/about-img_3.png" alt="">
+					<div class="footer-about-us__info">
+						<h4 class="footer-about-us__title title-bold">ABOUT US:</h4>
+						<p class="footer-about-us__text">
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Voluptatem accusantium doloremque laudantium.
+						</p>
 					</div>
 				</div>
+				<div class="footer-pictures">
+						<img class="footer-pictures__img" src="img/footer/about-ua-img/about-img_1.png" alt="">
+						<img class="footer-pictures__img" src="img/footer/about-ua-img/about-img_2.png" alt="">
+						<img class="footer-pictures__img" src="img/footer/about-ua-img/about-img_3.png" alt="">
+					</div>
 				<div class="footer-stores">
-					<h4 class="footer-stores__title">STORES:</h4>
+					<h4 class="footer-stores__title title-bold">STORES:</h4>
 					<div class="store">
-						<div class="store__title">WONDERPOTS STORE NO. 1</div>
+						<div class="title-bold">WONDERPOTS STORE NO. 1</div>
 						<ul class="store-info">
 							<li class="store-info__item">Georgenstraße, S-Bahnbogen 194</li>
 							<li class="store-info__item">10117 Berlin</li>
@@ -263,7 +342,7 @@
 						</ul>	
 					</div>
 					<div class="store">
-						<div class="store__title">WONDERPOTS STORE NO. 2</div>
+						<div class="title-bold">WONDERPOTS STORE NO. 2</div>
 						<ul class="store-info">
 							<li class="store-info__item">Grunerstraße 20</li>
 							<li class="store-info__item">10179 Berlin </li>

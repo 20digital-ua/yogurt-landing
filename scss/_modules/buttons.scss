@@ -11,10 +11,24 @@
   font-family: $MontserratSemiBold;
   display: block;
   margin: 0 auto;
+  @include transition();
+  &:hover{
+    background-color: #e6f9ff;
+  }
+  @include screen-lg{
+    width: 195px;
+    height: 58px;
+    line-height: 58px;
+    border-radius: 50px;
+  }
+  
   &--blue{
     background-color: #7dcdf3;
     box-shadow: 0 5px 0 #1c8abe;
     color: #ffffff;
+    &:hover{
+      background-color: #92d5f4;
+    }
   }
   &--submit{
     border:none;
