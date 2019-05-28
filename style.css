@@ -322,7 +322,7 @@ header {
 .main-logo {
   width: 81px;
   height: 81px;
-  background-color: #fff;
+  border: 2px solid #fff;
   justify-self: center;
   display: flex;
   justify-content: center;
@@ -332,8 +332,9 @@ header {
 }
 
 .main-logo__img {
-  width: 79px;
-  height: 79px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .main-logo--header {
@@ -458,8 +459,8 @@ header {
   white-space: nowrap;
   display: block;
   color: #191d22;
-  font-size: 14px;
-  font-weight: 400;
+  font: 14px "Montserrat";
+  font-weight: 500;
   letter-spacing: 0.45px;
   margin-right: 16px;
   transition: all .25s linear;
@@ -524,6 +525,8 @@ header {
 .yogurt__img {
   position: relative;
   left: 70px;
+  width: 385px;
+  height: 100%;
 }
 
 .yogurt__property {
@@ -596,10 +599,13 @@ header {
 .services .title:after {
   content: '';
   display: block;
-  width: 100%;
+  width: 297px;
   height: 9px;
+  margin: 0 auto;
   background: url("img/title-shapes/Service.svg") center no-repeat;
   position: relative;
+  background-size: contain;
+  bottom: -10px;
 }
 
 .services-grid {
@@ -710,7 +716,7 @@ header {
   bottom: 30px;
 }
 
-.facts-points__wrapper {
+.facts-points-container {
   background: url("img/facts/facts-points_BG.svg") 5px no-repeat;
   background-size: contain;
   max-width: 912px;
@@ -718,7 +724,7 @@ header {
   box-sizing: content-box;
 }
 
-.facts-points__wrapper .title-copy {
+.facts-points-container .title-copy {
   font: 32px "MontserratBold";
   display: none;
   font-weight: 700;
@@ -765,9 +771,11 @@ header {
 .latest-events .title:after {
   content: '';
   display: block;
-  width: 100%;
-  height: 9px;
+  width: 200px;
+  height: 13px;
   background: url("img/title-shapes/Latest-events.svg") center no-repeat;
+  background-size: contain;
+  margin: 0 auto;
   position: relative;
   bottom: -10px;
 }
@@ -939,6 +947,27 @@ header {
   background: url("img/unique/Unique_ContactForm_BG.svg") center;
   background-size: 190%;
   padding-bottom: 50px;
+  position: relative;
+}
+
+.unigue--container {
+  padding-top: 0 !important;
+}
+
+.unique-blocks--container {
+  position: relative;
+}
+
+.unique-blocks--container:before {
+  display: none;
+  content: '';
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 20%;
+  background: url("img/unique/Line.svg") center repeat-x;
 }
 
 .unique-blocks {
@@ -946,6 +975,10 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 50px;
+  max-width: 1335px;
+  padding: 0 7%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .unique-item {
@@ -1030,7 +1063,7 @@ header {
 /* CONTACT FORM */
 
 footer {
-  background: url("img/footer/Footer_BG_mob.png") center;
+  background: url("img/footer/Footer_BG_mob.png") center repeat-x;
   min-height: 592px;
 }
 
@@ -1272,11 +1305,11 @@ footer .container {
   }
 
   .facts-img-container {
-    width: 50%;
+    width: 41%;
     overflow: visible;
   }
 
-  .facts-points__wrapper {
+  .facts-points-container {
     width: 45%;
     margin: 0;
     padding: 20px;
@@ -1296,6 +1329,10 @@ footer .container {
   .topping-slider-wrapper {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .unique-blocks--container:before {
+    display: block;
   }
 
   .booking-wrapper {
@@ -1406,17 +1443,13 @@ footer .container {
     display: block;
     background-color: #7dcdf3;
     color: #ffffff;
+    margin-top: -5px;
   }
 
   .header-btn-order .inner {
     padding-left: 30px;
     background: url("img/icons/Dish-white.svg") left center no-repeat;
     background-size: 19px 17px;
-  }
-
-  .main-logo__img {
-    width: 136px;
-    height: 136px;
   }
 
   .main-logo {
@@ -1485,6 +1518,7 @@ footer .container {
 
   .yogurt__img {
     height: 611px;
+    width: auto;
     left: 0;
   }
 
@@ -1563,10 +1597,6 @@ footer .container {
     line-height: 30px;
   }
 
-  .services .title:after {
-    bottom: -10px;
-  }
-
   .services-grid {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1588,6 +1618,13 @@ footer .container {
     display: none;
   }
 
+  .main-img {
+    margin-top: 100px;
+    width: 480px;
+    height: 390px;
+    left: -180px;
+  }
+
   .main-img:before {
     width: 623px;
     height: 160px;
@@ -1595,17 +1632,26 @@ footer .container {
     bottom: -10px;
   }
 
-  .facts-points__wrapper .title-copy {
+  .facts-points-container .title-copy {
     display: block;
   }
 
-  .facts-points__wrapper {
+  .facts-points-container {
     padding: 50px 80px 50px 50px;
   }
 
   .toppings .title-wrapper {
     font-size: 32px;
     margin-bottom: 60px;
+  }
+
+  .unigue {
+    background-size: 100%;
+  }
+
+  .unique-blocks--container:before {
+    height: 200px;
+    top: 15%;
   }
 
   .unique-item {
@@ -1741,9 +1787,9 @@ footer .container {
 
   .main-img {
     margin-top: 60px;
-    width: 550px;
-    height: 470px;
-    left: -180px;
+    width: 560px;
+    height: 480px;
+    left: -220px;
   }
 
   .main-img:before {
@@ -1753,13 +1799,19 @@ footer .container {
     bottom: -10px;
   }
 
-  .facts-points__wrapper .title-copy {
-    font-size: 36px;
+  .facts-points-container .title-copy {
+    font-size: 44px;
     margin-bottom: 90px;
   }
 
-  .facts-points__wrapper {
+  .facts-points-container {
     padding: 90px 120px 50px 90px;
+  }
+
+  .latest-events .title:after {
+    width: 300px;
+    height: 20px;
+    bottom: -20px;
   }
 
   .toppings .title-wrapper {
@@ -1831,6 +1883,12 @@ footer .container {
     left: 0;
   }
 
+  .services .title:after {
+    width: 422px;
+    height: 20px;
+    bottom: -20px;
+  }
+
   .service-item:first-child {
     margin-bottom: 70px;
   }
@@ -1853,31 +1911,30 @@ footer .container {
   }
 
   .main-img {
-    width: 650px;
-    height: 570px;
+    width: 710px;
+    height: 600px;
   }
 
   .main-img:before {
     width: 1023px;
     height: 204px;
-    right: -260px;
+    right: -100px;
     bottom: -10px;
   }
 
-  .facts-points__wrapper .title-copy {
+  .facts-points-container .title-copy {
     margin-bottom: 100px !important;
-    font-size: 40px;
+    font-size: 55px;
     margin-bottom: 110px;
   }
 
-  .facts-points__wrapper {
-    padding: 110px 140px 70px 130px;
+  .facts-points-container {
+    padding: 110px 110px 70px 110px;
   }
 
   .facts-points {
     margin: 0;
     padding: 0;
-    width: 504px;
     height: 370px;
   }
 
@@ -1905,6 +1962,11 @@ footer .container {
     width: 139px;
     height: 90px;
     transform: translateX(130%);
+  }
+
+  .unique-blocks--container:before {
+    height: 200px;
+    top: 15%;
   }
 
   .booking {

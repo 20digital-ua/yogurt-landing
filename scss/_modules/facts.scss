@@ -39,7 +39,7 @@
 .facts-img-container{
   overflow: hidden;
   @include screen-tb{
-    width: 50%;
+    width: 41%;
     overflow: visible;
   }
 }
@@ -65,15 +65,22 @@
   background-size: 100% 100%;
   position: relative;
   left: -130px;
-  @include screen-md{
-    margin-top: 60px;
-    width: 550px;
-    height: 470px;
+  @include screen-lp{
+    margin-top: 100px;
+    width: 480px;
+    height: 390px;
     left: -180px;
   }
+  @include screen-md{
+    margin-top: 60px;
+    width: 560px;
+    height: 480px;
+    left: -220px;
+  }
   @include screen-lg{
-    width: 650px;
-    height: 570px;
+    width: 710px;
+    height: 600px;
+    // left: -180px;
   }
   &:before{
     content: '';
@@ -99,7 +106,7 @@
     @include screen-lg{
       width: 1023px;
       height: 204px;
-      right: -260px;
+      right: -100px;
       bottom: -10px;
     }
   }
@@ -108,7 +115,7 @@
 
 
 
-.facts-points__wrapper{
+.facts-points-container{
   @include bgi('facts/facts-points_BG.svg', 5px no-repeat);
   background-size: contain;
   max-width: 912px;
@@ -126,12 +133,12 @@
       display: block;
     }
     @include screen-md{
-      font-size: 36px;
+      font-size: 44px;
       margin-bottom: 90px;
     }
     @include screen-lg{
       margin-bottom: 100px !important;
-      font-size: 40px;
+      font-size: 55px;
       margin-bottom: 110px;
     }
   }
@@ -147,7 +154,7 @@
     padding: 90px 120px 50px 90px;
   }
   @include screen-lg{
-    padding: 110px 140px 70px 130px;
+    padding: 110px 110px 70px 110px;
   }
 }
 .facts-points{
@@ -163,7 +170,6 @@
   @include screen-lg{
     margin: 0;
     padding: 0;
-    width: 504px;
     height: 370px;
   }
 }

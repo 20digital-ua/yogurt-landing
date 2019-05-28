@@ -95,9 +95,12 @@
   position: relative;
   &__img{
     position: relative;
-    left: 70px; 
+    left: 70px;
+    width: 385px;
+    height: 100%;
     @include screen-lp{
       height: 611px;
+      width: auto;
       left: 0; 
     }
   }
