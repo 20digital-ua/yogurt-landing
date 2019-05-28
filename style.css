@@ -661,32 +661,57 @@ header {
   background-size: cover;
 }
 
+.facts .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.facts-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .facts-img-container {
-  background: url("img/facts/Wonderpots_img_shape.svg") 100% 100% no-repeat;
-  background-size: 581px 115px;
-  width: 100%;
-  height: 320px;
-  max-width: 580px;
   overflow: hidden;
-  position: relative;
+}
+
+.facts-img {
+  width: 320px;
+  height: 383px;
+  /* max-width: 290px; */
   margin: 0 auto;
 }
 
-.facts-img-container img {
-  object-fit: contain;
-  width: 401px;
-  height: 350px;
+.main-img {
+  width: 430px;
+  height: 383px;
+  /* max-width: 290px; */
+  margin: 0 auto;
+  position: relative;
+  background: url(img/facts/Wonderpots_img.png) center no-repeat;
+  background-position-x: 100%;
+  background-size: 100% 100%;
+  position: relative;
+  left: -130px;
+}
+
+.main-img:before {
+  content: '';
+  width: 581px;
+  height: 115px;
+  z-index: -1;
+  background: url(img/facts/Wonderpots_img_shape.svg) center no-repeat;
   position: absolute;
-  right: 36px;
+  right: -20px;
+  bottom: 30px;
 }
 
 .facts-points {
-  /* Style for "Vector Sma" */
   width: 100%;
-  max-width: 322px;
+  height: 100%;
   margin: 0 auto;
-  height: 351px;
-  background: url("img/facts/facts-points_BG.png") 5px no-repeat;
+  min-height: 351px;
+  background: url("img/facts/facts-points_BG.svg") 5px no-repeat;
   background-size: contain;
   margin-top: 30px;
   display: flex;
@@ -694,6 +719,16 @@ header {
   font-family: "IndieFlower";
   padding-left: 13px;
   padding-top: 40px;
+}
+
+.facts-points__title {
+  font: 40px "MontserratBold";
+  display: none;
+  font-weight: 700;
+  line-height: 58px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px !important;
 }
 
 .facts-point {
@@ -1209,6 +1244,27 @@ footer .container {
     margin-top: 21px;
   }
 
+  .facts .container {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .facts-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .facts-img-container {
+    width: 50%;
+    overflow: visible;
+  }
+
+  .facts-points {
+    width: 50%;
+    margin: 0;
+    padding: 60px;
+  }
+
   .latest-events-slide {
     margin: 0 20px;
     margin-bottom: 40px;
@@ -1502,6 +1558,14 @@ footer .container {
     margin-bottom: 30px;
   }
 
+  .facts .facts-title {
+    display: none;
+  }
+
+  .facts-points__title {
+    display: block;
+  }
+
   .toppings .title-wrapper {
     font-size: 32px;
     margin-bottom: 60px;
@@ -1712,6 +1776,11 @@ footer .container {
 
   .wonder-event-wrapper .wonder-content .primary-btn {
     margin-top: 49px;
+  }
+
+  .facts-points {
+    width: 912px;
+    height: 864px;
   }
 
   .toppings .title-wrapper {
