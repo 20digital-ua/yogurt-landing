@@ -136,8 +136,11 @@ footer{
   &__img{
     width: 32%;
     max-width: 148px;
-    max-height: 148px;
+    max-height: 89px;
     object-fit: contain;
+    @include screen-tb{
+      max-height: 148px;
+    }
   }
   @include screen-tb{
     grid-column: 2/3;
