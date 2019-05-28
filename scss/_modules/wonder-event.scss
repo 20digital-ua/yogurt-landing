@@ -1,4 +1,9 @@
 .wonder-event{
+  .container{
+    @include screen-tb{
+      padding-bottom: 60px;
+    }
+  }
   .title:after{
     content: '';
     display: block;
@@ -11,6 +16,7 @@
     left: -88px;
     z-index: -1;
   }
+  
 }
 
 .wonder-img{

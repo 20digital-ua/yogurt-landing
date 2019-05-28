@@ -1,13 +1,25 @@
 .facts{
   @include bgi('facts/Facts_BG.svg', -277px 20px  no-repeat);
   background-size: cover;
+  @include screen-tb{
+    background-position: 20px 0%;
+  }
+  @include screen-md{
+    background-size: contain;
+    background-position: 100px center;
+  }
+  @include screen-lg{
+    background-position: 80px center;
+  }
   .container{
     padding-left: 0;
     padding-right: 0;
     @include screen-tb{
       padding-left: $sidePaddingsMain;
       padding-right: $sidePaddingsMain;
+      padding-bottom: 50px;
     }
+    
   }
   .facts-title{
     @include screen-lp{

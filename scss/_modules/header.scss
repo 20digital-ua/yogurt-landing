@@ -209,7 +209,6 @@ header{
       @include transition();
       &:hover{
         color: #1c8abe;
-        transform: scale(1.05); 
       }
     }
     :last-child{
