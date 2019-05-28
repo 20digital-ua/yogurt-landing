@@ -1,5 +1,5 @@
 footer{
-  @include bgi('footer/Footer_BG_mob.png', center);
+  @include bgi('footer/Footer_BG_mob.png', center repeat-x);
   min-height: 592px;
   @include screen-tb{
     @include bgi('footer/Footer_BG_desk.png', center repeat-x);

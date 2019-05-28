@@ -2,12 +2,17 @@
   .title:after{
     content: '';
     display: block;
-    width: 100%;
+    width: 297px;
     height: 9px;
+    margin: 0 auto;
     @include bgi('title-shapes/Service.svg', center no-repeat);
     position: relative;
-    @include screen-lp{
-      bottom: -10px;
+    background-size: contain;
+    bottom: -10px;
+    @include screen-lg{
+      width: 422px;
+      height: 20px;
+      bottom: -20px;
     }
   }
 }
