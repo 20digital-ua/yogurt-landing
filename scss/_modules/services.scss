@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include screen-lp{
+  @include screen-md{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -38,6 +38,10 @@
     margin-top: 16px;
     text-align: center;
     @include font(25px, $MontserratSemiBold);
+  }
+  &__img{
+    width: 183px;
+    height: 185px;
   }
   &__description{
     display: none;
@@ -66,14 +70,10 @@
     }
   }
   @include screen-lp{
-    width: 48%;
     max-width: 610px;
-    margin-bottom: 0;
-    &:first-child{
-      margin-bottom: 30px;
-    }
   }
   @include screen-md{
+    width: 48%;
     &:first-child{
       margin-bottom: 45px;
     }

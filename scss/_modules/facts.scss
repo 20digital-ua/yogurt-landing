@@ -117,7 +117,7 @@
 
 .facts-points-container{
   @include bgi('facts/facts-points_BG.svg', 5px no-repeat);
-  background-size: contain;
+  background-size: 100% 100%;
   max-width: 912px;
   max-height: 864px;
   box-sizing: content-box;
@@ -158,7 +158,7 @@
   }
 }
 .facts-points{
-  width: 100%;
+  width: 100%; 
   // height: 100%;
   margin: 0 auto; 
   min-height: 351px;
