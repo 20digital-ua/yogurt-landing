@@ -628,6 +628,11 @@ header {
   font: 25px "MontserratSemiBold";
 }
 
+.service-item__img {
+  width: 183px;
+  height: 185px;
+}
+
 .service-item__description {
   display: none;
 }
@@ -718,7 +723,7 @@ header {
 
 .facts-points-container {
   background: url("img/facts/facts-points_BG.svg") 5px no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   max-width: 912px;
   max-height: 864px;
   box-sizing: content-box;
@@ -1337,7 +1342,7 @@ footer .container {
 
   .booking-wrapper {
     background: url("img/unique/Paper_BG.svg") top center no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1597,21 +1602,8 @@ footer .container {
     line-height: 30px;
   }
 
-  .services-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
   .service-item {
-    width: 48%;
     max-width: 610px;
-    margin-bottom: 0;
-  }
-
-  .service-item:first-child {
-    margin-bottom: 30px;
   }
 
   .facts .facts-title {
@@ -1766,6 +1758,17 @@ footer .container {
   .wonderpots-title span {
     font-size: 94px;
     line-height: 125px;
+  }
+
+  .services-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .service-item {
+    width: 48%;
   }
 
   .service-item:first-child {

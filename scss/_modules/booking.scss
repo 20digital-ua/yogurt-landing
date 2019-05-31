@@ -1,7 +1,7 @@
 .booking-wrapper{
   @include screen-tb{
     @include bgi('unique/Paper_BG.svg',top center no-repeat);
-    background-size: 100%;
+    background-size: 100% 100%;
     display: flex;
     justify-content: center;
     align-items: center;
