@@ -478,7 +478,9 @@ header {
 
 .wonderpots-general {
   background: url("img/wonderpots-top/Header_BG_mob.png") center repeat-x;
+  background-size: cover;
   min-height: 574px;
+  padding-bottom: 50px;
 }
 
 .wonderpots-general .container {
@@ -592,6 +594,70 @@ header {
 
 .wonderpots__text {
   display: none;
+}
+
+.cookie-notification {
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #e9f6fc;
+  margin: 0 10px;
+  line-height: 18px;
+  font-size: 14px;
+  opacity: 0;
+  padding: 0;
+  transition: all .25s linear;
+}
+
+.cookie-notification.show {
+  padding: 30px;
+  opacity: 1;
+}
+
+.cookie-notification__agree-btn {
+  min-width: 148px;
+  height: 38px;
+  box-shadow: 0 3px 0 #1c8abe;
+  background-color: #7dccf3;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  margin-top: 16px;
+  cursor: pointer;
+  font: 13px "MontserratSemiBold";
+}
+
+.cookie-notification__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  display: block;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie-notification__close span {
+  display: block;
+  width: 15px;
+  height: 2px;
+  background-color: #1c8abe;
+  border-radius: 3px;
+  position: absolute;
+}
+
+.cookie-notification__close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.cookie-notification__close span:nth-child(2) {
+  transform: rotate(-45deg);
 }
 
 /* WONDERPOTS GENERAL */
@@ -1228,6 +1294,22 @@ footer .container {
     overflow: hidden !important;
   }
 
+  .cookie-notification.show {
+    padding: 10px 74px 10px 108px;
+  }
+
+  .cookie-notification {
+    background: #e9f6fc url("img/wonderpots-top/cookie-notification-icon.svg") 20px center no-repeat;
+    flex-direction: row;
+    background-position: 35px center;
+    margin: 0;
+  }
+
+  .cookie-notification__agree-btn {
+    margin-top: 0;
+    margin-left: 21px;
+  }
+
   .service-item {
     max-width: 500px;
     display: flex;
@@ -1488,6 +1570,7 @@ footer .container {
   .wonderpots-general {
     min-height: 1000px;
     background: url("img/wonderpots-top/Header_BG_desk.png") center repeat-x;
+    padding-bottom: 0;
   }
 
   .wonderpots-general .primary-btn {
