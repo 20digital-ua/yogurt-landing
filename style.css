@@ -674,6 +674,11 @@ header {
   bottom: -10px;
 }
 
+.services .container.service-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .services-grid {
   min-height: 185px;
   display: flex;
@@ -1308,6 +1313,16 @@ footer .container {
   .cookie-notification__agree-btn {
     margin-top: 0;
     margin-left: 21px;
+  }
+
+  .services .container.service-container {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .services .slider-wrapper {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .service-item {
