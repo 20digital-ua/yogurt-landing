@@ -15,6 +15,21 @@
       bottom: -20px;
     }
   }
+  .container.toppings-container{
+    padding-left: 0;
+    padding-right: 0;
+    @include screen-tb{
+      padding-left: $sidePaddingsMain;
+      padding-right: $sidePaddingsMain;
+    }
+  }
+  .slider-wrapper{
+    @include screen-tb{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+  }
 }
 
 .services-grid{
