@@ -674,7 +674,7 @@ header {
   bottom: -10px;
 }
 
-.services .container.toppings-container {
+.services .container.service-container {
   padding-left: 0;
   padding-right: 0;
 }
@@ -1315,7 +1315,7 @@ footer .container {
     margin-left: 21px;
   }
 
-  .services .container.toppings-container {
+  .services .container.service-container {
     padding-left: 7%;
     padding-right: 7%;
   }
