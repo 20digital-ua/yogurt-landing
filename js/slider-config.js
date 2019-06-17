@@ -4,16 +4,22 @@ var $toppingsSlider = jQuery('.toppings-slider');
 jQuery(document).ready(function () {
   $serviceSlider.slick({
     infinite: false,
-    // slidesToShow: 1,
+    slidesToShow: 1,
     slidesToScroll: 1,
     dots:true,
-    variableWidth: true,
+    
     arrows: false,
     appendDots: jQuery('#services-slider-dots'),
     mobileFirst:true,
     responsive:[
       {
         breakpoint: 767,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 1023,
         settings: "unslick"
       }
     ]
