@@ -164,8 +164,8 @@ body.no-scroll {
   margin: 0 auto;
   padding-top: 48px;
   padding-bottom: 0;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 11px;
+  padding-right: 11px;
 }
 
 .container.slider-container {
@@ -278,7 +278,6 @@ body.no-scroll {
 }
 
 .slider-wrapper {
-  padding-left: 10px;
   padding-bottom: 40px;
   overflow: hidden;
 }
@@ -350,8 +349,8 @@ header {
   height: 100%;
   position: relative;
   padding-top: 0 !important;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 11px;
+  padding-right: 11px;
 }
 
 .burger-btn {
@@ -540,7 +539,7 @@ header {
 }
 
 .yogurt__property-oganic {
-  left: 40px;
+  left: 35px;
   top: 79px;
 }
 
@@ -674,38 +673,32 @@ header {
   bottom: -10px;
 }
 
-.services .container.service-container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.services-grid {
-  min-height: 185px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.services-slider.slick-slider {
+  margin: 0 -11px;
 }
 
 .service-item {
+  max-width: 298px;
   outline: none;
-  margin-right: 15px;
-  max-width: 183px;
+  margin: 0 auto;
   transition: all .25s linear;
 }
 
 .service-item__name {
   margin-top: 16px;
-  text-align: center;
-  font: 25px "MontserratSemiBold";
+  margin-bottom: 19px;
+  text-align: left;
+  font: 22px "MontserratSemiBold";
 }
 
 .service-item__img {
-  width: 183px;
-  height: 185px;
+  width: 100%;
+  height: 302px;
 }
 
 .service-item__description {
-  display: none;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 /* SERVICES */
@@ -729,7 +722,7 @@ header {
   margin-bottom: 20px;
   max-width: 581px;
   max-height: 562px;
-  width: 70%;
+  width: 100%;
 }
 
 .wonder-content p {
@@ -818,7 +811,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   font-family: "IndieFlower";
-  padding: 30px 0 0 13px;
+  padding: 30px 0 20px 13px;
 }
 
 .facts-point {
@@ -839,7 +832,7 @@ header {
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
-  letter-spacing: 2.29px;
+  letter-spacing: 2px;
 }
 
 /* FACTS */
@@ -1290,8 +1283,6 @@ footer .container {
   }
 
   .slider-wrapper {
-    padding-left: 50px;
-    padding-right: 50px;
     padding-bottom: 0;
   }
 
@@ -1315,30 +1306,12 @@ footer .container {
     margin-left: 21px;
   }
 
-  .services .container.service-container {
-    padding-left: 7%;
-    padding-right: 7%;
-  }
-
-  .services .slider-wrapper {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   .service-item {
-    max-width: 500px;
-    display: flex;
     align-items: center;
-    margin-right: 0;
     margin-bottom: 20px;
   }
 
-  .service-item__info {
-    margin-left: 50px;
-  }
-
   .service-item__name {
-    margin-top: 0;
     margin-bottom: 24px;
     text-align: left;
   }
@@ -1700,8 +1673,22 @@ footer .container {
     line-height: 30px;
   }
 
-  .service-item {
-    max-width: 610px;
+  .services {
+    background: url("img/services/Service_BG.svg") center 85% no-repeat;
+    background-size: 100% 80%;
+  }
+
+  .services-grid {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .services-grid .slide {
+    margin-right: 30px;
+  }
+
+  .services-grid .slide:last-child {
+    margin-right: 0;
   }
 
   .facts .facts-title {
@@ -1856,17 +1843,6 @@ footer .container {
   .wonderpots-title span {
     font-size: 94px;
     line-height: 125px;
-  }
-
-  .services-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .service-item {
-    width: 48%;
   }
 
   .service-item:first-child {

@@ -15,65 +15,58 @@
       bottom: -20px;
     }
   }
-  .container.service-container{
-    padding-left: 0;
-    padding-right: 0;
-    @include screen-tb{
-      padding-left: $sidePaddingsMain;
-      padding-right: $sidePaddingsMain;
-    }
-  }
-  .slider-wrapper{
-    @include screen-tb{
-      padding-left: 0;
-      padding-right: 0;
-    }
+
+    @include screen-lp{
+      background: url("#{$image_dir}services/Service_BG.svg") center 85% no-repeat;
+      background-size: 100% 80%;
     
   }
 }
-
+.services-slider.slick-slider{
+  margin: 0 -11px;
+}
 .services-grid{
-  min-height: 185px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include screen-md{
-    flex-direction: row;
-    flex-wrap: wrap;
+  @include screen-lp{
+    display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+   
+  }
+  .slide{
+    @include screen-lp{
+      margin-right: 30px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
   }
 }
 .service-item{
+  max-width: 298px;
   outline: none;
-  margin-right: 15px; 
-  max-width: 183px;
+  margin:0 auto; 
   @include transition();
   &__name{
     margin-top: 16px;
-    text-align: center;
-    @include font(25px, $MontserratSemiBold);
+    margin-bottom: 19px;
+    text-align: left;
+    @include font(22px, $MontserratSemiBold);
   }
   &__img{
-    width: 183px;
-    height: 185px;
+     width: 100%;
+    height: 302px;
   }
   &__description{
-    display: none;
+    font-size: 14px;
+    line-height: 17px;
   }
 
 
   @include screen-tb{
-    max-width: 500px;
-    display: flex;
     align-items: center;
-    margin-right: 0;
     margin-bottom: 20px; 
     &__info{
-      margin-left: 50px;
     }
     &__name{
-      margin-top: 0;
       margin-bottom: 24px;
       text-align: left;
     }
@@ -85,10 +78,9 @@
     }
   }
   @include screen-lp{
-    max-width: 610px;
+    
   }
   @include screen-md{
-    width: 48%;
     &:first-child{
       margin-bottom: 45px;
     }
