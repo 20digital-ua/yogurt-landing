@@ -2,7 +2,7 @@
   background: url("#{$image_dir}wonderpots-top/Header_BG_mob.png") center repeat-x;
   background-size: cover;
   min-height: 574px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   @include screen-lp{
     min-height: 1000px;
     background: url("#{$image_dir}wonderpots-top/Header_BG_desk.png") center repeat-x;
@@ -246,6 +246,7 @@
   flex-direction: column;
   align-items: center;
   
+  
   position: relative;
   background-color: #e9f6fc;
   margin: 0 10px;
@@ -257,6 +258,7 @@
   @include transition();
   &.show{
     padding: 30px;
+    margin-bottom: 20px;
     opacity: 1;
     // visibility: visible;
     @include screen-tb{

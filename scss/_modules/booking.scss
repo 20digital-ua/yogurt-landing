@@ -5,25 +5,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 945px;
+    // max-height: 712px; 
+    margin: 0 auto;
   }
 }
 .booking{
+  margin: 0 auto;
+  max-width: 554px;
   @include screen-tb{
-    padding: 10%;
+    padding: 10% 0;
     width: 90%;
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     &__info{
-      width: 50%;
-      max-width: 411px;
+
+      // max-width: 411px;
     }
     &__form{
-      width: 45%;
-      max-width: 454px;
+    
+      // max-width: 454px;
     }
   }
   @include screen-lg{
-    padding: 140px 100px;
+    padding: 140px 0;
   }
   @include screen-lp{
     &__info{
@@ -35,6 +40,7 @@
 .booking__title{
   @include font(28px, $MontserratBold);
   margin-bottom: 36px;
+  text-align: center;
   @include screen-lp{
     margin-bottom: 24px;
     font-size: 32px;
@@ -101,7 +107,7 @@
     }
     @include screen-md{
       min-height: 132px;
-      margin-bottom: 46px;
+      margin-bottom: 36px;
     }
   }
   .primary-btn--submit{

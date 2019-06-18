@@ -1,12 +1,15 @@
 footer{
   @include bgi('footer/Footer_BG_mob.png', center repeat-x);
   min-height: 592px;
+  background-size: 100% 100%;
   @include screen-tb{
     @include bgi('footer/Footer_BG_desk.png', center repeat-x);
     min-height: 459px;
+    background-size: 100% 100%;
   }
   .container{
     padding-top: 28px;
+    padding-bottom: 30px;
   }
 }
 .footer-wrapper{
@@ -31,6 +34,7 @@ footer{
   }
 }
 .main-logo--footer{
+  order: unset !important;
   grid-column: 1/2;
   justify-self: flex-start;
   @include screen-md{
@@ -120,6 +124,7 @@ footer{
   &__text{
     font-weight: 400;
     letter-spacing: 0.52px;
+    max-width: 350px;
   }
   @include screen-tb{
     grid-column: 1/2;
@@ -133,11 +138,32 @@ footer{
   margin-top: 16px;
   grid-column: 1/3;
   max-width: 513px;
-  &__img{
+  &__wrapper{
     width: 32%;
     max-width: 148px;
-    max-height: 89px;
+    max-height: 148px;
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      @include transition();
+    }
+    &:hover{
+      &:before{
+        background-color: rgba(0,0,0,.15);
+      }
+    }
+
+  }
+  &__img{
+    width: 100%;
+    height: auto;
+   
     object-fit: contain;
+
     @include screen-tb{
       max-height: 148px;
     }
@@ -168,6 +194,7 @@ footer{
   }
 
   &__title{
+    text-transform: uppercase;
     margin-bottom: 12px;
     @include screen-lp{
       margin-bottom: 20px;

@@ -3,7 +3,7 @@ var $latestEventsSlider = jQuery('.latest-events-slider');
 var $toppingsSlider = jQuery('.toppings-slider');
 jQuery(document).ready(function () {
   $serviceSlider.slick({
-    infinite: false,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots:true,
@@ -25,7 +25,7 @@ jQuery(document).ready(function () {
     ]
   });
   $latestEventsSlider.slick({
-    infinite: false,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots:true,

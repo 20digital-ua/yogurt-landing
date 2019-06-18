@@ -217,6 +217,7 @@ body.no-scroll {
 }
 
 .primary-btn--blue {
+  width: 204px;
   background-color: #7dcdf3;
   box-shadow: 0 5px 0 #1c8abe;
   color: #ffffff;
@@ -331,8 +332,6 @@ header {
 }
 
 .main-logo--header {
-  position: absolute;
-  left: 50%;
   transform: translate(-50%);
 }
 
@@ -443,28 +442,30 @@ header {
 
 .primary-menu .menu {
   display: none;
-  justify-content: space-between;
-  margin-right: 30px;
+  justify-content: center;
   transition: all .25s linear;
+}
+
+.primary-menu .menu__item {
+  margin-right: 50px;
+}
+
+.primary-menu .menu__item:last-child {
+  margin-right: 0;
 }
 
 .primary-menu .menu__link {
   white-space: nowrap;
   display: block;
   color: #191d22;
-  font: 14px "Montserrat";
+  font: 18px "Montserrat";
   font-weight: 500;
   letter-spacing: 0.45px;
-  margin-right: 16px;
   transition: all .25s linear;
 }
 
 .primary-menu .menu__link:hover {
   color: #1c8abe;
-}
-
-.primary-menu .menu :last-child {
-  margin-right: 0;
 }
 
 /* MAIN CONTENT */
@@ -473,7 +474,7 @@ header {
   background: url("img/wonderpots-top/Header_BG_mob.png") center repeat-x;
   background-size: cover;
   min-height: 574px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .wonderpots-general .container {
@@ -607,6 +608,7 @@ header {
 
 .cookie-notification.show {
   padding: 30px;
+  margin-bottom: 20px;
   opacity: 1;
 }
 
@@ -965,6 +967,10 @@ header {
   padding-right: 0;
 }
 
+.topping-slider-wrapper {
+  padding-left: 11px;
+}
+
 .toppings-slider {
   display: grid;
   grid-gap: 67px;
@@ -1019,10 +1025,6 @@ header {
   position: relative;
 }
 
-.unigue--container {
-  padding-top: 0 !important;
-}
-
 .unique-blocks--container {
   position: relative;
 }
@@ -1045,14 +1047,14 @@ header {
   justify-content: space-between;
   margin-bottom: 50px;
   max-width: 1335px;
-  padding: 0 7%;
+  padding: 0 11px;
   margin: 0 auto;
   position: relative;
 }
 
 .unique-item {
-  width: 126px;
-  height: 126px;
+  width: 139px;
+  height: 139px;
   box-shadow: 4px 6px 0 #3ba7da;
   background-color: #85d1f5;
   border-radius: 50%;
@@ -1062,10 +1064,10 @@ header {
   text-align: center;
   padding-top: 10px;
   color: #ffffff;
-  font: 23px "IndieFlower";
+  font: 22px "IndieFlower";
   font-weight: 400;
-  line-height: 25.71px;
-  letter-spacing: 0.89px;
+  line-height: 23.71px;
+  letter-spacing: 0.86px;
   margin-bottom: 43px;
 }
 
@@ -1075,9 +1077,15 @@ header {
 
 /* UNIQUE */
 
+.booking {
+  margin: 0 auto;
+  max-width: 554px;
+}
+
 .booking__title {
   font: 28px "MontserratBold";
   margin-bottom: 36px;
+  text-align: center;
 }
 
 .contact-form {
@@ -1134,10 +1142,12 @@ header {
 footer {
   background: url("img/footer/Footer_BG_mob.png") center repeat-x;
   min-height: 592px;
+  background-size: 100% 100%;
 }
 
 footer .container {
   padding-top: 28px;
+  padding-bottom: 30px;
 }
 
 .footer-wrapper {
@@ -1150,6 +1160,7 @@ footer .container {
 }
 
 .main-logo--footer {
+  order: unset !important;
   grid-column: 1/2;
   justify-self: flex-start;
 }
@@ -1218,6 +1229,7 @@ footer .container {
 .footer-about-us__text {
   font-weight: 400;
   letter-spacing: 0.52px;
+  max-width: 350px;
 }
 
 .footer-pictures {
@@ -1230,10 +1242,29 @@ footer .container {
   max-width: 513px;
 }
 
-.footer-pictures__img {
+.footer-pictures__wrapper {
   width: 32%;
   max-width: 148px;
-  max-height: 89px;
+  max-height: 148px;
+  position: relative;
+}
+
+.footer-pictures__wrapper:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all .25s linear;
+}
+
+.footer-pictures__wrapper:hover:before {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.footer-pictures__img {
+  width: 100%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -1243,6 +1274,7 @@ footer .container {
 }
 
 .footer-stores__title {
+  text-transform: uppercase;
   margin-bottom: 12px;
 }
 
@@ -1274,6 +1306,11 @@ footer .container {
   .container {
     padding-left: 7%;
     padding-right: 7%;
+  }
+
+  .unique-blocks {
+    padding: 0 7%;
+    box-sizing: content-box;
   }
 }
 
@@ -1415,23 +1452,13 @@ footer .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 945px;
+    margin: 0 auto;
   }
 
   .booking {
-    padding: 10%;
+    padding: 10% 0;
     width: 90%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .booking__info {
-    width: 50%;
-    max-width: 411px;
-  }
-
-  .booking__form {
-    width: 45%;
-    max-width: 454px;
   }
 
   .contact-form {
@@ -1445,6 +1472,7 @@ footer .container {
   footer {
     background: url("img/footer/Footer_BG_desk.png") center repeat-x;
     min-height: 459px;
+    background-size: 100% 100%;
   }
 
   .footer-wrapper {
@@ -1507,7 +1535,7 @@ footer .container {
   }
 
   .header-btn-order {
-    width: 176px;
+    width: 214px;
     height: 44px;
     border-radius: 25px;
     line-height: 44px;
@@ -1527,14 +1555,14 @@ footer .container {
   }
 
   .main-logo {
-    left: 8%;
+    order: 1;
     transform: unset;
     width: 138px;
     height: 138px;
   }
 
   .header-container {
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: row-reverse;
   }
 
@@ -1547,7 +1575,7 @@ footer .container {
   }
 
   .primary-menu {
-    width: 60%;
+    width: 50%;
   }
 
   .primary-menu .menu {
@@ -1737,8 +1765,8 @@ footer .container {
   .unique-item {
     width: 196px;
     height: 196px;
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 30px;
+    line-height: 30px;
   }
 
   .unique-item:nth-child(even) {
@@ -1821,14 +1849,6 @@ footer .container {
     margin-bottom: 90px;
   }
 
-  .primary-menu .menu {
-    margin-right: 60px;
-  }
-
-  .primary-menu .menu__link {
-    font-size: 18px;
-  }
-
   .wonderpots-general .primary-btn {
     margin-top: 50px;
     width: 196px;
@@ -1909,7 +1929,7 @@ footer .container {
 
   .contact-form__textarea {
     min-height: 132px;
-    margin-bottom: 46px;
+    margin-bottom: 36px;
   }
 
   .main-logo--footer {
@@ -1932,18 +1952,10 @@ footer .container {
   }
 
   .primary-btn {
-    width: 195px;
+    width: 245px;
     height: 58px;
     line-height: 58px;
     border-radius: 50px;
-  }
-
-  .primary-menu {
-    width: 67%;
-  }
-
-  .primary-menu .menu {
-    margin-right: 89px;
   }
 
   .wonderpots-title {
@@ -2044,13 +2056,12 @@ footer .container {
     transform: translateX(130%);
   }
 
-  .unique-blocks--container:before {
-    height: 200px;
-    top: 15%;
+  .unigue--container {
+    padding-top: 70px;
   }
 
   .booking {
-    padding: 140px 100px;
+    padding: 140px 0;
   }
 
   .booking__title {
