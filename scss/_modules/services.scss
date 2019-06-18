@@ -17,8 +17,8 @@
   }
 
     @include screen-lp{
-      background: url("#{$image_dir}services/Service_BG.svg") center 85% no-repeat;
-      background-size: 100% 80%;
+      background: url("#{$image_dir}services/Service_BG.svg") center bottom no-repeat;
+      background-size: 100% 70%;
     
   }
 }

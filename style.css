@@ -168,12 +168,6 @@ body.no-scroll {
   padding-right: 11px;
 }
 
-.container.slider-container {
-  padding-left: 0;
-  padding-right: 0;
-  max-width: 1335px;
-}
-
 .container-nopadding {
   padding-top: 0;
   padding-bottom: 0;
@@ -849,6 +843,10 @@ header {
   bottom: -10px;
 }
 
+.latest-events .container {
+  max-width: 1440px;
+}
+
 .latest-events-slider {
   min-height: 314px;
   position: relative;
@@ -868,39 +866,41 @@ header {
   width: 45px;
   height: 45px;
   background: url("img/icons/sliders/Arrow-left.svg") center no-repeat;
-  left: -30px;
+  left: -10px;
 }
 
 .latest-events-slider .slider-arrow-right {
-  right: -30px;
+  right: -10px;
   display: block;
   width: 45px;
   height: 45px;
   background: url("img/icons/sliders/Arrow-right.svg") center no-repeat;
 }
 
-.latest-events-slide {
-  width: 213px;
+.latest-events-link {
+  max-width: 256px;
   outline: none;
   max-height: 450px;
   box-shadow: 10px 17px 36px 2px rgba(0, 25, 36, 0.1);
   border-radius: 20px;
-  margin: 0 8px;
   position: relative;
   overflow: hidden;
+  display: block;
+  margin: 0 auto;
 }
 
-.latest-events-slide:hover .hover-block {
+.latest-events-link:hover .hover-block {
   visibility: visible;
   opacity: 0.9;
 }
 
-.latest-events-slide .hover-block {
+.latest-events-link .hover-block {
   visibility: hidden;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 70px;
+  border-radius: 0 0 20px   20px;
   background-color: #85d1f5;
   opacity: 0.9;
   color: #fff;
@@ -911,11 +911,11 @@ header {
   opacity: 0;
 }
 
-.latest-events-slide .hover-block span {
+.latest-events-link .hover-block span {
   line-height: 70px;
 }
 
-.latest-events-slide img {
+.latest-events-link img {
   width: 100%;
   height: 100%;
 }
@@ -1390,8 +1390,7 @@ footer .container {
     padding: 20px;
   }
 
-  .latest-events-slide {
-    margin: 0 20px;
+  .latest-events-link {
     margin-bottom: 40px;
     box-shadow: 6px 7px 15px 4px rgba(0, 25, 36, 0.1);
   }
@@ -1674,8 +1673,8 @@ footer .container {
   }
 
   .services {
-    background: url("img/services/Service_BG.svg") center 85% no-repeat;
-    background-size: 100% 80%;
+    background: url("img/services/Service_BG.svg") center bottom no-repeat;
+    background-size: 100% 70%;
   }
 
   .services-grid {
@@ -1715,6 +1714,10 @@ footer .container {
 
   .facts-points-container {
     padding: 50px 80px 50px 50px;
+  }
+
+  .latest-events-slider {
+    padding: 0 30px;
   }
 
   .toppings .title-wrapper {
@@ -1923,10 +1926,6 @@ footer .container {
     padding-top: 150px;
   }
 
-  .container.slider-container {
-    max-width: 1475px;
-  }
-
   .title {
     font-size: 40px;
     margin-bottom: 110px;
@@ -1979,7 +1978,7 @@ footer .container {
   }
 
   .facts {
-    background-position: 80px center;
+    background-position: center;
   }
 
   .facts-img {
@@ -2022,6 +2021,10 @@ footer .container {
   .facts-point__name {
     font-size: 32px;
     line-height: 36.05px;
+  }
+
+  .latest-events-link {
+    max-width: 305px;
   }
 
   .toppings .title-wrapper {

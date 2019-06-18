@@ -38,14 +38,14 @@ body{
   @include screen-lg{
     padding-top: 150px;
   }
-  &.slider-container{
-    padding-left: 0;
-    padding-right: 0;
-    max-width: $maxContentWidth;
-    @include screen-lg{
-      max-width: $maxContentWidth+140;
-    }
-  }
+  // &.slider-container{
+  //   padding-left: 0;
+  //   padding-right: 0;
+  //   max-width: $maxContentWidth;
+  //   @include screen-lg{
+  //     max-width: $maxContentWidth+140;
+  //   }
+  // }
   // outline: 1px solid red;
   
   &-nopadding{
