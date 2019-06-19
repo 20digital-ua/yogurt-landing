@@ -17,9 +17,16 @@ jQuery(document).ready(function () {
       success:function(res){
           // var result = jQuery.parseJSON(res);
           console.log(res);
+          jQuery('.booking__main').addClass('hide');
+          if(res==true){
+            jQuery('.result-box__succsess').addClass('show');
+          }else{
+            jQuery('.result-box__error').addClass('show');
+          }
+          
       },
       error: function(xhr, status, error) {
-        alert(xhr.responseText + '|\n' + status + '|\n' +error);
+        
       }
     
     });
