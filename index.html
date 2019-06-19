@@ -305,18 +305,27 @@
 			<div class="container unigue--container">
 				<div class="booking-wrapper">
 					<div class="booking">
-						<div class="booking__info">
+						<div class="booking__main">
+							<div class="booking__info">
 								<div class="booking__title">Nehmen Sie Kontakt mit uns auf!</div>
-								<!-- <div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.
-							</div> -->
+							</div>
+							<form  id="subscribe-form" method="POST" class="contact-form booking__form">
+								<input name="name" class="contact-form__input contact-form__input-name" type="text" placeholder="Your Name">
+								<input name="email" class="contact-form__input contact-form__input-email" type="email" placeholder="Email">
+								<textarea name="text"  class="contact-form__input contact-form__textarea" placeholder="Message" name="" ></textarea>
+								<button id="subscribe-submit" class="primary-btn primary-btn--blue primary-btn--submit"><span class="inner">Jetzt anfragen!</span></button>
+							</form>
 						</div>
-						<form  id="subscribe-form" method="POST" class="contact-form booking__form">
-							<input name="name" class="contact-form__input contact-form__input-name" type="text" placeholder="Your Name">
-							<input name="email" class="contact-form__input contact-form__input-email" type="email" placeholder="Email">
-							<textarea name="text"  class="contact-form__input contact-form__textarea" placeholder="Message" name="" ></textarea>
-							<button id="subscribe-submit" class="primary-btn primary-btn--blue primary-btn--submit"><span class="inner">Jetzt anfragen!</span></button>
-						</form>
+						<div class="result-box result-box__succsess">
+								<h3>Succsess</h3>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita cupiditate nisi fuga quos accusamus provident rerum eligendi distinctio, dolorum voluptate nihil! Assumenda tenetur eos, repudiandae libero repellat culpa amet quisquam.</p>
+						</div>
+						<div class="result-box result-box__error">
+								<h3>Error</h3>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita cupiditate nisi fuga quos accusamus provident rerum eligendi distinctio, dolorum voluptate nihil! Assumenda tenetur eos, repudiandae libero repellat culpa amet quisquam.</p>
+						</div>
 					</div>
+					
 				</div>
 			</div>
 		</section>

@@ -8,7 +8,7 @@ if (isset($_POST["name"]) && $_POST["name"] != '' &&
   $getData = array(
     'name' => $_POST["name"],
     'email'=>$_POST["email"],
-    'text'=>$_POST["text"],
+    'text'=>$_POST["text"]
   );
 
 

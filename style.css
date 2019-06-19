@@ -1081,15 +1081,40 @@ header {
 
 /* UNIQUE */
 
+.booking-wrapper {
+  padding: 10% 0;
+}
+
 .booking {
   margin: 0 auto;
   max-width: 554px;
+  position: relative;
+  transition: all .25s linear;
+}
+
+.booking__main.hide {
+  opacity: 0;
 }
 
 .booking__title {
   font: 28px "MontserratBold";
   margin-bottom: 36px;
   text-align: center;
+}
+
+.result-box {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  transition: all .25s linear;
+}
+
+.result-box__succsess.show {
+  opacity: 1;
+}
+
+.result-box__error.show {
+  opacity: 1;
 }
 
 .contact-form {
@@ -1461,7 +1486,6 @@ footer .container {
   }
 
   .booking {
-    padding: 10% 0;
     width: 90%;
   }
 
@@ -2064,7 +2088,7 @@ footer .container {
     padding-top: 70px;
   }
 
-  .booking {
+  .booking-wrapper {
     padding: 140px 0;
   }
 

@@ -1,4 +1,6 @@
 .booking-wrapper{
+  padding: 10% 0; 
+
   @include screen-tb{
     @include bgi('unique/Paper_BG.svg',top center no-repeat);
     background-size: 100% 100%;
@@ -9,12 +11,20 @@
     // max-height: 712px; 
     margin: 0 auto;
   }
+  @include screen-lg{
+    padding: 140px 0;
+  }
 }
 .booking{
   margin: 0 auto;
   max-width: 554px;
+  position: relative;
+  @include transition();
+  &__main.hide{
+    opacity: 0;
+  }
   @include screen-tb{
-    padding: 10% 0;
+
     width: 90%;
     // display: flex;
     // justify-content: space-between;
@@ -27,9 +37,7 @@
       // max-width: 454px;
     }
   }
-  @include screen-lg{
-    padding: 140px 0;
-  }
+ 
   @include screen-lp{
     &__info{
       font-size: 15px;
@@ -53,7 +61,22 @@
     margin-bottom: 59px;
   }
 }
-
+.result-box{
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  @include transition();
+  &__succsess{
+    &.show{
+      opacity: 1;
+    }
+  }
+  &__error{
+    &.show{
+      opacity: 1;
+    }
+  }
+}
 .contact-form{
   margin-top: 24px;
   @include screen-tb{
