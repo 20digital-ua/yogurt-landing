@@ -14,19 +14,19 @@ if (isset($_POST["name"]) && $_POST["name"] != '' &&
 
   $to = 'antonfedorishko17@gmail.com';
   // $to = 'antonfedorishko17@gmail.com';
-  $subject = 'Subscribe';
+  $subject = 'Subscribe Request';
   $message = '
-      <h3 style="font-weight:400">Hi, You have a Contact request from <strong>'.$getData['name'].'</strong></h3><br>
+      <h3 style="font-weight:400">Hi, You have a Subscribe Request from <strong>'.$getData['name'].'</strong></h3><br>
       <p>Detailes:</p>
-      <p>Eamil: '.$getData['email'].'</p>
-      <p>Text: '.$getData['text'].'</p>
+      <p>Email: '.$getData['email'].'</p>
+      <p>Message: '.$getData['text'].'</p>
       <br>
       <h4>Thank you!</h4>
 
   ';
   $headers  = 'MIME-Version: 1.0' ."\r\n";
   $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-  $headers .= 'From: Lefly.com <Leafly@Leafly.com>' . "\r\n";
+  $headers .= 'From: Lefly.com <wonderpots@wonderpots.com>' . "\r\n";
 
   $result = mail($to, $subject, $message, $headers);
 }else{
