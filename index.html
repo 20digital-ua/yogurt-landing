@@ -8,7 +8,8 @@
 
 	<link rel="stylesheet" href="fonts/fonts.css">
 	<link rel="stylesheet" href="style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<script src="source/jQuery/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" href="source/slick-slider/slick.css">
 	<script src="source/slick-slider/slick.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -25,9 +26,9 @@
 				<div class="menu-container primary-menu">
 					<nav class="main-nav-block">
 						<ul class="menu">
-							<li class="menu__item"><a class="menu__link" href="">Catering Service</a></li>
-							<li class="menu__item"><a class="menu__link" href="">Referenzen</a></li>
-							<li class="menu__item"><a class="menu__link" href="">Toppings</a></li>
+							<li class="menu__item"><a class="menu__link" href="#services__anchor">Catering Service</a></li>
+							<li class="menu__item"><a class="menu__link" href="#catering__anchor">Referenzen</a></li>
+							<li class="menu__item"><a class="menu__link" href="#toppings__anchor">Toppings</a></li>
 							<!-- <li class="menu__item"><a class="menu__link" href="">About</a></li>
 							<li class="menu__item"><a class="menu__link" href="">Numbers</a></li>
 							<li class="menu__item"><a class="menu__link" href="">Events</a></li>
@@ -89,7 +90,7 @@
 					</div>
 			</div>
 		</section>
-		<section class="services">
+		<section class="services" id="services__anchor">
 			<div class="container">
 					<div class="title">Unser Service</div>
 					<div class="slider-wrapper">
@@ -178,7 +179,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="latest-events">
+		<section class="latest-events" id="catering__anchor" >
 				<div class="container container-nopadding__sides">
 					<div class="title">Auszug unserer Catering-Events</div>
 					<div class="slider-wrapper">
@@ -218,7 +219,7 @@
 					<div id="latest-events-slider-dots"></div>
 				</div>
 		</section>
-		<section class="toppings">
+		<section class="toppings" id="toppings__anchor">
 			<div class="container toppings-container">
 				<div class="title-wrapper">
 						<div class="title">Wonderful toppings</div>
@@ -309,11 +310,11 @@
 								<!-- <div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.
 							</div> -->
 						</div>
-						<form action="" class="contact-form booking__form">
-							<input class="contact-form__input contact-form__input-name" type="text" placeholder="Your Name">
-							<input class="contact-form__input contact-form__input-email" type="email" placeholder="Email">
-							<textarea class="contact-form__input contact-form__textarea" placeholder="Message" name="" ></textarea>
-							<button class="primary-btn primary-btn--blue primary-btn--submit"><span class="inner">Jetzt anfragen!</span></button>
+						<form  id="subscribe-form" method="POST" class="contact-form booking__form">
+							<input name="name" class="contact-form__input contact-form__input-name" type="text" placeholder="Your Name">
+							<input name="email" class="contact-form__input contact-form__input-email" type="email" placeholder="Email">
+							<textarea name="text"  class="contact-form__input contact-form__textarea" placeholder="Message" name="" ></textarea>
+							<button id="subscribe-submit" class="primary-btn primary-btn--blue primary-btn--submit"><span class="inner">Jetzt anfragen!</span></button>
 						</form>
 					</div>
 				</div>
@@ -388,7 +389,10 @@ Höchste Qualität und beste Zutaten liegen dem jungen Team sehr am Herzen. Nebe
 			</div>
 		</div>
 	</footer>
+	<script src="source/jquery.smoothscroll.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/subscribe.js"></script>
 	<script src="js/slider-config.js"></script>
+	
 </body>
 </html>

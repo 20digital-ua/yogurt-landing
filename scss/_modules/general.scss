@@ -13,7 +13,9 @@ body{
     overflow: hidden;
   }
 }
-
+section{
+  outline: none;
+}
 .container{
   max-width: $maxContentWidth;
   box-sizing: content-box;

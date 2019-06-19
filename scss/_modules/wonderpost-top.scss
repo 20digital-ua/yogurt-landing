@@ -11,14 +11,14 @@
   .container{
     overflow: hidden;
     padding-top: 0 !important;
-  }
+  } 
   .primary-btn{
     @include screen-lp{
       margin: 0;
     }
     @include screen-md{
       margin-top: 50px;
-      width: 196px;
+      width: 221px;
       height: 67px;
       font-size: 18px;
       font-weight: 400;

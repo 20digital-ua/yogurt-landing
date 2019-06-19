@@ -30,7 +30,11 @@ jQuery(document).ready(function () {
     jQuery('.cookie-notification').removeClass('show');
   });
 
-  
+  jQuery(".menu__link").smoothscroll({
+    duration:  350,
+    hash: false
+    // offset:100
+  });
   
 });
 
@@ -46,3 +50,6 @@ function getCookie(name) {
   var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
   return v ? v[2] : null;
 }
+
+
+

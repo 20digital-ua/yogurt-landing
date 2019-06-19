@@ -158,6 +158,10 @@ body.no-scroll {
   overflow: hidden;
 }
 
+section {
+  outline: none;
+}
+
 .container {
   max-width: 1335px;
   box-sizing: content-box;
@@ -1851,7 +1855,7 @@ footer .container {
 
   .wonderpots-general .primary-btn {
     margin-top: 50px;
-    width: 196px;
+    width: 221px;
     height: 67px;
     font-size: 18px;
     font-weight: 400;
