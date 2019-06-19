@@ -26,7 +26,7 @@ if (isset($_POST["name"]) && $_POST["name"] != '' &&
   ';
   $headers  = 'MIME-Version: 1.0' ."\r\n";
   $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-  $headers .= 'From: Lefly.com <wonderpots@wonderpots.com>' . "\r\n";
+  $headers .= 'From: Wonderpots.com <wonderpots@wonderpots.com>' . "\r\n";
 
   $result = mail($to, $subject, $message, $headers);
 }else{
