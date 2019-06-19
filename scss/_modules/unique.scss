@@ -7,7 +7,9 @@
     background-size: 100%;
   }
   &--container{
-    padding-top: 0 !important;
+    @include screen-lg{
+     padding-top: 70px;
+    }
   }
 }
 .unique-blocks--container{
@@ -29,9 +31,9 @@
       height: 200px;
       top: 15%;
     }
-    @include screen-lg{
-      height: 200px;
-      top: 15%;
+    @include screen-md{
+      // height: 163px;
+      // top: 15%;
     }
   }
 }
@@ -42,15 +44,18 @@
  justify-content: space-between;
  margin-bottom: 50px;
  max-width: $maxContentWidth;
- padding: 0 $sidePaddingsMain;
+ padding: 0 $sidePaddingsMob;
  margin: 0 auto;
  position: relative;
-  
+  @include screen-sm{
+    padding: 0 $sidePaddingsMain;
+    box-sizing: content-box;
+  }
 
 }
 .unique-item{
-  width: 126px;
-  height: 126px;
+  width: 139px;
+  height: 139px;
   box-shadow: 4px 6px 0 #3ba7da;
   background-color: #85d1f5;
   border-radius: 50%;  
@@ -60,10 +65,10 @@
   text-align: center;
   padding-top: 10px;
   color: #ffffff;
-  @include font(23px, $IndieFlower);
+  @include font(22px, $IndieFlower);
   font-weight: 400;
-  line-height: 25.71px;
-  letter-spacing: 0.89px;
+  line-height: 23.71px;
+  letter-spacing: 0.86px;
   margin-bottom: 43px;
   &:last-child{
     padding-top: 0;
@@ -71,8 +76,8 @@
   @include screen-lp{
     width: 196px;
     height: 196px;
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 30px;
+    line-height: 30px;
     &:nth-child(even){
       margin-top: 120px;
     }

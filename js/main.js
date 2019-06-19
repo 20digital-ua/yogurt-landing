@@ -20,17 +20,21 @@ jQuery(document).ready(function () {
     }
   },1000);
   jQuery('.cookie-notification__close').on('click',function(){
-    jQuery('.cookie-notification').slideDown('slow');
+    jQuery('.cookie-notification').slideUp('slow');
     jQuery('.cookie-notification').removeClass('show');
   });
   
   jQuery('.cookie-notification__agree-btn').on('click',function(){
     setCookie('cookie-notification','true',1);
-    jQuery('.cookie-notification').slideDown('slow');
+    jQuery('.cookie-notification').slideUp('slow');
     jQuery('.cookie-notification').removeClass('show');
   });
 
-  
+  jQuery(".menu__link").smoothscroll({
+    duration:  350,
+    hash: false
+    // offset:100
+  });
   
 });
 
@@ -46,3 +50,6 @@ function getCookie(name) {
   var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
   return v ? v[2] : null;
 }
+
+
+

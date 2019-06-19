@@ -16,13 +16,14 @@
     background-color: #e6f9ff;
   }
   @include screen-lg{
-    width: 195px;
+    width: 245px;
     height: 58px;
     line-height: 58px;
     border-radius: 50px;
   }
   
   &--blue{
+    width: 204px;
     background-color: #7dcdf3;
     box-shadow: 0 5px 0 #1c8abe;
     color: #ffffff;

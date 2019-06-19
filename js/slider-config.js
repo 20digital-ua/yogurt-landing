@@ -3,7 +3,7 @@ var $latestEventsSlider = jQuery('.latest-events-slider');
 var $toppingsSlider = jQuery('.toppings-slider');
 jQuery(document).ready(function () {
   $serviceSlider.slick({
-    infinite: false,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots:true,
@@ -25,11 +25,11 @@ jQuery(document).ready(function () {
     ]
   });
   $latestEventsSlider.slick({
-    infinite: false,
-    // slidesToShow: 1,
+    infinite: true,
+    slidesToShow: 1,
     slidesToScroll: 1,
     dots:true,
-    variableWidth: true,
+    // variableWidth: true,
     arrows: false,
     appendDots: jQuery('#latest-events-slider-dots'),
     mobileFirst:true,
@@ -37,7 +37,7 @@ jQuery(document).ready(function () {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           variableWidth: false,
           dots: false,
           arrows: true,
@@ -50,12 +50,19 @@ jQuery(document).ready(function () {
       {
         breakpoint: 1023,
         settings: {
-          slidesToShow: 4,
-          variableWidth: false,
-          dots: false,
+          slidesToShow: 3,
           arrows: true,
-          // appendArrows: jQuery('#latest-events-slider-dots'),
-          slidesToScroll: 1,
+          dots: false,
+          prevArrow: '<div class="slider-arrow slider-arrow-left"></div>',
+          nextArrow: '<div class="slider-arrow slider-arrow-right"></div>'
+        }
+      },
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 4,
+          arrows: true,
+          dots: false,
           prevArrow: '<div class="slider-arrow slider-arrow-left"></div>',
           nextArrow: '<div class="slider-arrow slider-arrow-right"></div>'
         }
