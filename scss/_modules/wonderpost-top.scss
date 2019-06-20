@@ -237,7 +237,17 @@
     line-height: 30px;
   }
 }
-
+.notification-wrapper{
+  max-width: $maxContentWidth;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding-left: $sidePaddingsMob;
+  padding-right: $sidePaddingsMob;
+  @include screen-sm{
+    padding-left: $sidePaddingsMain;
+    padding-right: $sidePaddingsMain;
+  }
+}
 .cookie-notification{
   // height: 0;
   border-radius: 4px;
