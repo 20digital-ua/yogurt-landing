@@ -681,11 +681,23 @@ header {
   bottom: -10px;
 }
 
+.services .slider-wrapper {
+  padding-top: 40px;
+}
+
 .services-slider.slick-slider {
   margin: 0 -11px;
 }
 
+.services-grid .slide {
+  top: -50px;
+  position: relative;
+  opacity: 0;
+  transition: all .25s linear;
+}
+
 .service-item {
+  position: relative;
   max-width: 298px;
   outline: none;
   margin: 0 auto;

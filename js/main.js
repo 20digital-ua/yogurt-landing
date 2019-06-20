@@ -47,9 +47,25 @@ jQuery(document).ready(function () {
     jQuery('.cookie-notification').css({
       'opacity':1-$opacityKof/1000,
       'bottom':-$opacityKof/20
-  })
-  });
+    });
+      if ($('.services').offset().top-$(window).scrollTop()<400) 
+      {
+        console.log(($('.services').offset().top-$(window).scrollTop())/100);
+        
+          jQuery('.services .slide').css({
+            'opacity':1,
+            'top':0
+          });
 
+      }
+      else
+      {
+        jQuery('.services .slide').css({
+          'opacity':0,
+          'top':-50
+        });
+      }
+  });
 });
 
 
