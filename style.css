@@ -682,6 +682,7 @@ header {
 }
 
 .services .slider-wrapper {
+  margin-top: -40px;
   padding-top: 40px;
 }
 
