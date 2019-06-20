@@ -21,7 +21,7 @@
 	<header>
 		<div class="header-top">
 			<div class="header-container container">
-				<a href="#" class="header-btn-order"><spna class="inner">Jetzt anfragen!</spna></a>
+				<a href="#subscribe-scroll" class="sub-scroll header-btn-order"><span class="inner">Jetzt anfragen!</span></a>
 				<a href="#" class="main-logo main-logo--header" ><img class="main-logo__img" src="/img/header/Logo.svg" alt=""></a>
 				<div class="menu-container primary-menu">
 					<nav class="main-nav-block">
@@ -29,12 +29,6 @@
 							<li class="menu__item"><a class="menu__link" href="#services__anchor">Catering Service</a></li>
 							<li class="menu__item"><a class="menu__link" href="#catering__anchor">Referenzen</a></li>
 							<li class="menu__item"><a class="menu__link" href="#toppings__anchor">Toppings</a></li>
-							<!-- <li class="menu__item"><a class="menu__link" href="">About</a></li>
-							<li class="menu__item"><a class="menu__link" href="">Numbers</a></li>
-							<li class="menu__item"><a class="menu__link" href="">Events</a></li>
-							<li class="menu__item"><a class="menu__link" href="">Toppings</a></li>
-							<li class="menu__item"><a class="menu__link" href="">Why us</a></li>
-							<li class="menu__item"><a class="menu__link" href=""> Contact</a></li> -->
 						</ul>
 					</nav>
 					<div class="burger-btn">
@@ -78,16 +72,20 @@
 								<img src="img/wonderpots-top/Yogurt.png" class="yogurt__img" alt="">
 							</div>
 						</div>
-						<a href="#" class="primary-btn">Jetzt anfragen!</a>
+						<a href="#subscribe-scroll" class="sub-scroll primary-btn">Jetzt anfragen!</a>
 					</div>
+					
+					
+			</div>
+			<div class="notification-wrapper">
 					<div class="cookie-notification">
-						<div class="cookie-notification__text">Our website uses cookies to offer you better browsing experience. You may change your cookies settings here at any time. By continuing browsing the site you are agreeing by our use of cookies.</div>
-						<button class="cookie-notification__agree-btn">I‘m ok with this</button>
-						<div class="cookie-notification__close">
-							<span></span>
-							<span></span>
+							<div class="cookie-notification__text">Our website uses cookies to offer you better browsing experience. You may change your cookies settings here at any time. By continuing browsing the site you are agreeing by our use of cookies.</div>
+							<button class="cookie-notification__agree-btn">I‘m ok with this</button>
+							<div class="cookie-notification__close">
+								<span></span>
+								<span></span>
+							</div>
 						</div>
-					</div>
 			</div>
 		</section>
 		<section class="services" id="services__anchor">
@@ -140,7 +138,7 @@
 					<div class="wonder-content">
 						<p>Wir verwenden für Wonderpots-Frozen-Joghurt ausschließlich Bio-Joghurt in höchster Qualität. Durch unsere geheime Rezeptur erschaffen wir ein cremig erfrischendes und zugleich gesundes Dessert für jedermann. Verfeinert wird die Spezialität mit frischen Toppings, die von Saison zu Saison variieren. Mit einer Auswahl aus mehr als 30 verschiedenen Garnierungen ist garantiert für jeden etwas dabei! </p>
 						<p>Welchen Service Sie erwarten können? Ganz einfach: Wonderpots kümmert sich um alles, sodass Sie sich auf das Wesentliche konzentrieren können. Wir organisieren den Transport und Aufbau der Maschinen und stellen Ihnen geschultes, freundliches Personal zur Verfügung. Auch spezielle Wünsche zu Toppings und Joghurt-Sorten finden bei uns Gehör. Fragen Sie einfach nach!</p>
-						<a href="#" class="primary-btn primary-btn--blue"><span class="inner">Jetzt anfragen!</span></a>
+						<a href="#subscribe-scroll" class="sub-scroll  primary-btn primary-btn--blue"><span class="inner">Jetzt anfragen!</span></a>
 					</div>
 				</div>
 			</div>
@@ -303,7 +301,7 @@
 				</div>
 			</div>
 			<div class="container unigue--container">
-				<div class="booking-wrapper">
+				<div class="booking-wrapper" id="subscribe-scroll">
 					<div class="booking">
 						<div class="booking__main">
 							<div class="booking__info">
@@ -316,16 +314,22 @@
 								<button id="subscribe-submit" class="primary-btn primary-btn--blue primary-btn--submit"><span class="inner">Jetzt anfragen!</span></button>
 							</form>
 						</div>
-						<div class="result-box result-box__succsess">
-								<h3>Succsess</h3>
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita cupiditate nisi fuga quos accusamus provident rerum eligendi distinctio, dolorum voluptate nihil! Assumenda tenetur eos, repudiandae libero repellat culpa amet quisquam.</p>
-						</div>
-						<div class="result-box result-box__error">
-								<h3>Error</h3>
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita cupiditate nisi fuga quos accusamus provident rerum eligendi distinctio, dolorum voluptate nihil! Assumenda tenetur eos, repudiandae libero repellat culpa amet quisquam.</p>
+						<div class="result-box-wrapper">
+							<div class="close-btn">
+								<span></span>
+								<span></span>
+							</div>
+							<div class="result-box result-box__succsess">
+									<a href="#" class="main-logo result-box__main-logo" ><img class="main-logo__img" src="/img/header/Logo.svg" alt=""></a>
+									<div class="result-title">Danke für Ihre Anfrage!</div>
+									<p>Wir haben Ihre Anfrage erhalten und werden uns in Kürze mit Ihnen in Verbindung setzen!</p>
+							</div>
+							<div class="result-box result-box__error">
+									<a href="#" class="main-logo result-box__main-logo" ><img class="main-logo__img" src="/img/header/Logo.svg" alt=""></a>
+									<div class="result-title">Fehler, versuchen Sie es erneut</div>
+									<p></p>
 						</div>
 					</div>
-					
 				</div>
 			</div>
 		</section>

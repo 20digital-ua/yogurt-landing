@@ -21,6 +21,9 @@
       background-size: 100% 70%;
     
   }
+  .slider-wrapper{
+    padding-top: 40px;
+  }
 }
 .services-slider.slick-slider{
   margin: 0 -11px;
@@ -32,6 +35,10 @@
    
   }
   .slide{
+    top:-50px;
+    position: relative;
+    opacity: 0;
+    @include transition();
     @include screen-lp{
       margin-right: 30px;
       &:last-child{
@@ -41,6 +48,9 @@
   }
 }
 .service-item{
+  position: relative;
+  // opacity: 0;
+  // top: -50px;
   max-width: 298px;
   outline: none;
   margin:0 auto; 

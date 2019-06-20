@@ -3,6 +3,7 @@ jQuery(document).ready(function () {
   var $mainMenuBlock    = jQuery('.main-nav-block').clone();
   var $cloneMenuToBlock = $('.main-nav-block-mob')
   var $burgerBtn = jQuery('.burger-btn');
+  
 
   $cloneMenuToBlock.append($mainMenuBlock);
   $burgerBtn.on('click',()=>{
@@ -10,7 +11,12 @@ jQuery(document).ready(function () {
     $burgerBtn.toggleClass('active');
     $cloneMenuToBlock.toggleClass('active');
   });
-
+  var $menuLink = jQuery('.menu__link');
+  $menuLink.on('click',()=>{
+    jQuery('body').removeClass('no-scroll');
+    $burgerBtn.toggleClass('active');
+    $cloneMenuToBlock.toggleClass('active');
+  });
 
 
   setTimeout(function(){
@@ -30,14 +36,37 @@ jQuery(document).ready(function () {
     jQuery('.cookie-notification').removeClass('show');
   });
 
-  jQuery(".menu__link").smoothscroll({
+  jQuery(".menu__link, .sub-scroll").smoothscroll({
     duration:  350,
     hash: false
-    // offset:100
   });
   
-});
 
+  jQuery(document).on('scroll',(e)=>{
+    var $opacityKof = $(window).scrollTop();
+    jQuery('.cookie-notification').css({
+      'opacity':1-$opacityKof/1000,
+      'bottom':-$opacityKof/20
+    });
+      if ($('.services').offset().top-$(window).scrollTop()<400) 
+      {
+        console.log(($('.services').offset().top-$(window).scrollTop())/100);
+        
+          jQuery('.services .slide').css({
+            'opacity':1,
+            'top':0
+          });
+
+      }
+      else
+      {
+        jQuery('.services .slide').css({
+          'opacity':0,
+          'top':-50
+        });
+      }
+  });
+});
 
 
 
