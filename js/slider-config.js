@@ -72,7 +72,7 @@ jQuery(document).ready(function () {
   $toppingsSlider.slick({
     infinite: false,
     // slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     dots:false,
     variableWidth: true,
     arrows: true,
