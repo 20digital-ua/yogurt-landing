@@ -46,16 +46,17 @@
 }
 .wonderpots-title{
   margin-top: 10px;
-  @include font(31px, $MontserratBold); 
+  @include font(31px, $GillBold);  
   text-transform: uppercase;
-  line-height: 18px; 
+  // line-height: 18px; 
   letter-spacing: 1.53px;
   min-width: 302px;
+  font-weight: 700;
   text-align: center;
   span{
-    @include font(52px, $MontserratExtraBold);
-    font-weight: 400;
+    @include font(52px,  $GillBold);
     letter-spacing: 2.37px;
+    line-height: 40px;
   }
   @include screen-lp{
     grid-row: 1/2;
@@ -63,21 +64,21 @@
     font-size: 38px;
     span{
       font-size: 64px;
-      line-height: 80px;
+      line-height: 60px;
     }
   }
   @include screen-md{
     font-size: 56px;
     span{
       font-size: 94px;
-      line-height: 125px;
+      line-height: 90px;
     }
   }
   @include screen-lg{
     font-size: 67px;
     span{
       font-size: 113px;
-      line-height: 170px;
+      line-height: 105px;
     }
   }
   
@@ -167,12 +168,12 @@
       line-height: 28px;
       letter-spacing: 2.51px;
       &-oganic{
-        left: -71px;
+        left: -100px;
         top: 99px;
         &:after{
           width: 116px;
           height: 68px;
-          right: -59px;
+          right: -29px;
           top: -38px;
         }
       }
@@ -235,6 +236,7 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
+    font-family: $GillBook;
   }
 }
 .notification-wrapper{
@@ -261,7 +263,7 @@
   background-color: #e9f6fc;
   margin: 0 10px;
   line-height: 18px;
-  font-size: 14px;
+  font-size: 15px;
   // visibility: hidden;
   opacity: 0;
   padding: 0;

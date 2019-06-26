@@ -33,3 +33,20 @@
     src: url("Sacramento-Regular.ttf") format("opentype");
     font-display: block;
 }
+
+
+@font-face {
+    font-family: 'Gill';
+    src: url("Gill/GillSansMTPro-Book.otf") format("opentype");
+    font-display: block;
+}
+@font-face {
+    font-family: 'Gill-Light';
+    src: url("Gill/GillSansMTPro-Light.otf") format("opentype");
+    font-display: block;
+}
+@font-face {
+    font-family: 'Gill-Bold';
+    src: url("Gill/GillSansMTPro-Bold.otf") format("opentype");
+    font-display: block;
+}

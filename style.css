@@ -150,7 +150,7 @@ a {
 }
 
 body {
-  font: 13px "Montserrat";
+  font: 13px "Gill-Light";
   color: #191d22;
 }
 
@@ -190,7 +190,7 @@ section {
 
 .title {
   text-align: center;
-  font: 28px "MontserratBold";
+  font: 28px "Gill-Bold";
   margin-bottom: 36px;
 }
 
@@ -497,18 +497,18 @@ header {
 
 .wonderpots-title {
   margin-top: 10px;
-  font: 31px "MontserratBold";
+  font: 31px "Gill-Bold";
   text-transform: uppercase;
-  line-height: 18px;
   letter-spacing: 1.53px;
   min-width: 302px;
+  font-weight: 700;
   text-align: center;
 }
 
 .wonderpots-title span {
-  font: 52px "MontserratExtraBold";
-  font-weight: 400;
+  font: 52px "Gill-Bold";
   letter-spacing: 2.37px;
+  line-height: 40px;
 }
 
 .yogurt-container {
@@ -612,7 +612,7 @@ header {
   background-color: #e9f6fc;
   margin: 0 10px;
   line-height: 18px;
-  font-size: 14px;
+  font-size: 15px;
   opacity: 0;
   padding: 0;
   transition: all .25s linear;
@@ -692,10 +692,6 @@ header {
 
 .services-grid .slide {
   outline: none;
-  top: -50px;
-  position: relative;
-  opacity: 0;
-  transition: all .25s linear;
 }
 
 .service-item {
@@ -714,8 +710,12 @@ header {
 }
 
 .service-item__img {
+  transition: all .25s linear;
   width: 100%;
   height: 302px;
+  top: -50px;
+  position: relative;
+  opacity: 0;
 }
 
 .service-item__description {
@@ -1758,7 +1758,7 @@ footer .container {
 
   .wonderpots-title span {
     font-size: 64px;
-    line-height: 80px;
+    line-height: 60px;
   }
 
   .yogurt-container {
@@ -1786,14 +1786,14 @@ footer .container {
   }
 
   .yogurt__property-oganic {
-    left: -71px;
+    left: -100px;
     top: 99px;
   }
 
   .yogurt__property-oganic:after {
     width: 116px;
     height: 68px;
-    right: -59px;
+    right: -29px;
     top: -38px;
   }
 
@@ -1847,6 +1847,7 @@ footer .container {
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
+    font-family: "Gill";
   }
 
   .services {
@@ -1863,12 +1864,15 @@ footer .container {
     margin-right: 30px;
   }
 
-  .services-grid .slide:nth-child(2) {
+  .services-grid .slide:nth-child(2) .service-item__img {
     transition-delay: .2s;
   }
 
   .services-grid .slide:last-child {
     margin-right: 0;
+  }
+
+  .services-grid .slide:last-child .service-item__img {
     transition-delay: .4s;
   }
 
@@ -2028,7 +2032,7 @@ footer .container {
 
   .wonderpots-title span {
     font-size: 94px;
-    line-height: 125px;
+    line-height: 90px;
   }
 
   .service-item:first-child {
@@ -2132,7 +2136,7 @@ footer .container {
 
   .wonderpots-title span {
     font-size: 113px;
-    line-height: 170px;
+    line-height: 105px;
   }
 
   .yogurt {
