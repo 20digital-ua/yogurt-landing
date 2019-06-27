@@ -20,11 +20,12 @@ header{
   }
 }
 .header-btn-order{
-  @include font(12px,$MontserratSemiBold);
+  @include font(12px,$GillMedium);
   color: $primaryTextColor;
   font-weight: 400;
   .inner{
     padding-left: 15px;
+    
     @include bgi('icons/Dish-black.svg', left center no-repeat);
     background-size: 11px 10px;
   }
@@ -32,15 +33,20 @@ header{
     width: 214px;
     height: 44px;
     border-radius: 25px;
-    line-height: 44px;
+    line-height: 50px;
     box-shadow: 0 5px 0 #1c8abe;
     text-align: center;
     font-size: 16px;
+    text-transform: uppercase;
     
     display: block;
     background-color: #7dcdf3;
     color: #ffffff; 
     margin-top: -5px;
+    @include transition();
+    &:hover{
+      background-color: #92d5f4;
+    }
     .inner{
       padding-left: 30px;
       @include bgi('icons/Dish-white.svg', left center no-repeat);
@@ -68,16 +74,13 @@ header{
     }
   }
   &--header{ 
-    // position: absolute;
-    // left: 50%;
     transform: translate(-50%);
   }
   @include screen-lp{
     order: 1;
-    // left: 0;
     transform: unset;
-    width: 138px;
-    height: 138px;
+    width: 130px;
+    height: 130px;
   }
 }
 .header-container{

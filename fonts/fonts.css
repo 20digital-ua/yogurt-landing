@@ -46,6 +46,11 @@
     font-display: block;
 }
 @font-face {
+    font-family: 'Gill-Medium';
+    src: url("Gill/GillSansMTPro-Medium.otf") format("opentype");
+    font-display: block;
+}
+@font-face {
     font-family: 'Gill-Bold';
     src: url("Gill/GillSansMTPro-Bold.otf") format("opentype");
     font-display: block;

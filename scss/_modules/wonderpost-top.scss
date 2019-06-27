@@ -4,27 +4,29 @@
   min-height: 574px;
   padding-bottom: 20px;
   @include screen-lp{
-    min-height: 1000px;
-    background: url("#{$image_dir}wonderpots-top/Header_BG_desk.png") center repeat-x;
-    padding-bottom: 0;
+    min-height: 900px;
+    background: url("#{$image_dir}wonderpots-top/Header_BG_desk.png") bottom center  repeat-x;
+    padding-bottom: 50px;
   }
   .container{
     overflow: hidden;
     padding-top: 0 !important;
   } 
-  .primary-btn{
+  .primary-btn{ 
     text-transform: uppercase;
-    @include screen-lp{
+    font-family: $GillMedium;
+    @include screen-lp{ 
       margin: 0;
     }
     @include screen-md{
-      margin-top: 50px;
+      position: relative;
+      top: -15px;
       width: 229px;
-      height: 67px;
+      height: 60px;
       font-size: 16px;
       font-weight: 400;
-      line-height: 67px;
-      border-radius: 40px;
+      line-height: 60px;
+      border-radius: 40px; 
     }
   }
 }
@@ -32,7 +34,7 @@
   max-width: 100%;
   padding-top: 106px;
   height: 100%;
-  padding-bottom: 25px;
+  padding-bottom: 11px;
   display: grid;
   grid-template-columns: 100%;
   @include screen-lp{
@@ -69,17 +71,17 @@
     }
   }
   @include screen-md{
-    font-size: 56px;
+    font-size: 46px;
     span{
-      font-size: 94px;
-      line-height: 90px;
+      font-size: 78px;
+      line-height: 70px;
     }
   }
   @include screen-lg{
-    font-size: 67px;
+    font-size: 60px;
     span{
-      font-size: 113px;
-      line-height: 105px;
+      font-size: 100px;
+      line-height: 99px;  
     }
   }
   
@@ -104,7 +106,7 @@
     width: 385px;
     height: 100%;
     @include screen-lp{
-      height: 611px;
+      height: 567px;
       width: auto;
       left: 0; 
     }
@@ -116,8 +118,9 @@
     text-align: center;
     line-height: 16px;
     &-oganic{
-      left: 35px;
+      left: 25px;
       top: 79px;
+      width: 80px;
       &:after{
         content: '';
         @include bgi('wonderpots-top/Prop_arrows/Yogurt_prop_arrow_1.svg', center no-repeat);
@@ -125,7 +128,7 @@
         width: 56px;
         height: 33px;
         position: absolute;
-        right: -29px;
+        right: -15px;
         top: -18px;
       }
     }
@@ -164,41 +167,42 @@
   .yogurt{
     left: -50px;
     &__property{
-      font-size: 31px;
+      font-size: 26px;
       font-weight: 400;
-      line-height: 28px;
-      letter-spacing: 2.51px;
+      line-height: 25px;
+      letter-spacing: 2.01px;
       &-oganic{
-        left: -100px;
-        top: 99px;
+        left: -87px;
+        top: 90px;
+        width: unset;
         &:after{
-          width: 116px;
-          height: 68px;
-          right: -29px;
-          top: -38px;
+          width: 99px;
+          height: 80px;
+          right: -26px;
+          top: -37px;
         }
       }
       &-fresh{
-        right: -145px;
-        top: 131px;
+        right: -96px;
+        top: 122px;
         &:after{
-          width: 107px;
-          height: 62px; 
-          left: -51px;
-          top: -38px;
+          width: 90px;
+          height: 62px;
+          left: -44px;
+          top: -35px;
         }
       }
       &-logo{
-        left: -66px;
-        bottom: -5px;
+        left: -55px;
+        bottom: 15px;
         &:after{
-          width: 144px;
-          height: 115px; 
-          left: 151px;
-          top: -76px;
+          width: 122px;
+          height: 116px;
+          left: 122px;
+          top: -73px;
         }
       }
-    }
+    } 
   }
 }
 
@@ -211,17 +215,21 @@
 .wonder-ticket{
   display: none;
   @include screen-lp{
-    width: 335px;
+    width: 265px;
     height: 97px;
-    margin-top: 70px;
-    margin-bottom: 64px;
+    margin-top: 30px;
+    margin-bottom: 36px;
     display: block;
     text-align: center;
     @include bgi('wonderpots-top/wonder-tcket-bg.svg', center no-repeat);
+    background-size: contain;
     &__inner{
+      position: relative;
+      left: -7px;
+      letter-spacing: 2px;
       color: #2c3137;
       font-family: $Sacramento;
-      font-size: 55px;
+      font-size: 43px;
       font-weight: 400;
       line-height: 97px;
       display: inline-block;
@@ -232,11 +240,11 @@
 .wonderpots__text{
   display: none;
   @include screen-lp{
-    margin-top: 22px;
+    margin-top: 10px;
     display: block;
     font-size: 18px;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 23px;
     font-family: $GillBook;
   }
 }
@@ -287,14 +295,14 @@
   &__agree-btn{
     min-width: 148px;
     height: 38px;
-    box-shadow: 0 3px 0 #1c8abe;
     background-color: #7dccf3;
     border: none;
     outline: none;
     border-radius: 25px;
     margin-top: 16px;
+    padding-top: 5px;
     cursor: pointer;
-    @include font(13px,$MontserratSemiBold);
+    @include font(15px,$GillBook);
     @include screen-tb{
       margin-top: 0;
       margin-left: 21px;

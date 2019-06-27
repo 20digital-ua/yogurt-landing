@@ -163,7 +163,7 @@ section {
 }
 
 .container {
-  max-width: 1335px;
+  max-width: 1140px;
   box-sizing: content-box;
   margin: 0 auto;
   padding-top: 48px;
@@ -204,7 +204,7 @@ section {
   width: 168px;
   height: 50px;
   border-radius: 25px;
-  line-height: 50px;
+  line-height: 55px;
   box-shadow: 0 5px 0 #1c8abe;
   background-color: #ffffff;
   text-align: center;
@@ -306,7 +306,7 @@ header {
 }
 
 .header-btn-order {
-  font: 12px "MontserratSemiBold";
+  font: 12px "Gill-Medium";
   color: #191d22;
   font-weight: 400;
 }
@@ -488,13 +488,14 @@ header {
 
 .wonderpots-general .primary-btn {
   text-transform: uppercase;
+  font-family: "Gill-Medium";
 }
 
 .wonderpots-wrapper {
   max-width: 100%;
   padding-top: 106px;
   height: 100%;
-  padding-bottom: 25px;
+  padding-bottom: 11px;
   display: grid;
   grid-template-columns: 100%;
 }
@@ -542,8 +543,9 @@ header {
 }
 
 .yogurt__property-oganic {
-  left: 35px;
+  left: 25px;
   top: 79px;
+  width: 80px;
 }
 
 .yogurt__property-oganic:after {
@@ -553,7 +555,7 @@ header {
   width: 56px;
   height: 33px;
   position: absolute;
-  right: -29px;
+  right: -15px;
   top: -18px;
 }
 
@@ -599,7 +601,7 @@ header {
 }
 
 .notification-wrapper {
-  max-width: 1335px;
+  max-width: 1140px;
   box-sizing: content-box;
   margin: 0 auto;
   padding-left: 11px;
@@ -631,14 +633,14 @@ header {
 .cookie-notification__agree-btn {
   min-width: 148px;
   height: 38px;
-  box-shadow: 0 3px 0 #1c8abe;
   background-color: #7dccf3;
   border: none;
   outline: none;
   border-radius: 25px;
   margin-top: 16px;
+  padding-top: 5px;
   cursor: pointer;
-  font: 13px "MontserratSemiBold";
+  font: 15px "Gill";
 }
 
 .cookie-notification__close {
@@ -1094,7 +1096,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 50px;
-  max-width: 1335px;
+  max-width: 1140px;
   padding: 0 11px;
   margin: 0 auto;
   position: relative;
@@ -1722,14 +1724,20 @@ footer .container {
     width: 214px;
     height: 44px;
     border-radius: 25px;
-    line-height: 44px;
+    line-height: 50px;
     box-shadow: 0 5px 0 #1c8abe;
     text-align: center;
     font-size: 16px;
+    text-transform: uppercase;
     display: block;
     background-color: #7dcdf3;
     color: #ffffff;
     margin-top: -5px;
+    transition: all .25s linear;
+  }
+
+  .header-btn-order:hover {
+    background-color: #92d5f4;
   }
 
   .header-btn-order .inner {
@@ -1741,8 +1749,8 @@ footer .container {
   .main-logo {
     order: 1;
     transform: unset;
-    width: 138px;
-    height: 138px;
+    width: 130px;
+    height: 130px;
   }
 
   .header-container {
@@ -1767,9 +1775,9 @@ footer .container {
   }
 
   .wonderpots-general {
-    min-height: 1000px;
-    background: url("img/wonderpots-top/Header_BG_desk.png") center repeat-x;
-    padding-bottom: 0;
+    min-height: 900px;
+    background: url("img/wonderpots-top/Header_BG_desk.png") bottom center repeat-x;
+    padding-bottom: 50px;
   }
 
   .wonderpots-general .primary-btn {
@@ -1804,7 +1812,7 @@ footer .container {
   }
 
   .yogurt__img {
-    height: 611px;
+    height: 567px;
     width: auto;
     left: 0;
   }
@@ -1814,62 +1822,67 @@ footer .container {
   }
 
   .yogurt__property {
-    font-size: 31px;
+    font-size: 26px;
     font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 2.51px;
+    line-height: 25px;
+    letter-spacing: 2.01px;
   }
 
   .yogurt__property-oganic {
-    left: -100px;
-    top: 99px;
+    left: -87px;
+    top: 90px;
+    width: unset;
   }
 
   .yogurt__property-oganic:after {
-    width: 116px;
-    height: 68px;
-    right: -29px;
-    top: -38px;
+    width: 99px;
+    height: 80px;
+    right: -26px;
+    top: -37px;
   }
 
   .yogurt__property-fresh {
-    right: -145px;
-    top: 131px;
+    right: -96px;
+    top: 122px;
   }
 
   .yogurt__property-fresh:after {
-    width: 107px;
+    width: 90px;
     height: 62px;
-    left: -51px;
-    top: -38px;
+    left: -44px;
+    top: -35px;
   }
 
   .yogurt__property-logo {
-    left: -66px;
-    bottom: -5px;
+    left: -55px;
+    bottom: 15px;
   }
 
   .yogurt__property-logo:after {
-    width: 144px;
-    height: 115px;
-    left: 151px;
-    top: -76px;
+    width: 122px;
+    height: 116px;
+    left: 122px;
+    top: -73px;
   }
 
   .wonder-ticket {
-    width: 335px;
+    width: 265px;
     height: 97px;
-    margin-top: 70px;
-    margin-bottom: 64px;
+    margin-top: 30px;
+    margin-bottom: 36px;
     display: block;
     text-align: center;
     background: url("img/wonderpots-top/wonder-tcket-bg.svg") center no-repeat;
+    background-size: contain;
   }
 
   .wonder-ticket__inner {
+    position: relative;
+    left: -7px;
+    letter-spacing: 2px;
     color: #2c3137;
     font-family: "Sacramento";
-    font-size: 55px;
+    font-size: 43px;
     font-weight: 400;
     line-height: 97px;
     display: inline-block;
@@ -1877,11 +1890,11 @@ footer .container {
   }
 
   .wonderpots__text {
-    margin-top: 22px;
+    margin-top: 10px;
     display: block;
     font-size: 18px;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 23px;
     font-family: "Gill";
   }
 
@@ -2052,22 +2065,23 @@ footer .container {
   }
 
   .wonderpots-general .primary-btn {
-    margin-top: 50px;
+    position: relative;
+    top: -15px;
     width: 229px;
-    height: 67px;
+    height: 60px;
     font-size: 16px;
     font-weight: 400;
-    line-height: 67px;
+    line-height: 60px;
     border-radius: 40px;
   }
 
   .wonderpots-title {
-    font-size: 56px;
+    font-size: 46px;
   }
 
   .wonderpots-title span {
-    font-size: 94px;
-    line-height: 90px;
+    font-size: 78px;
+    line-height: 70px;
   }
 
   .service-item:first-child {
@@ -2166,12 +2180,12 @@ footer .container {
   }
 
   .wonderpots-title {
-    font-size: 67px;
+    font-size: 60px;
   }
 
   .wonderpots-title span {
-    font-size: 113px;
-    line-height: 105px;
+    font-size: 100px;
+    line-height: 99px;
   }
 
   .yogurt {
