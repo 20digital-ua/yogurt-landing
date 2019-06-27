@@ -21,8 +21,8 @@ jQuery(document).ready(function () {
 
   setTimeout(function(){
     if(getCookie('cookie-notification')!='true'){
-      jQuery('.cookie-notification').show('medium');
-      jQuery('.cookie-notification').addClass('show');
+      // jQuery('.cookie-notification').show('medium');
+      // jQuery('.cookie-notification').addClass('show');
     }
   },1000);
   jQuery('.cookie-notification__close').on('click',function(){

@@ -2,16 +2,19 @@
   width: 168px;
   height: 50px;
   border-radius: 25px;
-  line-height: 55px;
+  line-height: 50px;
   box-shadow: 0 5px 0 #1c8abe;
   background-color: #ffffff; 
   text-align: center;
   color: $primaryTextColor;
-  font-size: 15px;
-  font-family: $MontserratSemiBold;
+  font-size: 16px;
+  font-family: $GillMedium;
+  font-weight: 600;
   display: block;
   margin: 0 auto;
   @include transition();
+  text-transform: uppercase;
+  padding-top: 2px;
   &:hover{
     background-color: #e6f9ff;
   }
@@ -37,8 +40,12 @@
     outline: none;
   }
   .inner{
-    background: url("#{$image_dir}icons/Dish-white.svg") left 4px no-repeat;
+    background: url("#{$image_dir}icons/Dish-white.svg") left 0 no-repeat;
     background-size: 17px 13px;
     padding-left: 22px;
+    @include screen-lp{
+      background-size: 20px 16px;
+      padding-left: 37px;
+    }
   }
 } 
