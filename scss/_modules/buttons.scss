@@ -9,7 +9,7 @@
   color: $primaryTextColor;
   font-size: 16px;
   font-family: $GillMedium;
-  font-weight: 600;
+  // font-weight: 600;
   display: block;
   margin: 0 auto;
   @include transition();
@@ -18,7 +18,7 @@
   &:hover{
     background-color: #e6f9ff;
   }
-  @include screen-lg{
+  @include screen-md{
     width: 245px;
     height: 58px;
     line-height: 58px;

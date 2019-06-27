@@ -156,7 +156,7 @@
     }
   }
   & .title-copy{
-    @include font(32px, $MontserratBold);
+    @include font(32px, $GillBold);
     display: none;
     font-weight: 700;
     line-height: 58px;
