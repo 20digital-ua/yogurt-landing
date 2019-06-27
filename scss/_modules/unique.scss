@@ -2,13 +2,24 @@
   @include bgi('unique/Unique_ContactForm_BG.svg',center);
   background-size: 190%;
   padding-bottom: 50px;
+  padding-top: 50px;
   position: relative;
   @include screen-lp{
     background-size: 100%;
+    padding-top: 80px;
+  }
+  @include screen-md{
+    padding-top: 140px;
+  }
+  @include screen-lg{
+    padding-top: 193px;
+  }
+  .title{
+    padding: 0 10px;
   }
   &--container{
     @include screen-lg{
-     padding-top: 70px;
+     padding-top: 0;
     }
   }
 }
@@ -74,9 +85,9 @@
     padding-top: 0;
   }
   @include screen-lp{
-    width: 196px;
-    height: 196px;
-    font-size: 30px;
+    width: 176px;
+    height: 176px;
+    font-size: 26px;
     line-height: 30px;
     &:nth-child(even){
       margin-top: 120px;

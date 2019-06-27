@@ -14,7 +14,7 @@
     }
     @include screen-lg{
       font-size: 40px;
-      margin-bottom: 110px;
+      margin-bottom: 108px;
     }
   }
   .title{
@@ -29,7 +29,7 @@
       background-size: contain;
       position: absolute;
       top: 7px;
-      left: 0;
+      left: -9px;
       transform: translateX(-110%);
       @include screen-lg{
         width: 128px;
@@ -46,7 +46,7 @@
       background-size: contain;
       position: absolute;
       top: 7px;
-      right:0;
+      right:-8px;
       transform: translateX(125%);
       @include screen-lg{
         width: 139px;
@@ -64,6 +64,9 @@
     padding-left: $sidePaddingsMain;
     padding-right: $sidePaddingsMain;
   }
+  @include screen-lg{
+    padding-top: 139px;
+  }
 }
 .topping-slider-wrapper{
   padding-left: 11px;
@@ -75,7 +78,7 @@
 }
 .toppings-slider{
   display: grid;
-  grid-gap: 67px;
+  grid-gap: 28px;
   grid-template-columns: repeat(auto-fill, 166px);
   justify-content: space-between;
 }
