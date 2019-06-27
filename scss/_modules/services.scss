@@ -7,7 +7,7 @@
     margin: 0 auto;
     @include bgi('title-shapes/Service.svg', center no-repeat);
     position: relative;
-    background-size: cover;
+    background-size: contain;
     bottom: -10px;
     @include screen-lg{
       width: 422px;
@@ -28,7 +28,7 @@
 }
 .services-slider.slick-slider{
   margin: 0 -11px;
-}
+} 
 .services-grid{
   @include screen-lp{
     display: flex;

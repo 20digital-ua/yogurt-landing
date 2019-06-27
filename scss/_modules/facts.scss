@@ -116,11 +116,30 @@
 
 
 .facts-points-container{
-  @include bgi('facts/facts-points_BG.svg', 5px no-repeat);
-  background-size: 100% 100%;
+  overflow: hidden;
   max-width: 912px;
   max-height: 864px;
   box-sizing: content-box;
+  position: relative;
+  @include screen-tb{
+    overflow: visible;
+  }
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    @include bgi('facts/Paint splash.svg', 5px no-repeat);
+    background-size: 100% 100%;
+    width: 150%;
+    height: 115%;
+    top: -20px;
+    left: -70px;
+    z-index: 1;
+    @include screen-sm{
+      width: 120%;
+      height: 115%;
+    }
+  }
   & .title-copy{
     @include font(32px, $MontserratBold);
     display: none;
@@ -128,18 +147,19 @@
     line-height: 58px;
     text-align: center;
     width: 100%;
-    margin-bottom: 30px !important;
+    z-index: 99;
+    position: relative;
+    margin-bottom: 30px;
     @include screen-lp{
       display: block;
     }
     @include screen-md{
-      font-size: 44px;
-      margin-bottom: 90px;
+      font-size: 36px;
+      margin-bottom: 40px;
     }
     @include screen-lg{
-      margin-bottom: 100px !important;
-      font-size: 55px;
-      margin-bottom: 110px;
+      margin-bottom: 50px;
+      font-size: 40px;
     }
   }
   @include screen-tb{
@@ -158,7 +178,8 @@
   }
 }
 .facts-points{
-  width: 100%; 
+  width: 100%;
+  max-width: 350px; 
   // height: 100%;
   margin: 0 auto; 
   min-height: 351px;
@@ -166,12 +187,18 @@
   display: flex;
   flex-wrap: wrap;
   font-family: $IndieFlower;
+  z-index: 99;
+  position: relative;
   padding: 30px 0 20px 13px;
+  @include screen-tb{
+    max-width: 100%; 
+  } 
   @include screen-lg{
     margin: 0;
     padding: 0;
     height: 370px;
   }
+  
 }
 .facts-point{
   width: 50%;

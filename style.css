@@ -486,6 +486,10 @@ header {
   padding-top: 0 !important;
 }
 
+.wonderpots-general .primary-btn {
+  text-transform: uppercase;
+}
+
 .wonderpots-wrapper {
   max-width: 100%;
   padding-top: 106px;
@@ -677,7 +681,7 @@ header {
   margin: 0 auto;
   background: url("img/title-shapes/Service.svg") center no-repeat;
   position: relative;
-  background-size: cover;
+  background-size: contain;
   bottom: -10px;
 }
 
@@ -808,11 +812,24 @@ header {
 }
 
 .facts-points-container {
-  background: url("img/facts/facts-points_BG.svg") 5px no-repeat;
-  background-size: 100% 100%;
+  overflow: hidden;
   max-width: 912px;
   max-height: 864px;
   box-sizing: content-box;
+  position: relative;
+}
+
+.facts-points-container:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: url("img/facts/Paint splash.svg") 5px no-repeat;
+  background-size: 100% 100%;
+  width: 150%;
+  height: 115%;
+  top: -20px;
+  left: -70px;
+  z-index: 1;
 }
 
 .facts-points-container .title-copy {
@@ -822,17 +839,22 @@ header {
   line-height: 58px;
   text-align: center;
   width: 100%;
-  margin-bottom: 30px !important;
+  z-index: 99;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .facts-points {
   width: 100%;
+  max-width: 350px;
   margin: 0 auto;
   min-height: 351px;
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   font-family: "IndieFlower";
+  z-index: 99;
+  position: relative;
   padding: 30px 0 20px 13px;
 }
 
@@ -1456,6 +1478,11 @@ footer .container {
     padding-right: 7%;
   }
 
+  .facts-points-container:before {
+    width: 120%;
+    height: 115%;
+  }
+
   .unique-blocks {
     padding: 0 7%;
     box-sizing: content-box;
@@ -1572,9 +1599,17 @@ footer .container {
   }
 
   .facts-points-container {
+    overflow: visible;
+  }
+
+  .facts-points-container {
     width: 45%;
     margin: 0;
     padding: 20px;
+  }
+
+  .facts-points {
+    max-width: 100%;
   }
 
   .latest-events-link {
@@ -2018,9 +2053,9 @@ footer .container {
 
   .wonderpots-general .primary-btn {
     margin-top: 50px;
-    width: 221px;
+    width: 229px;
     height: 67px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 67px;
     border-radius: 40px;
@@ -2067,8 +2102,8 @@ footer .container {
   }
 
   .facts-points-container .title-copy {
-    font-size: 44px;
-    margin-bottom: 90px;
+    font-size: 36px;
+    margin-bottom: 40px;
   }
 
   .facts-points-container {
@@ -2183,9 +2218,8 @@ footer .container {
   }
 
   .facts-points-container .title-copy {
-    margin-bottom: 100px !important;
-    font-size: 55px;
-    margin-bottom: 110px;
+    margin-bottom: 50px;
+    font-size: 40px;
   }
 
   .facts-points-container {
