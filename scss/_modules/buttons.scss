@@ -7,15 +7,18 @@
   background-color: #ffffff; 
   text-align: center;
   color: $primaryTextColor;
-  font-size: 15px;
-  font-family: $MontserratSemiBold;
+  font-size: 16px;
+  font-family: $GillMedium;
+  // font-weight: 600;
   display: block;
   margin: 0 auto;
   @include transition();
+  text-transform: uppercase;
+  padding-top: 2px;
   &:hover{
     background-color: #e6f9ff;
   }
-  @include screen-lg{
+  @include screen-md{
     width: 245px;
     height: 58px;
     line-height: 58px;
@@ -37,8 +40,12 @@
     outline: none;
   }
   .inner{
-    background: url("#{$image_dir}icons/Dish-white.svg") left 4px no-repeat;
+    background: url("#{$image_dir}icons/Dish-white.svg") left 0 no-repeat;
     background-size: 17px 13px;
     padding-left: 22px;
+    @include screen-lp{
+      background-size: 20px 16px;
+      padding-left: 37px;
+    }
   }
 } 

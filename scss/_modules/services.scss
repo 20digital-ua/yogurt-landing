@@ -7,12 +7,12 @@
     margin: 0 auto;
     @include bgi('title-shapes/Service.svg', center no-repeat);
     position: relative;
-    background-size: cover;
+    background-size: contain;
     bottom: -10px;
     @include screen-lg{
-      width: 422px;
+      width: 402px;
       height: 20px;
-      bottom: -20px;
+      bottom: -4px;
     }
   }
 
@@ -21,14 +21,17 @@
       background-size: 100% 70%;
     
   }
+  .container{
+    padding-bottom: 30px;
+  }
   .slider-wrapper{
-    margin-top: -40px;
+    margin-top: -30px;
     padding-top: 40px;
   }
 }
 .services-slider.slick-slider{
   margin: 0 -11px;
-}
+} 
 .services-grid{
   @include screen-lp{
     display: flex;
@@ -37,18 +40,19 @@
   }
   .slide{
     outline: none;
-    top:-50px;
-    position: relative;
-    opacity: 0;
-    @include transition();
+   
     @include screen-lp{
       margin-right: 30px;
       &:nth-child(2){
-        transition-delay: .2s;
+        .service-item__img{
+          transition-delay: .2s;
+        }
       }
       &:last-child{
         margin-right: 0;
-        transition-delay: .4s;
+        .service-item__img{
+          transition-delay: .4s;
+        }
       }
     }
   }
@@ -61,35 +65,35 @@
   outline: none;
   margin:0 auto; 
   @include transition();
-  &__name{
-    margin-top: 16px;
-    margin-bottom: 19px;
-    text-align: left;
-    @include font(22px, $MontserratSemiBold);
+  @include screen-tb{
+    max-width: 265px;
   }
   &__img{
-     width: 100%;
-    height: 302px;
+    @include transition();
+    width: 100%;
+    top:-50px;
+    position: relative;
+    opacity: 0;
+  }
+  &__name{
+    margin-top: 25px;
+    margin-bottom: 12px;
+    text-align: left;
+    @include font(24px, $GillBold);
   }
   &__description{
     font-size: 14px;
-    line-height: 17px;
+    line-height: 22px;
   }
 
 
   @include screen-tb{
     align-items: center;
     margin-bottom: 20px; 
-    &__info{
-    }
-    &__name{
-      margin-bottom: 24px;
-      text-align: left;
-    }
     &__description{
       display: block;
       font-size: 16px;
-      line-height: 25px;
+      line-height: 22px;
     }
     &:first-child{
       margin-bottom: 20px;

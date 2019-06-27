@@ -150,7 +150,7 @@ a {
 }
 
 body {
-  font: 13px "Montserrat";
+  font: 13px "Gill-Light";
   color: #191d22;
 }
 
@@ -163,7 +163,7 @@ section {
 }
 
 .container {
-  max-width: 1335px;
+  max-width: 1140px;
   box-sizing: content-box;
   margin: 0 auto;
   padding-top: 48px;
@@ -190,7 +190,7 @@ section {
 
 .title {
   text-align: center;
-  font: 28px "MontserratBold";
+  font: 28px "Gill-Bold";
   margin-bottom: 36px;
 }
 
@@ -209,11 +209,13 @@ section {
   background-color: #ffffff;
   text-align: center;
   color: #191d22;
-  font-size: 15px;
-  font-family: "MontserratSemiBold";
+  font-size: 16px;
+  font-family: "Gill-Medium";
   display: block;
   margin: 0 auto;
   transition: all .25s linear;
+  text-transform: uppercase;
+  padding-top: 2px;
 }
 
 .primary-btn:hover {
@@ -238,7 +240,7 @@ section {
 }
 
 .primary-btn .inner {
-  background: url("img/icons/Dish-white.svg") left 4px no-repeat;
+  background: url("img/icons/Dish-white.svg") left 0 no-repeat;
   background-size: 17px 13px;
   padding-left: 22px;
 }
@@ -306,7 +308,7 @@ header {
 }
 
 .header-btn-order {
-  font: 12px "MontserratSemiBold";
+  font: 12px "Gill-Medium";
   color: #191d22;
   font-weight: 400;
 }
@@ -462,7 +464,7 @@ header {
   white-space: nowrap;
   display: block;
   color: #191d22;
-  font: 18px "Montserrat";
+  font: 18px "Gill";
   font-weight: 500;
   letter-spacing: 0.45px;
   transition: all .25s linear;
@@ -486,29 +488,34 @@ header {
   padding-top: 0 !important;
 }
 
+.wonderpots-general .primary-btn {
+  text-transform: uppercase;
+  font-family: "Gill-Medium";
+}
+
 .wonderpots-wrapper {
   max-width: 100%;
   padding-top: 106px;
   height: 100%;
-  padding-bottom: 25px;
+  padding-bottom: 11px;
   display: grid;
   grid-template-columns: 100%;
 }
 
 .wonderpots-title {
   margin-top: 10px;
-  font: 31px "MontserratBold";
+  font: 31px "Gill-Bold";
   text-transform: uppercase;
-  line-height: 18px;
   letter-spacing: 1.53px;
   min-width: 302px;
+  font-weight: 700;
   text-align: center;
 }
 
 .wonderpots-title span {
-  font: 52px "MontserratExtraBold";
-  font-weight: 400;
+  font: 52px "Gill-Bold";
   letter-spacing: 2.37px;
+  line-height: 40px;
 }
 
 .yogurt-container {
@@ -538,8 +545,9 @@ header {
 }
 
 .yogurt__property-oganic {
-  left: 35px;
+  left: 25px;
   top: 79px;
+  width: 80px;
 }
 
 .yogurt__property-oganic:after {
@@ -549,7 +557,7 @@ header {
   width: 56px;
   height: 33px;
   position: absolute;
-  right: -29px;
+  right: -15px;
   top: -18px;
 }
 
@@ -595,7 +603,7 @@ header {
 }
 
 .notification-wrapper {
-  max-width: 1335px;
+  max-width: 1140px;
   box-sizing: content-box;
   margin: 0 auto;
   padding-left: 11px;
@@ -612,7 +620,7 @@ header {
   background-color: #e9f6fc;
   margin: 0 10px;
   line-height: 18px;
-  font-size: 14px;
+  font-size: 15px;
   opacity: 0;
   padding: 0;
   transition: all .25s linear;
@@ -627,14 +635,14 @@ header {
 .cookie-notification__agree-btn {
   min-width: 148px;
   height: 38px;
-  box-shadow: 0 3px 0 #1c8abe;
   background-color: #7dccf3;
   border: none;
   outline: none;
   border-radius: 25px;
   margin-top: 16px;
+  padding-top: 5px;
   cursor: pointer;
-  font: 13px "MontserratSemiBold";
+  font: 15px "Gill";
 }
 
 .cookie-notification__close {
@@ -677,12 +685,16 @@ header {
   margin: 0 auto;
   background: url("img/title-shapes/Service.svg") center no-repeat;
   position: relative;
-  background-size: cover;
+  background-size: contain;
   bottom: -10px;
 }
 
+.services .container {
+  padding-bottom: 30px;
+}
+
 .services .slider-wrapper {
-  margin-top: -40px;
+  margin-top: -30px;
   padding-top: 40px;
 }
 
@@ -692,10 +704,6 @@ header {
 
 .services-grid .slide {
   outline: none;
-  top: -50px;
-  position: relative;
-  opacity: 0;
-  transition: all .25s linear;
 }
 
 .service-item {
@@ -706,21 +714,24 @@ header {
   transition: all .25s linear;
 }
 
-.service-item__name {
-  margin-top: 16px;
-  margin-bottom: 19px;
-  text-align: left;
-  font: 22px "MontserratSemiBold";
+.service-item__img {
+  transition: all .25s linear;
+  width: 100%;
+  top: -50px;
+  position: relative;
+  opacity: 0;
 }
 
-.service-item__img {
-  width: 100%;
-  height: 302px;
+.service-item__name {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  text-align: left;
+  font: 24px "Gill-Bold";
 }
 
 .service-item__description {
   font-size: 14px;
-  line-height: 17px;
+  line-height: 22px;
 }
 
 /* SERVICES */
@@ -742,13 +753,13 @@ header {
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
-  max-width: 581px;
-  max-height: 562px;
+  max-width: 555px;
+  max-height: 451px;
   width: 100%;
 }
 
 .wonder-content p {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .wonder-content .primary-btn {
@@ -758,11 +769,15 @@ header {
 /* WONDER EVENT */
 
 .facts {
-  background: url("img/facts/Facts_BG.svg") -277px 20px no-repeat;
-  background-size: cover;
+  background: url("img/facts/Facts_BG.svg") -150px center no-repeat;
+  background-size: 300% 100%;
+  padding-bottom: 38px;
+  padding-top: 30px;
+  margin-top: 50px;
 }
 
 .facts .container {
+  padding-top: 0;
   padding-left: 0;
   padding-right: 0;
 }
@@ -808,31 +823,49 @@ header {
 }
 
 .facts-points-container {
-  background: url("img/facts/facts-points_BG.svg") 5px no-repeat;
-  background-size: 100% 100%;
+  overflow: hidden;
   max-width: 912px;
   max-height: 864px;
   box-sizing: content-box;
+  position: relative;
+  width: 100%;
+}
+
+.facts-points-container:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: url("img/facts/Paint splash.svg") 5px no-repeat;
+  background-size: 100% 100%;
+  width: 150%;
+  height: 115%;
+  top: -20px;
+  left: -84px;
 }
 
 .facts-points-container .title-copy {
-  font: 32px "MontserratBold";
+  font: 32px "Gill-Bold";
   display: none;
   font-weight: 700;
   line-height: 58px;
   text-align: center;
   width: 100%;
-  margin-bottom: 30px !important;
+  z-index: 99;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .facts-points {
   width: 100%;
+  max-width: 350px;
   margin: 0 auto;
   min-height: 351px;
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   font-family: "IndieFlower";
+  z-index: 99;
+  position: relative;
   padding: 30px 0 20px 13px;
 }
 
@@ -847,7 +880,7 @@ header {
   font-weight: 400;
   line-height: 39.7px;
   letter-spacing: 6.07px;
-  margin-bottom: 18px;
+  margin-bottom: 25px;
 }
 
 .facts-point__name {
@@ -872,7 +905,7 @@ header {
 }
 
 .latest-events .container {
-  max-width: 1440px;
+  max-width: 1230px;
 }
 
 .latest-events-slider {
@@ -906,7 +939,8 @@ header {
 }
 
 .latest-events-link {
-  max-width: 256px;
+  max-width: 262px;
+  max-height: 386px;
   outline: none;
   max-height: 450px;
   box-shadow: 10px 17px 36px 2px rgba(0, 25, 36, 0.1);
@@ -934,7 +968,7 @@ header {
   color: #fff;
   text-align: center;
   line-height: 70px;
-  font: 18px "MontserratSemiBold";
+  font: 18px "Gill-Bold";
   transition: all .25s linear;
   opacity: 0;
 }
@@ -971,7 +1005,7 @@ header {
   background-size: contain;
   position: absolute;
   top: 7px;
-  left: 0;
+  left: -9px;
   transform: translateX(-110%);
 }
 
@@ -984,7 +1018,7 @@ header {
   background-size: contain;
   position: absolute;
   top: 7px;
-  right: 0;
+  right: -8px;
   transform: translateX(125%);
 }
 
@@ -999,7 +1033,7 @@ header {
 
 .toppings-slider {
   display: grid;
-  grid-gap: 67px;
+  grid-gap: 28px;
   grid-template-columns: repeat(auto-fill, 166px);
   justify-content: space-between;
 }
@@ -1048,7 +1082,12 @@ header {
   background: url("img/unique/Unique_ContactForm_BG.svg") center;
   background-size: 190%;
   padding-bottom: 50px;
+  padding-top: 50px;
   position: relative;
+}
+
+.unigue .title {
+  padding: 0 10px;
 }
 
 .unique-blocks--container {
@@ -1072,7 +1111,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 50px;
-  max-width: 1335px;
+  max-width: 1140px;
   padding: 0 11px;
   margin: 0 auto;
   position: relative;
@@ -1128,8 +1167,8 @@ header {
 }
 
 .booking__title {
-  font: 28px "MontserratBold";
-  margin-bottom: 36px;
+  font: 28px "Gill-Bold";
+  margin-bottom: 24px;
   text-align: center;
 }
 
@@ -1165,7 +1204,7 @@ header {
   text-align: center;
   font-weight: 700;
   letter-spacing: 1px;
-  font: 28px "MontserratBold";
+  font: 28px "Gill-Bold";
   margin-bottom: 36px;
 }
 
@@ -1240,7 +1279,7 @@ header {
   box-shadow: 2px 4px 10px #dedede;
   border: 1px solid #f3f3f3;
   border-radius: 25px;
-  font: 13px "Montserrat";
+  font: 13px "Gill";
   background-color: #fff;
   margin-bottom: 11px;
 }
@@ -1296,10 +1335,6 @@ footer .container {
 .footer-wrapper {
   display: grid;
   font-size: 11px;
-}
-
-.title-bold {
-  font: 13px "MontserratBold";
 }
 
 .main-logo--footer {
@@ -1373,6 +1408,7 @@ footer .container {
   font-weight: 400;
   letter-spacing: 0.52px;
   max-width: 350px;
+  line-height: 18px;
 }
 
 .footer-pictures {
@@ -1382,13 +1418,12 @@ footer .container {
   justify-content: space-between;
   margin-top: 16px;
   grid-column: 1/3;
-  max-width: 513px;
 }
 
 .footer-pictures__wrapper {
   width: 32%;
-  max-width: 148px;
-  max-height: 148px;
+  max-width: 166px;
+  max-height: 166px;
   position: relative;
 }
 
@@ -1419,28 +1454,42 @@ footer .container {
 .footer-stores__title {
   text-transform: uppercase;
   margin-bottom: 12px;
+  font: 16px "Gill-Bold";
 }
 
-.store {
-  margin-bottom: 21px;
+.store-info__item {
+  margin-bottom: 8px;
+  padding-left: 26px;
 }
 
-.store__title {
-  line-height: 13px;
-  font: 13px "MontserratBold";
-  font-weight: 700;
-  letter-spacing: 0.52px;
-  text-transform: uppercase;
+.store-info__item-name {
+  background: url("img/icons/man-user.svg") left 2px no-repeat;
+  background-size: 12px 14px;
+}
+
+.store-info__item-phone {
+  background: url("img/icons/phone-receiver.svg") left no-repeat;
+  background-size: 14px 14px;
+}
+
+.store-info__item-address {
+  background: url("img/icons/maps-and-flags.svg") left 4px no-repeat;
+  background-size: 15px 16px;
+}
+
+.store-info a {
+  color: #191d22;
 }
 
 .footer-copyright {
   grid-column: 1/3;
-  font: 11px "MontserratBold";
+  font: 11px "Gill-Bold";
   font-weight: 700;
   line-height: 11.56px;
   text-transform: uppercase;
   letter-spacing: 0.52px;
   text-align: center;
+  margin-top: 35px;
 }
 
 /* FOOTER */
@@ -1454,6 +1503,11 @@ footer .container {
   .notification-wrapper {
     padding-left: 7%;
     padding-right: 7%;
+  }
+
+  .facts-points-container:before {
+    width: 125%;
+    height: 113%;
   }
 
   .unique-blocks {
@@ -1492,19 +1546,18 @@ footer .container {
   }
 
   .service-item {
-    align-items: center;
-    margin-bottom: 20px;
+    max-width: 265px;
   }
 
-  .service-item__name {
-    margin-bottom: 24px;
-    text-align: left;
+  .service-item {
+    align-items: center;
+    margin-bottom: 20px;
   }
 
   .service-item__description {
     display: block;
     font-size: 16px;
-    line-height: 25px;
+    line-height: 22px;
   }
 
   .service-item:first-child {
@@ -1518,27 +1571,28 @@ footer .container {
   .wonder-event-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 27px;
   }
 
   .wonder-event-wrapper .wonder-title {
     grid-column: 2;
     grid-row: 1;
     text-align-last: left;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
   }
 
   .wonder-event-wrapper .wonder-title:after {
     background-position: left;
-    width: 372px;
+    width: 309px;
     height: 16px;
-    left: -30%;
+    left: -31%;
   }
 
   .wonder-event-wrapper .wonder-img {
     grid-column: 1;
     grid-row: 1/3;
     margin: 0;
-    width: 80%;
+    width: 100%;
   }
 
   .wonder-event-wrapper .wonder-content {
@@ -1552,13 +1606,14 @@ footer .container {
   }
 
   .facts {
-    background-position: 20px 0%;
+    padding-bottom: 60px;
+    background-size: 150% 100%;
+    background-position: -100px center;
   }
 
   .facts .container {
     padding-left: 7%;
     padding-right: 7%;
-    padding-bottom: 50px;
   }
 
   .facts-wrapper {
@@ -1572,9 +1627,22 @@ footer .container {
   }
 
   .facts-points-container {
-    width: 45%;
+    overflow: visible;
+  }
+
+  .facts-points-container:before {
+    width: 115%;
+    height: 113%;
+    left: -30px;
+  }
+
+  .facts-points-container {
     margin: 0;
     padding: 20px;
+  }
+
+  .facts-points {
+    max-width: 85%;
   }
 
   .latest-events-link {
@@ -1602,7 +1670,7 @@ footer .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 945px;
+    max-width: 990px;
     margin: 0 auto;
   }
 
@@ -1615,19 +1683,19 @@ footer .container {
   }
 
   .contact-form__textarea {
-    margin-bottom: 11px;
+    margin-bottom: 20px;
   }
 
   footer {
     background: url("img/footer/Footer_BG_desk.png") center repeat-x;
-    min-height: 459px;
+    min-height: 411px;
     background-size: 100% 100%;
   }
 
   .footer-wrapper {
-    margin-top: 20px;
-    grid-template-columns: 30% 36% 30%;
-    grid-column-gap: 2%;
+    margin-top: 28px;
+    grid-template-columns: 24% 49% 26%;
+    grid-column-gap: 17px;
     line-height: 22px;
   }
 
@@ -1641,18 +1709,18 @@ footer .container {
   }
 
   .footer-pictures__img {
-    max-height: 148px;
+    max-height: 166px;
   }
 
   .footer-pictures {
     grid-column: 2/3;
-    margin-top: 0;
+    margin-top: 20px;
   }
 
   .footer-stores {
     grid-column: 3;
-    grid-row: 1/3;
-    margin-top: 30px;
+    grid-row: 2/3;
+    padding-left: 10px;
   }
 
   .footer-copyright {
@@ -1675,6 +1743,11 @@ footer .container {
     margin-bottom: 60px;
   }
 
+  .primary-btn .inner {
+    background-size: 20px 16px;
+    padding-left: 37px;
+  }
+
   header {
     top: 51px;
   }
@@ -1687,14 +1760,20 @@ footer .container {
     width: 214px;
     height: 44px;
     border-radius: 25px;
-    line-height: 44px;
+    line-height: 50px;
     box-shadow: 0 5px 0 #1c8abe;
     text-align: center;
     font-size: 16px;
+    text-transform: uppercase;
     display: block;
     background-color: #7dcdf3;
     color: #ffffff;
     margin-top: -5px;
+    transition: all .25s linear;
+  }
+
+  .header-btn-order:hover {
+    background-color: #92d5f4;
   }
 
   .header-btn-order .inner {
@@ -1706,8 +1785,8 @@ footer .container {
   .main-logo {
     order: 1;
     transform: unset;
-    width: 138px;
-    height: 138px;
+    width: 130px;
+    height: 130px;
   }
 
   .header-container {
@@ -1732,13 +1811,24 @@ footer .container {
   }
 
   .wonderpots-general {
-    min-height: 1000px;
-    background: url("img/wonderpots-top/Header_BG_desk.png") center repeat-x;
-    padding-bottom: 0;
+    min-height: 900px;
+    background: url("img/wonderpots-top/Header_BG_desk.png") bottom center repeat-x;
+    padding-bottom: 50px;
   }
 
   .wonderpots-general .primary-btn {
     margin: 0;
+  }
+
+  .wonderpots-general .primary-btn {
+    position: relative;
+    top: -15px;
+    width: 229px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 60px;
+    border-radius: 40px;
   }
 
   .wonderpots-wrapper {
@@ -1758,7 +1848,7 @@ footer .container {
 
   .wonderpots-title span {
     font-size: 64px;
-    line-height: 80px;
+    line-height: 60px;
   }
 
   .yogurt-container {
@@ -1769,7 +1859,7 @@ footer .container {
   }
 
   .yogurt__img {
-    height: 611px;
+    height: 567px;
     width: auto;
     left: 0;
   }
@@ -1779,62 +1869,67 @@ footer .container {
   }
 
   .yogurt__property {
-    font-size: 31px;
+    font-size: 26px;
     font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 2.51px;
+    line-height: 25px;
+    letter-spacing: 2.01px;
   }
 
   .yogurt__property-oganic {
-    left: -71px;
-    top: 99px;
+    left: -87px;
+    top: 90px;
+    width: unset;
   }
 
   .yogurt__property-oganic:after {
-    width: 116px;
-    height: 68px;
-    right: -59px;
-    top: -38px;
+    width: 99px;
+    height: 80px;
+    right: -26px;
+    top: -37px;
   }
 
   .yogurt__property-fresh {
-    right: -145px;
-    top: 131px;
+    right: -96px;
+    top: 122px;
   }
 
   .yogurt__property-fresh:after {
-    width: 107px;
+    width: 90px;
     height: 62px;
-    left: -51px;
-    top: -38px;
+    left: -44px;
+    top: -35px;
   }
 
   .yogurt__property-logo {
-    left: -66px;
-    bottom: -5px;
+    left: -55px;
+    bottom: 15px;
   }
 
   .yogurt__property-logo:after {
-    width: 144px;
-    height: 115px;
-    left: 151px;
-    top: -76px;
+    width: 122px;
+    height: 116px;
+    left: 122px;
+    top: -73px;
   }
 
   .wonder-ticket {
-    width: 335px;
+    width: 265px;
     height: 97px;
-    margin-top: 70px;
-    margin-bottom: 64px;
+    margin-top: 30px;
+    margin-bottom: 36px;
     display: block;
     text-align: center;
     background: url("img/wonderpots-top/wonder-tcket-bg.svg") center no-repeat;
+    background-size: contain;
   }
 
   .wonder-ticket__inner {
+    position: relative;
+    left: -7px;
+    letter-spacing: 2px;
     color: #2c3137;
     font-family: "Sacramento";
-    font-size: 55px;
+    font-size: 43px;
     font-weight: 400;
     line-height: 97px;
     display: inline-block;
@@ -1842,11 +1937,12 @@ footer .container {
   }
 
   .wonderpots__text {
-    margin-top: 22px;
+    margin-top: 10px;
     display: block;
     font-size: 18px;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 23px;
+    font-family: "Gill";
   }
 
   .services {
@@ -1863,12 +1959,15 @@ footer .container {
     margin-right: 30px;
   }
 
-  .services-grid .slide:nth-child(2) {
+  .services-grid .slide:nth-child(2) .service-item__img {
     transition-delay: .2s;
   }
 
   .services-grid .slide:last-child {
     margin-right: 0;
+  }
+
+  .services-grid .slide:last-child .service-item__img {
     transition-delay: .4s;
   }
 
@@ -1909,6 +2008,7 @@ footer .container {
 
   .unigue {
     background-size: 100%;
+    padding-top: 80px;
   }
 
   .unique-blocks--container:before {
@@ -1917,9 +2017,9 @@ footer .container {
   }
 
   .unique-item {
-    width: 196px;
-    height: 196px;
-    font-size: 30px;
+    width: 176px;
+    height: 176px;
+    font-size: 26px;
     line-height: 30px;
   }
 
@@ -1933,7 +2033,6 @@ footer .container {
   }
 
   .booking__title {
-    margin-bottom: 24px;
     font-size: 32px;
   }
 
@@ -1954,8 +2053,9 @@ footer .container {
     font-size: 14px;
   }
 
-  .title-bold {
-    font-size: 16px;
+  .main-logo--footer {
+    width: 98px;
+    height: 98px;
   }
 
   .social__item {
@@ -1988,15 +2088,6 @@ footer .container {
     margin-bottom: 20px;
   }
 
-  .footer-stores {
-    padding-left: 20px;
-    margin-top: 56px;
-  }
-
-  .footer-stores__title {
-    margin-bottom: 20px;
-  }
-
   .footer-copyright {
     font-size: 13px;
   }
@@ -2012,23 +2103,20 @@ footer .container {
     margin-bottom: 90px;
   }
 
-  .wonderpots-general .primary-btn {
-    margin-top: 50px;
-    width: 221px;
-    height: 67px;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 67px;
-    border-radius: 40px;
+  .primary-btn {
+    width: 245px;
+    height: 58px;
+    line-height: 58px;
+    border-radius: 50px;
   }
 
   .wonderpots-title {
-    font-size: 56px;
+    font-size: 46px;
   }
 
   .wonderpots-title span {
-    font-size: 94px;
-    line-height: 125px;
+    font-size: 78px;
+    line-height: 70px;
   }
 
   .service-item:first-child {
@@ -2036,7 +2124,7 @@ footer .container {
   }
 
   .wonder-event-wrapper .wonder-title:after {
-    top: 20px;
+    top: 7px;
   }
 
   .wonder-event-wrapper .wonder-content .primary-btn {
@@ -2044,15 +2132,15 @@ footer .container {
   }
 
   .facts {
-    background-size: contain;
-    background-position: 100px center;
+    padding-top: 0;
+    margin-top: 0;
   }
 
   .main-img {
-    margin-top: 60px;
-    width: 560px;
-    height: 480px;
-    left: -220px;
+    margin-top: 100px;
+    width: 631px;
+    height: 550px;
+    left: -208px;
   }
 
   .main-img:before {
@@ -2062,9 +2150,16 @@ footer .container {
     bottom: -10px;
   }
 
+  .facts-points-container:before {
+    width: 124%;
+    height: 115%;
+    left: -80px;
+  }
+
   .facts-points-container .title-copy {
-    font-size: 44px;
-    margin-bottom: 90px;
+    font-size: 36px;
+    margin-bottom: 40px;
+    margin-left: 10px;
   }
 
   .facts-points-container {
@@ -2082,6 +2177,10 @@ footer .container {
     margin-bottom: 90px;
   }
 
+  .unigue {
+    padding-top: 140px;
+  }
+
   .booking__title {
     font-size: 36px;
   }
@@ -2097,42 +2196,27 @@ footer .container {
 
   .contact-form__textarea {
     min-height: 132px;
-    margin-bottom: 36px;
-  }
-
-  .main-logo--footer {
-    margin-bottom: 20px;
-  }
-
-  .footer-stores {
-    padding-left: 90px;
+    margin-bottom: 30px;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   .container {
-    padding-top: 150px;
+    padding-top: 130px;
   }
 
   .title {
     font-size: 40px;
-    margin-bottom: 110px;
-  }
-
-  .primary-btn {
-    width: 245px;
-    height: 58px;
-    line-height: 58px;
-    border-radius: 50px;
+    margin-bottom: 84px;
   }
 
   .wonderpots-title {
-    font-size: 67px;
+    font-size: 60px;
   }
 
   .wonderpots-title span {
-    font-size: 113px;
-    line-height: 170px;
+    font-size: 100px;
+    line-height: 99px;
   }
 
   .yogurt {
@@ -2140,25 +2224,32 @@ footer .container {
   }
 
   .services .title:after {
-    width: 422px;
+    width: 402px;
     height: 20px;
-    bottom: -20px;
+    bottom: -4px;
   }
 
   .service-item:first-child {
     margin-bottom: 70px;
   }
 
+  .wonder-event .container {
+    padding-top: 193px;
+  }
+
   .wonder-event-wrapper .wonder-title:after {
-    top: 30px;
+    top: 17px;
   }
 
   .wonder-event-wrapper .wonder-content .primary-btn {
-    margin-top: 49px;
+    margin-top: 41px;
   }
 
   .facts {
-    background-position: center;
+    margin-top: 139px;
+    background-size: 120% 100%;
+    background-position: -31px center;
+    padding-bottom: 38px;
   }
 
   .facts-img {
@@ -2166,26 +2257,26 @@ footer .container {
     height: auto;
   }
 
-  .main-img {
-    width: 710px;
-    height: 600px;
-  }
-
   .main-img:before {
-    width: 1023px;
-    height: 204px;
-    right: -100px;
-    bottom: -10px;
+    width: 858px;
+    height: 151px;
+    right: -119px;
+    bottom: 29px;
   }
 
   .facts-points-container .title-copy {
-    margin-bottom: 100px !important;
-    font-size: 55px;
-    margin-bottom: 110px;
+    margin-bottom: 50px;
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: -2.8px;
   }
 
   .facts-points-container {
-    padding: 110px 110px 70px 110px;
+    padding: 99px 42px 66px 67px;
+  }
+
+  .facts-points {
+    max-width: 100%;
   }
 
   .facts-points {
@@ -2195,21 +2286,25 @@ footer .container {
   }
 
   .facts-point__count {
-    font-size: 68px;
+    font-size: 65px;
   }
 
   .facts-point__name {
-    font-size: 32px;
-    line-height: 36.05px;
+    font-size: 28px;
+    line-height: 31.05px;
   }
 
-  .latest-events-link {
-    max-width: 305px;
+  .latest-events .title {
+    margin-bottom: 103px;
+  }
+
+  .latest-events .container {
+    padding-top: 147px;
   }
 
   .toppings .title-wrapper {
     font-size: 40px;
-    margin-bottom: 110px;
+    margin-bottom: 108px;
   }
 
   .toppings .title:before {
@@ -2224,25 +2319,29 @@ footer .container {
     transform: translateX(130%);
   }
 
+  .container.toppings-container {
+    padding-top: 139px;
+  }
+
+  .unigue {
+    padding-top: 193px;
+  }
+
   .unigue--container {
-    padding-top: 70px;
+    padding-top: 0;
   }
 
   .booking-wrapper {
-    padding: 140px 0;
+    padding: 140px 0 160px 0;
   }
 
   .booking__title {
     font-size: 40px;
-    margin-bottom: 59px;
+    margin-bottom: 38px;
   }
 
   .result-box-wrapper .result-box .result-title {
     font-size: 40px;
     margin-bottom: 30px;
-  }
-
-  .footer-stores {
-    padding-left: 120px;
   }
 }

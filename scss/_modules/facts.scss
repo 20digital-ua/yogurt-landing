@@ -1,23 +1,33 @@
 .facts{
-  @include bgi('facts/Facts_BG.svg', -277px 20px  no-repeat);
-  background-size: cover;
+  @include bgi('facts/Facts_BG.svg', -150px center  no-repeat);
+    background-size: 300% 100%;
+    padding-bottom: 38px;
+    padding-top: 30px;
+    margin-top: 50px;
   @include screen-tb{
-    background-position: 20px 0%;
+    padding-bottom: 60px;
+    background-size:150% 100%;
+    background-position: -100px center;
   }
   @include screen-md{
-    background-size: contain;
-    background-position: 100px center;
+    // background-position: 100px center;
+    padding-top: 0;
+    margin-top: 0;
   }
   @include screen-lg{
-    background-position:center;
+    margin-top: 139px;
+    background-size: 120% 100%;
+    background-position: -31px center;
+    padding-bottom: 38px;
   }
   .container{
+    padding-top: 0;
     padding-left: 0;
     padding-right: 0;
     @include screen-tb{
       padding-left: $sidePaddingsMain;
       padding-right: $sidePaddingsMain;
-      padding-bottom: 50px;
+      // padding-bottom: 50px;
     }
     
   }
@@ -72,15 +82,10 @@
     left: -180px;
   }
   @include screen-md{
-    margin-top: 60px;
-    width: 560px;
-    height: 480px;
-    left: -220px;
-  }
-  @include screen-lg{
-    width: 710px;
-    height: 600px;
-    // left: -180px;
+    margin-top: 100px;
+    width: 631px;
+    height: 550px;
+    left: -208px;
   }
   &:before{
     content: '';
@@ -104,10 +109,10 @@
       bottom: -10px;
     }
     @include screen-lg{
-      width: 1023px;
-      height: 204px;
-      right: -100px;
-      bottom: -10px;
+      width: 858px;
+      height: 151px;
+      right: -119px;
+      bottom: 29px;
     }
   }
 }
@@ -116,34 +121,67 @@
 
 
 .facts-points-container{
-  @include bgi('facts/facts-points_BG.svg', 5px no-repeat);
-  background-size: 100% 100%;
+  overflow: hidden;
   max-width: 912px;
   max-height: 864px;
   box-sizing: content-box;
+  position: relative;
+  width: 100%;
+  @include screen-tb{
+    overflow: visible;
+  }
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    @include bgi('facts/Paint splash.svg', 5px no-repeat);
+    background-size: 100% 100%;
+    width: 150%;
+    height: 115%;
+    top: -20px;
+    left: -84px;
+    @include screen-tb{
+      width: 115%;
+      height: 113%;
+      left: -30px;
+    }
+    @include screen-sm{
+      width: 125%;
+      height: 113%;
+    }
+    @include screen-md{
+      width: 124%;
+    height: 115%;
+    left: -80px;
+    }
+  }
   & .title-copy{
-    @include font(32px, $MontserratBold);
+    @include font(32px, $GillBold);
     display: none;
     font-weight: 700;
     line-height: 58px;
     text-align: center;
     width: 100%;
-    margin-bottom: 30px !important;
+    z-index: 99;
+    position: relative;
+    margin-bottom: 30px;
     @include screen-lp{
       display: block;
     }
     @include screen-md{
-      font-size: 44px;
-      margin-bottom: 90px;
+      font-size: 36px;
+      margin-bottom: 40px;
+      margin-left: 10px;
     }
     @include screen-lg{
-      margin-bottom: 100px !important;
-      font-size: 55px;
-      margin-bottom: 110px;
+      margin-bottom: 50px;
+      
+      font-size: 40px;
+      line-height: 45px;
+      letter-spacing: -2.8px;
     }
   }
   @include screen-tb{
-    width: 45%; 
     margin: 0;
     padding: 20px;
   }
@@ -154,11 +192,12 @@
     padding: 90px 120px 50px 90px;
   }
   @include screen-lg{
-    padding: 110px 110px 70px 110px;
+    padding: 99px 42px 66px 67px;
   }
 }
 .facts-points{
-  width: 100%; 
+  width: 100%;
+  max-width: 350px; 
   // height: 100%;
   margin: 0 auto; 
   min-height: 351px;
@@ -166,12 +205,21 @@
   display: flex;
   flex-wrap: wrap;
   font-family: $IndieFlower;
+  z-index: 99;
+  position: relative;
   padding: 30px 0 20px 13px;
+  @include screen-tb{
+    max-width: 85%; 
+  } 
+  @include screen-lg{
+    max-width: 100%; 
+  } 
   @include screen-lg{
     margin: 0;
     padding: 0;
     height: 370px;
   }
+  
 }
 .facts-point{
   width: 50%;
@@ -183,9 +231,9 @@
     font-weight: 400;
     line-height: 39.7px;
     letter-spacing: 6.07px;
-    margin-bottom: 18px;
+    margin-bottom: 25px;
     @include screen-lg{
-      font-size: 68px;
+      font-size: 65px;
     }
   }
   &__name{
@@ -194,8 +242,8 @@
     line-height: 26px;
     letter-spacing: 2px;
     @include screen-lg{
-      font-size: 32px;
-      line-height: 36.05px;
+      font-size: 28px;
+      line-height: 31.05px;
     }
   }
 }

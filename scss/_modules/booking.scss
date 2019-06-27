@@ -7,12 +7,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 945px;
+    max-width: 990px;
     // max-height: 712px; 
     margin: 0 auto;
   }
   @include screen-lg{
-    padding: 140px 0;
+    padding: 140px 0 160px 0;
   }
 }
 .booking{
@@ -49,11 +49,10 @@
   }
 }
 .booking__title{
-  @include font(28px, $MontserratBold);
-  margin-bottom: 36px;
+  @include font(28px, $GillBold);
+  margin-bottom: 24px;
   text-align: center;
   @include screen-lp{
-    margin-bottom: 24px;
     font-size: 32px;
   }
   @include screen-md{
@@ -61,7 +60,7 @@
   }
   @include screen-lg{
     font-size: 40px;
-    margin-bottom: 59px;
+    margin-bottom: 38px;
   }
 }
 .result-box-wrapper{
@@ -93,7 +92,7 @@
       text-align: center;
       font-weight: 700;
       letter-spacing: 1px;
-      @include font(28px, $MontserratBold);
+      @include font(28px, $GillBold);
       margin-bottom: 36px;
       &--left{
         text-align: left;
@@ -172,7 +171,7 @@
     box-shadow: 2px 4px 10px #dedede;
     border: 1px solid #f3f3f3;
     border-radius: 25px;
-    @include font(13px, $Montserrat);
+    @include font(13px, $GillBook);
     
     background-color: #fff;
     margin-bottom: 11px;
@@ -207,11 +206,11 @@
     background:#fff url("#{$image_dir}icons/form-icons/edit.svg") 15px 13px no-repeat;
     background-size: 17px 17px;
     @include screen-tb{
-      margin-bottom: 11px;
+      margin-bottom: 20px;
     }
     @include screen-md{
       min-height: 132px;
-      margin-bottom: 36px;
+      margin-bottom: 30px;
     }
   }
   .redBorder{
