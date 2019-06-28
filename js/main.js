@@ -11,12 +11,21 @@ jQuery(document).ready(function () {
     $burgerBtn.toggleClass('active');
     $cloneMenuToBlock.toggleClass('active');
   });
+  
+  // TOFIX
   var $menuLink = jQuery('.menu__link');
   $menuLink.on('click',()=>{
     jQuery('body').removeClass('no-scroll');
     $burgerBtn.toggleClass('active');
     $cloneMenuToBlock.toggleClass('active');
   });
+  $('.header-btn-order').on('click',()=>{
+    jQuery('body').removeClass('no-scroll');
+    $burgerBtn.toggleClass('active');
+    $cloneMenuToBlock.toggleClass('active');
+  });
+  //
+
 
 
   setTimeout(function(){

@@ -106,12 +106,19 @@
   @include bgi('icons/Arrow-right.svg',center right no-repeat);
 }
 .toppings-slide__continue{
-  line-height: 100%;
+  // line-height: 100%;
   color: #85d1f5;
   font-size: 30px;
+  display: flex !important;
+  align-items: center;
   font-weight: 700;
-  line-height: 150px;
+  padding-left: 60px;
+  // line-height: 150px;
   /* Text style for "t, o be co" */
   letter-spacing: 0.75px;
   min-width: 300px;
-}
+  @include bgi('icons/heart.svg',center left no-repeat);
+  &.slick-slide{
+    height: 166px;
+  }
+} 
