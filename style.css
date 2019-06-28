@@ -1066,14 +1066,20 @@ header {
 }
 
 .toppings-slide__continue {
-  line-height: 100%;
   color: #85d1f5;
   font-size: 30px;
+  display: flex !important;
+  align-items: center;
   font-weight: 700;
-  line-height: 150px;
+  padding-left: 60px;
   /* Text style for "t, o be co" */
   letter-spacing: 0.75px;
   min-width: 300px;
+  background: url("img/icons/heart.svg") center left no-repeat;
+}
+
+.toppings-slide__continue.slick-slide {
+  height: 166px;
 }
 
 /* TOPPINGS */
