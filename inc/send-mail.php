@@ -12,8 +12,8 @@ if (isset($_POST["name"]) && $_POST["name"] != '' &&
   );
 
 
-  $to = 'antonfedorishko17@gmail.com';
-  // $to = 'antonfedorishko17@gmail.com';
+  // $to = 'webdev@twnty.de,info@twnty.de,antonfedorishko17@gmail.com';
+  $to = 'info@twnty.de';
   $subject = 'Subscribe Request';
   $message = '
       <h3 style="font-weight:400">Hi, You have a Subscribe Request from <strong>'.$getData['name'].'</strong></h3><br>
